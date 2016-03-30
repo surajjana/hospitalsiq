@@ -16,6 +16,16 @@
         event.preventDefault();
     });
 
+
+   $('#lo').on('click',(function(){
+    $('#ip').css('display', 'none');
+   });
+
+
+   $('#ca').click(function(){
+    $('#care').show();
+   });
+
     
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
