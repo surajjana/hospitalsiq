@@ -48,6 +48,21 @@
             });
         });
     </script>
+    <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', function () {
+            var places = new google.maps.places.Autocomplete(document.getElementById('s'));
+            google.maps.event.addListener(places, 'place_changed', function () {
+                var place = places.getPlace();
+                var address = place.formatted_address;
+                var latitude = place.geometry.location.lat();
+                var longitude = place.geometry.location.lng();
+                var mesg = "Address: " + address;
+                mesg += "\nLatitude: " + latitude;
+                mesg += "\nLongitude: " + longitude;
+                alert(mesg);
+            });
+        });
+    </script>
       
     <style>
     .navbar-inverse{
@@ -128,22 +143,24 @@
 
  <br/>
  <br/>
+ <section>
  <div class="container">
  <div class="row" id="ip">
- <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="op">
- <center>
-                    <input type="text" class="text-line" size="30" placeholder="Enter your location?" />
-                </center>
+ <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="op" style="position:absolute; top:25%;">
+ 
+                    <input type="text" class="text-line" id="s" size="30" placeholder="Enter your location?" />
+                
                 </div>
                 </div>
                 <div class="row" id="ipp">
- <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="opp">
- <center>
+ <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="opp" style="position:absolute; top:25%;">
+
                    <input type="text" class="text-line" id="care" size="30" placeholder="What care you need?" />
-                </center>
+              
                 </div>
                 </div>
                 </div>
+                </section>
 
 
 
@@ -153,7 +170,9 @@
     <div class="container-fluid">
        <div class="row">
           <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 "></div>
-          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="position:relative; top:50px;"><h2> Hospitals at Hebbal for cardiology</h2></div>
+          <div class="col-lg-8 col-md-8 hidden-sm hidden-xs" style="position:relative; top:50px;"><h2> Hospitals at Hebbal for cardiology</h2></div>
+           <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="position:relative; top:50px;"><h3
+           style="background-color:rgba(25,160,175,0.8); padding:3%; font-size:100%; width:100%;"> Hospitals at Hebbal for cardiology</h3></div>
           <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
        </div>
     </div>

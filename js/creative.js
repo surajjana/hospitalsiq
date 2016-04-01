@@ -17,13 +17,17 @@
     });
 
 
-   $('#lo').on('click',(function(){
-    $('#ip').css('display', 'none');
+  $('#lo').click(function() {
+    $('#opp').css('visibility', 'hidden');
+    $('#op').css('visibility', 'visible');
+    
    });
 
 
    $('#ca').click(function(){
-    $('#care').show();
+     $('#op').css('visibility', 'hidden');
+    $('#opp').css('visibility', 'visible');
+     
    });
 
     
