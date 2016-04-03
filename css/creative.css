@@ -12,7 +12,7 @@ body {
   -o-background-size: cover;
   background-position: center;
   background-image: url('../img/home_bg.png');
-  overflow-x:hidden;
+  /*overflow-x:hidden;*/
   
 }
 
@@ -87,7 +87,7 @@ body {
 
 #top-bar{
   position: relative;
-  top:0px;
+  top: 30px;
   min-height: 50px;
   padding-top: 30px;
   background-color:rgba(255,255,255,1);
@@ -137,7 +137,7 @@ h2{
 #first{
   position: relative;
  
-  padding-top: 25px;
+  padding-top: 35px;
   padding-bottom:25px;
 
 max-width:100%;
