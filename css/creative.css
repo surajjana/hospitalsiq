@@ -2,12 +2,27 @@ html,
 body {
   height: 100%;
   width: 100%;
-  padding-top: 25px;
+  padding-top: 5px;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('../img/home_bg.png');
+  overflow-x:hidden;
+  
 }
 
 
-.navbar{
+
+.navbar-default{
+  background-color:rgba(255,255,255,0);
+  border-bottom: none;
   margin-bottom: 0 !important;
+   
 }
 
 .navbar-custom{
@@ -18,48 +33,51 @@ body {
  
 }
 
- .navbar-inverse .navbar-header .navbar-brand {
+ .navbar-default .navbar-header .navbar-brand {
   color: #f05f40;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 1500;
+
   text-transform: uppercase;
 }
-.navbar-inverse .navbar-header .navbar-brand:hover,
-.navbar-inverse .navbar-header .navbar-brand:focus {
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
   color: #19a0af;
 }
 
 
-.navbar-inverse .nav > li > a,
-.navbar-inverse .nav > li > a:focus {
+.navbar-default .nav > li > a,
+.navbar-default .nav > li > a:focus {
+  font-family: 'sans-serif';
   text-transform: uppercase;
   font-weight: 1500;
-  font-size: 12px;
+  font-size: 14px;
   color: #000;
 }
 
 
-.navbar-inverse .nav > li > a:hover,
-.navbar-inverse .nav > li > a:focus:hover {
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover {
  color:rgba(0,0,0,1);
-background-color: rgba(25,160,175,1);
+/*background-color: #fbc940;*/
+  box-shadow: 0px -2px 0px 0px rgba(251,201,64,1) inset;
 }
 
 
 
-.navbar-inverse .nav > li.active > a,
-.navbar-inverse .nav > li.active > a:focus {
+.navbar-default .nav > li.active > a,
+.navbar-default .nav > li.active > a:focus {
   color: #009688 !important;
   background-color: white;
 }
 
 
-.navbar-inverse .nav > li.active > a:hover,
-.navbar-inverse .nav > li.active > a:focus:hover {
+.navbar-default .nav > li.active > a:hover,
+.navbar-default .nav > li.active > a:focus:hover {
   background-color: #009688;
 }
 
-.navbar-inverse .navbar-toggle .icon-bar {
+.navbar-default .navbar-toggle .icon-bar {
   background-color:#000 ;
 }
 

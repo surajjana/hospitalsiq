@@ -30,7 +30,16 @@
      
    });
 
-    
+$(document).on("click", function(e){
+    if( !$("#op").is(e.target) ){ 
+        $("#op").hide();
+    }
+});
+
+
+
+
+
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
