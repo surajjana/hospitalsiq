@@ -21,6 +21,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
+     <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -81,6 +84,46 @@
              });
         });
     </script>
+
+    <script>
+         $(function() {
+            var availableTutorials = [
+               "Radiology",
+"Urology",
+"Veterinary",
+"Opthalmology",
+"Eye",
+"Gastroenterologist",
+"Cardiology",
+"Dental",
+"Anesthesiology",
+"Hematology",
+"Psychiatric",
+"Diabetes",
+"Cosmetic & Plastic Surgery",
+"Immunology",
+"Ayurveda",
+"Nephrology",
+"ENT",
+"Homeopathy",
+"Oncology",
+"Mental",
+"Cancer",
+"Orthopaedic",
+"Gynecology",
+"Rheumatology",
+"Neurology",
+"Maternity",
+"Dermatology",
+"Children"
+            ];
+            $( "#Radius" ).autocomplete({
+               minLength:1,   
+               delay:500,   
+               source: availableTutorials
+            });
+         });
+      </script>
 
 
 
@@ -222,7 +265,12 @@
           
           <div class="col-lg-3 col-md-3 hidden-sm hidden-xs"></div>
     
-            <div class="col-lg-1 col-md-1 hidden-sm hidden-xs" > <img src="img/home_care.png" style="position:relative; top:37px; left:300px; padding-top:100%; padding-left:70%;" /></div>
+            
+            <div class="col-lg-1 col-md-1 hidden-sm hidden-xs" >
+
+             
+          <img src="img/home_care.png" style="position:relative; top:35px; left:260px; padding-top:100%; padding-left:60%;" /></div>
+       
 
 
             <div class="col-lg-2 col-md-2 hidden-sm hidden-xs" >
@@ -231,7 +279,9 @@
                 <input type="text" name="loc" size="30" id="Radius" class="text-line" placeholder="Enter the care required" />
            
             </div>
-            
+           
+         
+
             <div class="col-lg-5 col-md-5 hidden-sm hidden-xs "></div>
 
 

@@ -69,7 +69,7 @@
   background-color:rgba(255,255,255,1);
   border-bottom: none;
   margin-bottom: 0 !important;
-   
+  border-top:solid rgba(200,200,200,1) 1px;
 }
     html,
     body {
@@ -84,12 +84,17 @@
   -o-background-size: cover;
   background-position: center
 }
-    .navbar-inverse{
-        background-color: rgba(255,255,255,1);
-        border-bottom: solid rgba(255,80,20,1) 1px;
-        
-    }
-    
+.text-lines{
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  outline-style: none;
+  outline-offset: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #000 1px;
+}
     </style>
 </head>
 
@@ -144,13 +149,13 @@
         <div class="row" id="top-bar">
             <div class="col-md-1 col-lg-1 hidden-sm hidden-xs" ><a href="#" class="slideout-menu-toggle" style="color:black;"><i class="fa fa-bars" style="color:#000;"></i> Filter</a></div>
         <div class="hidden-lg hidden-md col-sm-3 col-xs-3" ><a href="#" class="slideout-menu-toggle" ><img src="img/filter.png"/></a></div>
-           <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/location1.png" id="lo" style="padding:2px;"/></div>
-           <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/care.png" id="ca" /></div>
+           <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/loc1.png" id="lo" style="padding:1px; height:35px;width:35px;"/></div>
+           <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/home_care1.png" id="ca" style="padding:1px; height:33px;width:35px;"/></div>
           
             <div class="col-md-10 hidden-sm hidden-xs">
                 <center>
-                    <input type="text" class="text-line" id="loc" size="30" placeholder="Enter your location?" />
-                    <input type="text" class="text-line" id="care" size="30" placeholder="What care you need?" />
+                    <input type="text" class="text-lines" id="loc" size="30" placeholder="Enter your location?" />
+                    <input type="text" class="text-lines" id="care" size="30" placeholder="What care you need?" />
                 </center>
             </div>
             <div class="col-md-1 col-lg-1 hidden-sm hidden-xs"><center>Sort</center></div>
@@ -167,14 +172,14 @@
  <div class="row" id="ip">
  <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="op" style="position:absolute; top:25%;">
  
-                    <input type="text" class="text-line" id="s" size="30" placeholder="Enter your location?" />
+                    <input type="text" class="text-lins" id="s" size="30" placeholder="Enter your location?" />
                 
                 </div>
                 </div>
                 <div class="row" id="ipp">
  <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="opp" style="position:absolute; top:25%;">
 
-                   <input type="text" class="text-line" id="care" size="30" placeholder="What care you need?" />
+                   <input type="text" class="text-lines" id="care" size="30" placeholder="What care you need?" />
               
                 </div>
                 </div>
@@ -190,7 +195,7 @@
        <div class="row">
           <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 "></div>
           <div class="col-lg-8 col-md-8 hidden-sm hidden-xs" style="position:relative; top:50px;"><h2> Hospitals at Hebbal for cardiology</h2></div>
-           <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="position:relative; top:50px;"><h3
+           <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="position:relative; top:80px;"><h3
            style="background-color:rgba(25,160,175,0.8); padding:3%; font-size:100%; width:100%;"> Hospitals at Hebbal for cardiology</h3></div>
           <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
        </div>
