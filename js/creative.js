@@ -35,7 +35,9 @@ $(document).on("click", function(e){
         $("#op").hide();
     }
 });
-
+$(document).ready(function(){
+    $("#show").hide();
+});
 
 
 
