@@ -60,7 +60,7 @@ body {
 .navbar-default .nav > li > a:focus:hover {
  color:rgba(0,0,0,1);
 /*background-color: #fbc940;*/
-  box-shadow: 0px -1px 0px 0px rgba(251,201,64,1) inset;
+  box-shadow: 0px -2px 0px 0px rgba(251,201,64,1) inset;
 }
 
 
