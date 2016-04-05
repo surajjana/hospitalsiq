@@ -12,9 +12,14 @@ body {
   -o-background-size: cover;
   background-position: center;
   background-image: url('../img/home_bg.png');
-  /*overflow-x:hidden;*/
+ /* overflow-x:hidden;*/
   
 }
+.dropdown-menu > li{
+color: rgba(251,201,64,0.5);
+  }
+
+
 
 
 
@@ -258,4 +263,6 @@ text-justify:inter-word;
     vertical-align: top;
     margin: 5px 3px 0 0;
   }
-
+#imgs:hover{
+  
+}
