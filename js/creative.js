@@ -30,14 +30,15 @@
      
    });
 
-$(document).on("click", function(e){
-    if( !$("#op").is(e.target) ){ 
-        $("#op").hide();
-    }
-});
-$(document).ready(function(){
-    $("#show").hide();
-});
+
+//$(document).on("click", function(e){
+    //if( !$("#op").is(e.target) ){ 
+      //  $("#op").hide();
+   // }
+//});
+//$(document).ready(function(){
+  //  $("#show").hide();
+//});
 
 
 
