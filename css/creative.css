@@ -23,6 +23,9 @@ color: rgba(251,201,64,0.5);
 
 
 
+
+
+
 .navbar-default{
   background-color:rgba(255,255,255,0);
   border-bottom: none;
@@ -87,7 +90,9 @@ color: rgba(251,201,64,0.5);
 .navbar-default .navbar-toggle .icon-bar {
   background-color:#000 ;
 }
+#first{
 
+}
 
 
 
@@ -95,12 +100,27 @@ color: rgba(251,201,64,0.5);
 #top-bar{
   position: relative;
   top: 41px;
-  min-height: 55px;
-  padding-top: 20px;
+  min-height: 40px;
+  padding-top: 15px;
+  padding-bottom: 8px;
  background-color: rgba(251,201,64,1);
   
   border-top:solid rgba(200,200,200,1) 1px;
+  box-shadow: 0 0px 3px rgba(0,0,0,0.7);
+ 
+
 }
+#top-bar1{
+  position: relative;
+  top: 41px;
+  min-height: 40px;
+  padding-top: 15px;
+  padding-bottom: 8px;
+ background-color: rgba(251,201,64,1);
+  
+  border-top:solid rgba(200,200,200,1) 1px;
+  box-shadow: 0 0px 3px rgba(0,0,0,0.7);
+ 
 
 }
 
@@ -121,9 +141,7 @@ color: rgba(251,201,64,0.5);
 ::-webkit-scrollbar-thumb
 {
   background: rgba(0, 0, 0, 0.5);
-}
-
-.text-line {
+} {
   background-color: transparent;
   color: #000;
   outline: none;
@@ -156,9 +174,11 @@ text-align:justify;
 text-justify:inter-word;
 
 }
-
-#imgs{
-  background-color: black;
+hr{
+  height: 10px;
+  border: 0;
+  width:700px;
+  box-shadow: 0 2px 3px -3px rgba(0,0,0,0.9)inset;
 }
 
 #op,
@@ -268,6 +288,16 @@ text-justify:inter-word;
     vertical-align: top;
     margin: 5px 3px 0 0;
   }
-#imgs:hover{
+
+.text-line {
+  background-color: transparent;
+  color: #5a5a5a;
+  outline: none;
+  outline-style: none;
+  outline-offset: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #000 2px;
   
 }

@@ -77,34 +77,99 @@
               margin-bottom: 0 !important;
               border-top:solid rgba(200,200,200,1) 1px;
               }
-     .dropdown-menu{
-        padding: 2px;
+   .dropbtn {
+     position: absolute;
+  top: -30px;
+  width:90px;
+  height: 46px;
+  padding:10px;
+
+
+    background-color: rgba(251,201,64,0.5);
+    color: black;
+ 
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top:15px;
+    background-color: rgba(0,0,0,0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: white;
+   
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: rgba(251,201,64,1);}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:rgba(0,0,0,0.9);
+    color:white;
+
+}
+
+
+
+
+ 
+
+
+
+
+
+ .dropdown-menu{
+  position:absolute;
+  left:-30px;
+  background-color:  rgba(251,201,64,0.5);
+        padding: 0;
         list-style: none;
-        background: #f2f2f2;
+        background: #000;
+        border-radius: 0px;
     }
     .dropdown-menu li{
         display: inline-block;
         position: relative;
-        line-height: 21px;
+     
         text-align: left;
     }
     .dropdown-menu li a{
+      position:relative;
+
         display: block;
-        padding: 8px 25px;
-        color: #333;
+        padding: 18px 16px;
+        color: white;
         text-decoration: none;
     }
     .dropdown-menu li a:hover{
         color: #fff;
-        background: #939393;
+        background: rgba(251,201,64,1);
     }
     .dropdown-menu li ul.dropdown{
         min-width: 125px; /* Set width of the dropdown */
-        background: #f2f2f2;
+        background: rgba(251,201,64,1);
         display: none;
         position: absolute;
-        z-index: 999;
-        left: 0;
+        
+        left: -30px;
     }
     .dropdown-menu li:hover ul.dropdown{
         display: block; /* Display the dropdown */
@@ -112,6 +177,9 @@
     ul li ul.dropdown li{
         display: block;
     }
+
+
+
 
 
         html,
@@ -125,14 +193,14 @@
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
-        background-position: center
+        background-position: center;
         }
 
 
 
         .text-lines{
       background-color: transparent;
-      color: #19a0af;
+      color: #000;
       outline: none;
       outline-style: none;
       outline-offset: 0;
@@ -142,9 +210,13 @@
       border-bottom: solid #000 1px;
       }
 .BODY{
- background-color: rgba(0,0,0,0.9);
+ background-color: #f9f9f9;
 }
-
+#bt{
+  position:relative;
+  top:-5px;
+  background-color: rgba(251,201,64,1);
+}
 
 
 
@@ -210,12 +282,14 @@
         <div class="container-fluid">
             <div class="row" id="top-bar">
                 
-                <div class="col-md-1 col-lg-1 hidden-sm hidden-xs" ><a href="#" class="slideout-menu-toggle" style="color:black; padding-top:20%;"><i class="fa fa-bars" style="color:#19a0af;"></i> Filter</a></div>
+                <div class="col-md-1 col-lg-1 hidden-sm hidden-xs" ><a href="#" class="slideout-menu-toggle" style="color:black; padding-top:20%;"><i class="fa fa-bars" style="color:#000;"></i> Filter</a></div>
                 
                 <div class="hidden-lg hidden-md col-sm-3 col-xs-3" ><a href="#" class="slideout-menu-toggle" ><img src="img/filter.png"/></a></div>
                 
-                <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/loc1.png" id="lo" style="padding:1px; height:35px;width:30px;"/></div>
-                <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/home_care1.png" id="ca" style="padding:1px; height:33px;width:35px;"/></div>
+                <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/loc1.png" id="lo" style="height:28px;width:21px;"/></div>
+
+
+                <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/home_care1.png" id="ca" style="pa height:27px;width:30px;"/></div>
           
                 <div class="col-md-10 hidden-sm hidden-xs">
                 
@@ -231,23 +305,20 @@
                 
 
                 <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
-                
-                    <div class="dropdown">
-                
-                      <button class="btn btn-default dropdown-toggle" id="bt" type="button" style="border:none;color:#19a0af; border-radius:0px;" data-toggle="dropdown" >Sort
-                
-                      <span class="caret"></span></button>
-                
-                      <ul class="dropdown-menu">
-                          <li><a href="#">Distance</a></li>
-                         <li><a href="#">Popularity</a></li>
-     
-                      </ul>
-                  
-                    </div>
+                              
+              <div class="dropdown">
+                <button class="dropbtn" >Sort<span class="caret" style="color:white;"></span></button>
+                <div class="dropdown-content">
+                  <a href="#">Distance</a>
+                  <a href="#">Popularity</a>
+            
+                </div>
+              </div>
+
                 
                   </div>
                   <div class="hidden-lg hidden-md col-sm-3 col-xs-3">
+                  
                     <div class="dropdown">
                 
                       <button class="btn btn-default dropdown-toggle" id="bt" type="button" style="border:none;color:#19a0af; border-radius:0px;" data-toggle="dropdown" ><img src="img/sort.png" style="height:25px;width:23px;padding:1px;"/>
@@ -261,7 +332,8 @@
                       </ul>
                   
                     </div>
-            
+                
+                  </div>
             
             </div>
        
@@ -278,18 +350,18 @@
 
  <div class="container">
  <div class="row" id="ip">
- <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="op" style="position:absolute; top:25%;">
+ <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="op" style="position:absolute; top:30%;">
  
-                    <input type="text" class="text-lines" id="s" size="30" placeholder="Enter your location?" />
+                    <input type="text" class="text-lines" id="s" size="26" placeholder="Enter your location?" />
                 
                 </div>
                 </div>
               
 
 <div class="row" id="ipp">
- <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="opp" style="position:absolute; top:25%;">
+ <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="opp" style="position:absolute; top:30%;">
 
-                   <input type="text" class="text-lines" id="care" size="30" placeholder="What care you need?" />
+                   <input type="text" class="text-lines" id="care" size="26" placeholder="What care you need?" />
               
                 </div>
                 </div>
@@ -304,9 +376,9 @@
     <div class="container-fluid" >
        <div class="row">
           <div class="col-lg-2 col-md-2 hidden-sm  hidden-xs "></div>
-          <div class="col-lg-8 col-md-8 hidden-sm hidden-xs" style="position:relative; top:50px; color:white;"><h2> Hospitals at Hebbal for cardiology</h2></div>
-           <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="position:relative; top:10`0px;padding:3%"><h3
-           style="background-color:rgba(251,201,64,0.6); font-size:100%; width:100%; color:white;"> Hospitals at Hebbal for cardiology</h3></div>
+          <div class="col-lg-8 col-md-8 hidden-sm hidden-xs" style="position:relative; top:50px; color:black;"><h2> Hospitals at Hebbal for cardiology</h2></div>
+           <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="position:relative; top:100px;padding:3%"><h3
+           style="font-size:16px; width:100%; color:black;"> Hospitals at Hebbal for cardiology</h3></div>
           <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
        </div>
     </div>
@@ -315,26 +387,46 @@
 
 
 <section>
-    <div class="container-fluid" style="position:relative;top:100px; padding-left:0;padding-right:0;">
+    <div class="container" style="position:relative;top:100px; padding-left:0;padding-right:0;">
       <div class="row" id="first"> 
+      <hr/>
           <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
               <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" ><center><img id="imgs"src="img/Fortis.png" /></center> </div>
+              <div class="col-lg-1 col-md-1 hidden-sm hidden-xs"></div>
               <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
-                  <br/>
+                  
                   <h4>Fortis Hospital</h4>
-                  <p style="text-align:justify; text-justify:inter-word;color:white; ">Fortis Healthcare Limited is a leading integrated healthcare delivery service provider in India. The healthcare verticals of the company primarily comprise hospitals, diagnostics and day care specialty facilities.</p>
+                  <p style="text-align:justify; text-justify:inter-word;color:black; ">
+                  Bangalore Baptist Hospital<br/>
+
+Bellary Road, Hebbal, Bangalore, Bangalore, Karnataka<br/>
+Hospital<br/>
+Allopathy</p>
+
+
               </div>
+
+
+
               <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
                   <center> <h4>Fortis Hospital</h4></center>
                   <center>
-                  <p style="position:relative; left:5%;color:white;">Fortis Healthcare Limited is a leading integrated healthcare delivery service provider in India. The healthcare verticals of the company primarily comprise hospitals, diagnostics and day care specialty facilities.</p></center>
+                    <p style="text-align:justify; text-justify:inter-word;color:black; ">
+                  Bangalore Baptist Hospital<br/>
+
+Bellary Road, Hebbal, Bangalore, Bangalore, Karnataka<br/>
+Hospital<br/>
+Allopathy</p></center>
               </div>
 
               <div class="col-lg-2 col-md-3 hidden-sm hidden-xs"></div>
       </div>
       
       <br/>
+      <hr/>
+       
       <br/>
+      
     
       <div class="row" id="first">
           <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
@@ -347,7 +439,7 @@
            
            <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
                <center><h4>Manipal Hospital</h4></center>
-               <center> <p style="text-align:justify; text-justify:inter-word; color:white;">Manipal Hospitals is part of the Manipal Education and Medical Group (MEMG), which pioneers in the field of education and healthcare delivery. The focus at Manipal Hospitals is to develop an affordable tertiary care multispecialty healthcare framework through its entire delivery spectrum and further extend it to homecare. </p></center>
+               <center> <p style="text-align:justify; text-justify:inter-word; color:black;">Manipal Hospitals is part of the Manipal Education and Medical Group (MEMG), which pioneers in the field of education and healthcare delivery. The focus at Manipal Hospitals is to develop an affordable tertiary care multispecialty healthcare framework through its entire delivery spectrum and further extend it to homecare. </p></center>
            </div>
            <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
       </div>
@@ -362,7 +454,7 @@
            <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
                <br/>
                <h4>Fortis Hospital</h4>
-                <p style="text-align:justify; text-justify:inter-word; color:white;">Fortis Healthcare Limited is a leading integrated healthcare delivery service provider in India. The healthcare verticals of the company primarily comprise hospitals, diagnostics and day care specialty facilities.</p>
+                <p style="text-align:justify; text-justify:inter-word; color:black;">Fortis Healthcare Limited is a leading integrated healthcare delivery service provider in India. The healthcare verticals of the company primarily comprise hospitals, diagnostics and day care specialty facilities.</p>
           </div>
           <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
                 <center> <h4>Fortis Hospital</h4></center>
@@ -383,7 +475,7 @@
           <div  class="col-lg-6 col-md-6 hidden-sm hidden-xs">
                 <h4>Manipal Hospital</h4>
 
-                <p style="text-align:justify; text-justify:inter-word; color:white;">Manipal Hospitals is part of the Manipal Education and Medical Group (MEMG), which pioneers in the field of education and healthcare delivery. The focus at Manipal Hospitals is to develop an affordable tertiary care multispecialty healthcare framework through its entire delivery spectrum and further extend it to homecare. </p>
+                <p style="text-align:justify; text-justify:inter-word; color:black;">Manipal Hospitals is part of the Manipal Education and Medical Group (MEMG), which pioneers in the field of education and healthcare delivery. The focus at Manipal Hospitals is to develop an affordable tertiary care multispecialty healthcare framework through its entire delivery spectrum and further extend it to homecare. </p>
            </div>
            
            <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
@@ -402,7 +494,7 @@
            <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
                  <br/>
                  <h4>Fortis Hospital</h4>
-                 <p style="text-align:justify; text-justify:inter-word;color:white; ">Fortis Healthcare Limited is a leading integrated healthcare delivery service provider in India. The healthcare verticals of the company primarily comprise hospitals, diagnostics and day care specialty facilities.</p>
+                 <p style="text-align:justify; text-justify:inter-word;color:black; ">Fortis Healthcare Limited is a leading integrated healthcare delivery service provider in India. The healthcare verticals of the company primarily comprise hospitals, diagnostics and day care specialty facilities.</p>
           </div>
           
           <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
@@ -425,7 +517,7 @@
           <div  class="col-lg-6 col-md-6 hidden-sm hidden-xs">
                 <h4>Manipal Hospital</h4>
 
-                <p style="text-align:justify; text-justify:inter-word;color:white; ">Manipal Hospitals is part of the Manipal Education and Medical Group (MEMG), which pioneers in the field of education and healthcare delivery. The focus at Manipal Hospitals is to develop an affordable tertiary care multispecialty healthcare framework through its entire delivery spectrum and further extend it to homecare. </p>
+                <p style="text-align:justify; text-justify:inter-word;color:black; ">Manipal Hospitals is part of the Manipal Education and Medical Group (MEMG), which pioneers in the field of education and healthcare delivery. The focus at Manipal Hospitals is to develop an affordable tertiary care multispecialty healthcare framework through its entire delivery spectrum and further extend it to homecare. </p>
            </div>
            
            <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
@@ -445,7 +537,7 @@
            <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
                  <br/>
                  <h4>Fortis Hospital</h4>
-                 <p style="text-align:justify; text-justify:inter-word;color:white; ">Fortis Healthcare Limited is a leading integrated healthcare delivery service provider in India. The healthcare verticals of the company primarily comprise hospitals, diagnostics and day care specialty facilities.</p>
+                 <p style="text-align:justify; text-justify:inter-word;color:black; ">Fortis Healthcare Limited is a leading integrated healthcare delivery service provider in India. The healthcare verticals of the company primarily comprise hospitals, diagnostics and day care specialty facilities.</p>
            </div>
            <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
                 <center> <h4>Fortis Hospital</h4></center>
