@@ -152,16 +152,16 @@ color: rgba(251,201,64,0.5);
   border-right: none;
   border-bottom: solid #000 2px;
 }
-h2{
+h3{
   position:relative;
-  border-bottom: solid rgba(251,201,64,0.5) 1px;
+  border-bottom:solid rgba(251,201,64,0.5) 2px;
 
     padding-top:5%;
   width:100%;
 }
 #first h4{
   
-  color: rgba(100,100,100,1);
+  color: rgba(0,0,0,0.9);
 }
 #first{
   position: relative;
@@ -220,7 +220,7 @@ text-justify:inter-word;
     color: #fff;
     font-size: 1.2em;
     font-weight: 400;
-    border-bottom: 4px solid #222;
+    border-bottom: 5px solid #222;
   }
   .slideout-menu .slideout-menu-toggle {
     position: absolute;

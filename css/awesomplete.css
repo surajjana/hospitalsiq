@@ -75,12 +75,12 @@ div.awesomplete > ul:empty {
 	
 	div.awesomplete > ul > li:hover {
 		background: hsl(200, 40%, 80%);
-		color: black;
+		color: white;
 	}
 	
 	div.awesomplete > ul > li[aria-selected="true"] {
-		background: hsl(205, 40%, 40%);
-		color: white;
+		background: hsl(0, 40%, 40%);
+		color: rgba(250,201,64,1);
 	}
 	
 		div.awesomplete mark {
