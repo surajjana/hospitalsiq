@@ -159,10 +159,7 @@ h3{
     padding-top:5%;
   width:100%;
 }
-#first h4{
-  
-  color: rgba(0,0,0,0.9);
-}
+
 #first{
   position: relative;
  
@@ -220,7 +217,7 @@ text-justify:inter-word;
     color: #fff;
     font-size: 1.2em;
     font-weight: 400;
-    border-bottom: 5px solid #222;
+    border-bottom: 4px solid #222;
   }
   .slideout-menu .slideout-menu-toggle {
     position: absolute;
