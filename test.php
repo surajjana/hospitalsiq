@@ -334,7 +334,7 @@ $json_a = json_decode($res, true);
           for($i=0;$i<sizeof($json_a["result"]);$i=$i+1){ 
             echo '<div class="row row-gap-medium">
           <div class="col-sm-2"></div>
-          <div class="col-sm-2 col-xs-12"><center><img src="img/bb.png" id="pa" onload="fadeIn(this)" style="display:none;position:relative;top:1px;"/></center></div>
+          <div class="col-sm-2 col-xs-12"><center><img src="img/hosp.png" id="pa" onload="fadeIn(this)" style="display:none;position:relative;top:1px;"/></center></div>
           <div class="col-sm-8 hidden-xs" style="position:relative;left:4%;" >
             <div class="row row-gap-small" >
               <h4>'.$json_a["result"][$i]["name"].'</h4>
