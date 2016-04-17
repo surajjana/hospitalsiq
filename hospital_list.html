@@ -28,8 +28,11 @@
 
     <link rel="stylesheet" type="text/css/awesomplete.css" href="css/">
     <script type="text/javascript" src="js/awesomplete.js"></script>
-<link rel="stylesheet" type="text/css" href="css/all.min.css" />
+
+<link rel="stylesheet" type="text/css" href="css/all1.min.css" />
+
 <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+<script type="text/javascript" src="js/list.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -75,8 +78,7 @@
     } 
 
     </script>
-
- <script type="text/javascript">
+    <script type="text/javascript">
     var cares = ["Radiology",
                 "Urology",
                 "Veterinary",
@@ -113,14 +115,29 @@
             },
             minLength: 1
         });
+         $("#autocomplete2").shieldAutoComplete({
+            dataSource: {
+                data: cares
+            },
+            minLength: 1
+        });
         
     });
-</script>
-   
+    </script>
+    <style>
+    #top-bar{
+  position: relative;
+  top: 41px;
+  min-height: 40px;
+  padding-top: 15px;
+  padding-bottom: 8px;
+ background-color: rgba(255,201,64,1);
+  
+  border-top:solid rgba(200,200,200,1) 1px;
+  box-shadow: 0 0px 3px rgba(0,0,0,0.7);
+ 
 
-
-
-  <style>
+}
     
 
     .page-top{
@@ -195,11 +212,8 @@
       cursor: pointer;
     }
 
+
   </style>
-
-
-</head>
-
 
 
 
@@ -309,18 +323,20 @@
   </div>
   <div class="row" id="ipp">
     <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="opp" style="position:relative; top:57px;">
-      <input type="text" class="text-lines" id="care1" size="26" placeholder="What care you need?" />
-    </div>
+
+                <input id="autocomplete2" class="text-lines" size="26" type="text" placeholder="Type a care" /><br />
+                    <button type="submit" class="btn" style="  position:relative;
+                    left:150px;
+                    top:16px;
+                    background:none;
+                    color: #fbc940;">
+                    <i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i>
+
+                    </button>    </div>
   </div>
 </div>
-          
 
-
-
-   
-
-
-<section>
+ <section>
   <div class="container">
     <div class="row">
       <div class="col-sm-2"></div>
@@ -328,11 +344,6 @@
     </div>
   </div>
 </section>
-
-   
-
-
-
 
 
 <div class="wrap">
@@ -366,6 +377,7 @@
               </p>
             </div></center>
           </div>
+
         
         </div>
         
