@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>HospitalsIQ | Home</title>
+
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -29,6 +29,10 @@
 
     <link rel="stylesheet" type="text/css/awesomplete.css" href="css/">
     <script type="text/javascript" src="js/awesomplete.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
+<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+  <title>HospitalsIQ | Home</title>
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -94,10 +98,8 @@
         });
     </script>
 
-    <script>
-         /*$(function() {
-            var availableTutorials = [
-               "Radiology",
+      <script type="text/javascript">
+    var cares = ["Radiology",
                 "Urology",
                 "Veterinary",
                 "Opthalmology",
@@ -124,20 +126,26 @@
                 "Neurology",
                 "Maternity",
                 "Dermatology",
-                "Children"
-                            ];
-            $( "#Radius" ).autocomplete({
-               minLength:1,   
-               delay:500,   
-               source: availableTutorials
-            });
-         });*/
-      </script>
+                "Children"];
+
+    jQuery(function ($) {
+        $("#a").shieldAutoComplete({
+            dataSource: {
+                data: cares
+            },
+            minLength: 1
+        });
+        
+    });
+</script>
+
 
 
 
 
     <style type="text/css">
+
+    ul.ui-shieldAutoComplete.ui-dataSource{width:500px;}
     body{
         overflow-x:hidden;
     }
@@ -152,6 +160,48 @@
         background:none;
         color: #fbc940;
     }
+     #loc{
+        position:relative;
+        top:100%;
+        font-size: 18px;
+        left:200px;
+        padding-top:85%;
+        padding-left:10%;
+        color:black;
+    }
+    .care{
+        position:relative;
+        top:0%;
+        font-size: 18px;
+        left:200px;
+        padding-top:5%;
+        padding-left:5%;
+        color:black;
+
+    }
+   
+
+        #location{
+        position:relative;
+        top:0%;
+        left:1%;
+        font-size: 20px;
+        padding-top:8%;
+        padding-left:8%;
+        color:black;
+    }
+.text-line {
+  background-color: transparent;
+  color: #5a5a5a;
+  outline: none;
+  outline-style: none;
+  outline-offset: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #000 2px;
+  
+}
 
 </style>
 
@@ -225,7 +275,7 @@
             <div class="hidden-lg hidden-md col-sm-10 col-xs-10" >
 
                 
-                <input type="text" name="location" size="16" id="location" class="text-line" />
+                <input type="text" name="location" size="30" id="location" class="text-line" />
            
             </div>
            
@@ -253,15 +303,29 @@
        
 
 
-            <div class="col-lg-2 col-md-2 hidden-sm hidden-xs" >
+            <div class=" col-lg-9" >
 
                 
-                <input type="text" name="care" size="24" id="care" class="awesomplete text-line" placeholder="Enter the care required" data-list="Radiology,Urology,Veterinary,Opthalmology,Eye,Gastroenterologist,Cardiology,Dental,Anesthesiology,Hematology,Psychiatric,Diabetes,Cosmetic & Plastic Surgery,Immunology,Ayurveda,Nephrology,ENT,Homeopathy,Oncology,Mental,Cancer,Orthopaedic,Gynecology,Rheumatology,Neurology,Maternity,Dermatology,Children" />
-                      <button type="submit" class="btn ">
-              <i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i>
+                
+   
+  
+      
+               
+               
+               
+                <input id="a" class="text-line care" size="30" type="text" placeholder="Type a care" /><br />
+                 <button type="submit" class="btn" style="  position:relative;
+        left:200px;
+        top:0px;
+        background:none;
+        color: #fbc940;">
+               <i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i>
 
             </button>
-           
+                
+        
+  
+                
             </div>
            
          
@@ -276,22 +340,7 @@
             <div class="hidden-lg hidden-md col-sm-2 col-xs-2" > <img src="img/home_care.png" style="position:absolute; top:55%; left:0px; padding-top:55%; padding-left:20%;" /></div>
 
 
-            <div class="hidden-lg hidden-md col-sm-10 col-xs-10" >
 
-             
-                <input type="text" name="care_small" size="30" id="care_small" class="awesomplete text-line" placeholder="Enter the care required" data-list="Radiology,Urology,Veterinary,Opthalmology,Eye,Gastroenterologist,Cardiology,Dental,Anesthesiology,Hematology,Psychiatric,Diabetes,Cosmetic & Plastic Surgery,Immunology,Ayurveda,Nephrology,ENT,Homeopathy,Oncology,Mental,Cancer,Orthopaedic,Gynecology,Rheumatology,Neurology,Maternity,Dermatology,Children" />
-                           <button type="submit" class="btn" style="  position:relative;
-        left:200px;
-        top:0px;
-
-        background:none;
-        color: #fbc940;">
-               <i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i>
-
-            </button>
-            </div>
-           
-       
         </div>
    
     </div>
