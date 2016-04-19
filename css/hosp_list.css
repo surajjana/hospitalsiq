@@ -61,8 +61,8 @@ dropdown label, dropdown ul li {
 }
 
 dropdown label:hover, dropdown ul li:hover {
-  background:  rgba(240,240,240,1);
-  color: black;
+  background:  rgba(246,246,246,1);
+  color: rgba(100,100,100,1);
   cursor: pointer;
 }
 
