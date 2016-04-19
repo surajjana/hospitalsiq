@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
@@ -20,6 +21,7 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
+      <link rel="stylesheet" href="css/trans.css" type="text/css">
     <link rel="stylesheet" href="css/creative.css" type="text/css">
      <link rel="stylesheet" href="css/hosp_list.css" type="text/css">
     <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
@@ -72,12 +74,7 @@
             });
         });
     </script>
-    <script type="text/javascript">
-    window.fadeIn = function(obj) {
-    $(obj).fadeIn(500);
-    } 
-
-    </script>
+   
     <script type="text/javascript">
     var cares = ["Radiology",
                 "Urology",
@@ -124,20 +121,16 @@
         
     });
     </script>
-    <style>
-    #top-bar{
-  position: relative;
-  top: 41px;
-  min-height: 40px;
-  padding-top: 15px;
-  padding-bottom: 8px;
- background-color: rgba(255,201,64,1);
-  
-  border-top:solid rgba(200,200,200,1) 1px;
-  box-shadow: 0 0px 3px rgba(0,0,0,0.7);
- 
+   
+   <script type="text/javascript">
+     $(document).ready(function(){
+    $('#para').addClass('animated fadeIn');
+    $("#k").addClass('animated fadeIn');
+  });
+ </script>
 
-}
+    <style>
+ 
     
 
     .page-top{
@@ -151,6 +144,7 @@
         border-bottom: none;
         margin-bottom: 0 !important;
         border-top:solid rgba(200,200,200,1) 1px;
+        max-height:40px;
     }
    
 
@@ -158,7 +152,7 @@
     html,
     body {
         background-image: none;
-        background-color: rgba(255,255,255,1);
+        background-color: rgba(240,240,240,1);
         height:100%;
         width:100%;
         min-height: auto;
@@ -185,17 +179,13 @@
 
 
     
-    .BODY{
-      background-color: rgba(200,200,200,1);
-    }
-
 
     
     #bt{
       position:relative;
       top:-2px;
       left:-20px;
-      background-color: rgba(251,201,64,1);
+      background-color: rgba(240,240,240,1);;
     }
 
 
@@ -205,7 +195,7 @@
       width:160px;
       height: 46px;
       padding:2px;
-      background-color: rgba(251,201,64,0.5);
+      background-color: rgba(240,240,240,1);;
       color: black;
       font-size: 16px;
       border: none;
@@ -257,15 +247,17 @@
       <div class="container-fluid">
         <div class="row" id="top-bar">
           <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
-            <div class="dropdown" >
-              <button class="dropbtn" id="btt">  <i class="fa fa-bars" style="color:#fff;"></i> Filters  </button>
-              <div class="dropdown-content" style="position: absolute; top:10px; left:0px;" >
-                <a href="#">Radiology</a>
-                <a href="#">Ambulance</a>
-                <a href="#">Emergency</a>
-                <a href="#">ATM</a>
-              </div>
-            </div>
+                        <dropdown>
+  <input id="toggle2" type="checkbox">
+  <label for="toggle2" class="animate">Editor<i class="fa fa-list float-right"></i></label>
+  <ul class="animate">
+    <li class="animate">Radiology<i class="fa fa-code float-right"></i></li>
+    <li class="animate">Ambulance<i class="fa fa-ambulance" style="position:relative;left:45px;"></i></li>
+    <li class="animate">Emergency<i class="fa fa-cog float-right"></i></li>
+     <li class="animate">Atm<i class="fa fa-usd" style="position:relative;left:93px;"></i></li>
+  </ul>
+</dropdown>
+
           </div>
           <div class="hidden-lg hidden-md col-sm-3 col-xs-3" ><a href="#" class="slideout-menu-toggle" ><img src="img/filter.png"/></a></div>
           <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/loc1.png" id="lo" style="height:28px;width:21px;"/></div>
@@ -349,10 +341,10 @@
 <div class="wrap">
   <div class="container">
     <div class="row row-gap-small">
-      <div class="col-sm-12" id="list" style="positive:relative;top:100px;" > 
+      <div class="col-sm-12" id="k" style="positive:relative;top:100px;" > 
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
-          <div class="col-sm-2 col-xs-12"><center><img src="img/bb.png" id="pa" onload="fadeIn(this)" style="display:none;position:relative;top:1px;"/></center></div>
+          <div class="col-sm-2 col-xs-12"  ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
           <div class="col-sm-8 hidden-xs" style="position:relative;left:4%;" >
             <div class="row row-gap-small" >
               <h4> RMV Hospital</h4>
@@ -377,17 +369,129 @@
               </p>
             </div></center>
           </div>
+        </div>
+        <div class="row row-gap-medium">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png" style="position:relative;top:1px;"/></center></div>
+          <div class="col-sm-8 hidden-xs"  style="position:relative;left:4%;" >
+            <div class="row row-gap-small" >
+              <h4> RMV Hospital</h4>
+            </div>
+            <div  class="row row-gap-small"> 
+              <p>
+                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
+                Hospital<br/>
+                Allopathy<br/>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-10 hidden-sm hidden-lg hidden-md" style="position:relative;left:4%;" >
+            <center><div class="row row-gap-small" >
+              <h4> RMV Hospital</h4>
+            </div>
+            <div  class="row row-gap-small"> 
+              <p>
+                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
+                Hospital<br/>
+                Allopathy<br/>
+              </p>
+            </div></center>
+          </div>
+        </div>
+        
+        <div class="row row-gap-medium">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
+          <div class="col-sm-8 hidden-xs"  style="position:relative;left:4%;" >
+            <div class="row row-gap-small" >
+              <h4> RMV Hospital</h4>
+            </div>
+            <div  class="row row-gap-small"> 
+              <p>
+                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
+                Hospital<br/>
+                Allopathy<br/>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-10 hidden-sm hidden-lg hidden-md" style="position:relative;left:4%;" >
+            <center><div class="row row-gap-small" >
+              <h4> RMV Hospital</h4>
+            </div>
+            <div  class="row row-gap-small"> 
+              <p>
+                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
+                Hospital<br/>
+                Allopathy<br/>
+              </p>
+            </div></center>
+          </div>
+        </div>
 
-        
-        </div>
-        
 
-        
-      
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
-          <div class="col-sm-2 col-xs-12"><center><img src="img/bb.png" id="pa" onload="fadeIn(this)" style="display:none;position:relative;top:1px;"/></center></div>
-          <div class="col-sm-8 hidden-xs" style="position:relative;left:4%;" >
+          <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
+          <div class="col-sm-8 hidden-xs"  style="position:relative;left:4%;" >
+            <div class="row row-gap-small" >
+              <h4> RMV Hospital</h4>
+            </div>
+            <div  class="row row-gap-small"> 
+              <p>
+                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
+                Hospital<br/>
+                Allopathy<br/>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-10 hidden-sm hidden-lg hidden-md" style="position:relative;left:4%;" >
+            <center><div class="row row-gap-small" >
+              <h4> RMV Hospital</h4>
+            </div>
+            <div  class="row row-gap-small"> 
+              <p>
+                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
+                Hospital<br/>
+                Allopathy<br/>
+              </p>
+            </div></center>
+          </div>
+        </div>
+
+
+        <div class="row row-gap-medium">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
+          <div class="col-sm-8 hidden-xs"  style="position:relative;left:4%;" >
+            <div class="row row-gap-small" >
+              <h4> RMV Hospital</h4>
+            </div>
+            <div  class="row row-gap-small"> 
+              <p>
+                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
+                Hospital<br/>
+                Allopathy<br/>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-10 hidden-sm hidden-lg hidden-md" style="position:relative;left:4%;" >
+            <center><div class="row row-gap-small" >
+              <h4> RMV Hospital</h4>
+            </div>
+            <div  class="row row-gap-small"> 
+              <p>
+                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
+                Hospital<br/>
+                Allopathy<br/>
+              </p>
+            </div></center>
+          </div>
+        </div>
+
+        <div class="row row-gap-medium">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
+          <div class="col-sm-8 hidden-xs"  style="position:relative;left:4%;" >
             <div class="row row-gap-small" >
               <h4> RMV Hospital</h4>
             </div>
@@ -415,8 +519,8 @@
         
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
-          <div class="col-sm-2 col-xs-12"><center><img src="img/bb.png" id="pa" onload="fadeIn(this)" style="display:none;position:relative;top:1px;"/></center></div>
-          <div class="col-sm-8 hidden-xs" style="position:relative;left:4%;" >
+          <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png" style="position:relative;top:1px;"/></center></div>
+          <div class="col-sm-8 hidden-xs"  style="position:relative;left:4%;" >
             <div class="row row-gap-small" >
               <h4> RMV Hospital</h4>
             </div>
@@ -442,36 +546,7 @@
           </div>
         </div>
         
-       
-        <div class="row row-gap-medium">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-2 col-xs-12"><center><img src="img/bb.png" id="pa" onload="fadeIn(this)" style="display:none;position:relative;top:1px;"/></center></div>
-          <div class="col-sm-8 hidden-xs" style="position:relative;left:4%;" >
-            <div class="row row-gap-small" >
-              <h4> RMV Hospital</h4>
-            </div>
-            <div  class="row row-gap-small"> 
-              <p>
-                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
-                Hospital<br/>
-                Allopathy<br/>
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-10 hidden-sm hidden-lg hidden-md" style="position:relative;left:4%;" >
-            <center><div class="row row-gap-small" >
-              <h4> RMV Hospital</h4>
-            </div>
-            <div  class="row row-gap-small"> 
-              <p>
-                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
-                Hospital<br/>
-                Allopathy<br/>
-              </p>
-            </div></center>
-          </div>
-        </div>
-      
+        
 
       </div>
    </div>
