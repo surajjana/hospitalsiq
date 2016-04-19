@@ -54,7 +54,7 @@ dropdown {
 dropdown label, dropdown ul li {
   display: block;
   width: 150px;
-  height:45px;
+  height:48px;
   background: rgba(240,240,240,1);
   padding: 15px 10px;
   z-index:2px;
@@ -62,7 +62,7 @@ dropdown label, dropdown ul li {
 
 dropdown label:hover, dropdown ul li:hover {
   background:  rgba(240,240,240,1);
-  color: white;
+  color: black;
   cursor: pointer;
 }
 
