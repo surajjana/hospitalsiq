@@ -55,7 +55,15 @@
                 var mesg = "Address: " + address;
                 mesg += "\nLatitude: " + latitude;
                 mesg += "\nLongitude: " + longitude;
-                alert(mesg);
+              /*  alert(mesg);*/
+              document.getElementById("lat").value = latitude;
+                document.getElementById("lon").value = longitude;
+                if(places!='\0')
+                {
+                    $("#lonlat").hide();
+                  
+                }
+
             });
         });
     </script>
@@ -70,10 +78,41 @@
                 var mesg = "Address: " + address;
                 mesg += "\nLatitude: " + latitude;
                 mesg += "\nLongitude: " + longitude;
-                alert(mesg);
+               /* alert(mesg);*/
+                 document.getElementById("lat").value = latitude;
+                document.getElementById("lon").value = longitude;
+                if(places!='\0')
+                {
+                    $("#lonlat").hide();
+                  
+                }
             });
         });
     </script>
+
+    <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
    
     <script type="text/javascript">
     var cares = ["Radiology",
@@ -124,7 +163,7 @@
    
    <script type="text/javascript">
      $(document).ready(function(){
-    $('#para').addClass('animated fadeIn');
+   
     $("#k").addClass('animated fadeIn');
   });
  </script>
@@ -154,7 +193,7 @@
     html,
     body {
         background-image: none;
-        background-color: rgba(240,240,240,1);
+        background-color: rgba(248,248,248,1);
         height:100%;
         width:100%;
         min-height: auto;
@@ -186,8 +225,9 @@
     #bt{
       position:relative;
       top:-2px;
-      left:-20px;
-      background-color: rgba(240,240,240,1);;
+      left:20px;
+      background-color: rgba(248,248,248,1);
+
     }
 
 
@@ -245,83 +285,111 @@
 
     
 
-    <div class=" navbar-custom">
-      <div class="container-fluid">
-        <div class="row" id="top-bar">
-          <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
-                        <dropdown>
-  <input id="toggle2" type="checkbox">
-  <label for="toggle2" class="animate">Filter<i class="fa fa-filter fa-2x float-right"></i></label>
-  <ul class="animate">
-    <li class="animate">Radiology<i class="fa fa-life-ring float-right"></i></li>
-    <li class="animate">Ambulance<i class="fa fa-ambulance float-right"></i></li>
-    <li class="animate">Emergency<i class="fa fa-sign-in float-right"></></i></li>
-     <li class="animate">Atm<i class="fa fa-usd float-right"></i></li>
-  </ul>
-</dropdown>
-
-          </div>
-          <div class="hidden-lg hidden-md col-sm-3 col-xs-3" >
-          <dropdown>
-  <input id="toggle2" type="checkbox">
-  <label for="toggle2" class="animate"><i class="fa fa-filter fa-2x float-left"></i></label>
-  <ul class="animate">
-    <li class="animate">Radiology<i class="fa fa-life-ring float-right"></i></li>
-    <li class="animate">Ambulance<i class="fa fa-ambulance float-right"></i></li>
-    <li class="animate">Emergency<i class="fa fa-sign-in float-right"></></i></li>
-     <li class="animate">Atm<i class="fa fa-usd float-right"></i></li>
-  </ul>
-</dropdown></div>
-          <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/loc1.png" id="lo" style="height:28px;width:21px;"/></div>
-          <div class="hidden-lg hidden-md col-sm-3 col-xs-3"><img src="img/home_care1.png" id="ca" style="pa height:27px;width:30px;"/></div>
-          <div class="col-md-9 hidden-sm hidden-xs">
-            <center>
-             
-              
-                    
-                    <input type="text" class="text-lines" id="loc" size="30" placeholder="Enter your location?" />
-                     
- 
-             
-                   <input id="autocomplete1" class="text-lines" size="30" placeholder="What care you need?">
-                
-             
-                </center>
-                
-          </div>
-          <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
-            <dropdown style="position:relative;left:75%;">
-              <input id="toggle3" type="checkbox">
-              <label for="toggle3" class="animate">Sort<i class="fa fa-sort fa-2x float-right"></i></label>
-              <ul class="animate">
-                <li class="animate">Distance<i class="fa fa-bullseye fa-3x float-right"></i></li>
-                <li class="animate">Popularity<i class="fa fa-line-chart float-right"></i></li>
-               
-              </ul>
-          </dropdown>
-          </div>
-          <div class="hidden-lg hidden-md col-sm-3 col-xs-3">
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" id="bt" type="button" style="border:none;color:#19a0af; border-radius:0px;" data-toggle="dropdown" ><img src="img/sort.png" style="height:25px;width:23px;padding:1px;"/>
-              <span class="caret" style="color:black;"></span></button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Distance</a></li>
-                <li><a href="#">Popularity</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<div class=" navbar-custom">
+  <div class="container-fluid">
+    <div class="row" id="top-bar">
+      <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
+        <dropdown>
+          <input id="toggle2" type="checkbox">
+          <label for="toggle2" class="animate">Filter<i class="fa fa-filter fa-2x float-right"></i></label>
+          <ul class="animate">
+            <li class="animate">Radiology<i class="fa fa-life-ring float-right"></i></li>
+            <li class="animate">Ambulance<i class="fa fa-ambulance float-right"></i></li>
+            <li class="animate">Emergency<i class="fa fa-sign-in float-right"></i></li>
+             <li class="animate">Atm<i class="fa fa-usd float-right"></i></li>
+          </ul>
+        </dropdown>
       </div>
+         
+        
+                <!--<div class="hidden-lg hidden-md col-sm-3 col-xs-3" >
+             <dropdown>
+              <input id="toggle2" type="checkbox">
+              <label for="toggle2" class="animate"><i class="fa fa-filter fa-2x float-right"></i></label>
+              <ul class="animate">
+                <li class="animate">Radiology<i class="fa fa-life-ring float-right"></i></li>
+                <li class="animate">Ambulance<i class="fa fa-ambulance float-right"></i></li>
+                <li class="animate">Emergency<i class="fa fa-sign-in float-right"></i></li>
+                 <li class="animate">Atm<i class="fa fa-usd float-right"></i></li>
+              </ul>
+              </dropdown>-->
+      <div class="hidden-lg hidden-md col-sm-3 col-xs-3" >
+        <dropdown>
+          <button onclick="myFunction()" class="dropbtn"><i class="fa fa-filter fa-5x"></i></button>
+          <ul id="myDropdown" class="animate" style="display:none; position:relative; top:5px;">
+            <li class="animate">Radiology<i class="fa fa-life-ring float-right"></i></li>
+            <li class="animate">Ambulance<i class="fa fa-ambulance float-right"></i></li>
+            <li class="animate">Emergency<i class="fa fa-sign-in float-right"></i></li>
+            <li class="animate">Atm<i class="fa fa-usd float-right"></i></li>
+          </ul>
+        </dropdown>
+      </div>
+
+          
+      <div class="hidden-lg hidden-md col-sm-3 col-xs-3">
+        <i class="fa fa-map-marker fa-5" id="lo" style="position:relative; left:9px;color:#1ABC9C;"></i>
+      </div>
+
+          
+      <div class="hidden-lg hidden-md col-sm-3 col-xs-3">
+        <i class="fa fa-users" aria-hidden="true" id="ca" style="position:relative; left:12px;color:#1ABC9C;"></i>
+      </div>
+
+          
+      <div class="col-md-9 hidden-sm hidden-xs">
+        <center>
+          <input type="text" class="text-lines" id="loc" size="30" placeholder="Enter your location?" />
+          <input type="hidden" name="lat" id="lat" value="">
+          <input type="hidden" name="lon" id="lon" value="">
+          <input id="autocomplete1" class="text-lines" size="30" placeholder="What care you need?">
+          <button type="submit" class="btn" 
+            style=" position:relative;
+                    left:20px;
+                    top:5px;
+                    background:none;
+                    color: #000;">
+            <i class="fa fa-long-arrow-right fa-5x " aria-hidden="true"></i>
+          </button>
+        </center>
+      </div>
+          
+
+      <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
+        <dropdown style="position:relative;left:75%;">
+          <input id="toggle4" type="checkbox">
+          <label for="toggle4" class="animate">Sort<i class="fa fa-sort fa-2x float-right"></i></label>
+          <ul class="animate">
+            <li class="animate">Distance<i class="fa fa-bullseye fa-3x float-right"></i></li>
+            <li class="animate">Popularity<i class="fa fa-line-chart float-right"></i></li>
+           
+          </ul>
+        </dropdown>
+      </div>
+          
+      <div class="hidden-lg hidden-md col-sm-3 col-xs-3">
+        <dropdown>
+          <button onclick="myFunction()" class="dropbtn"><i class="fa fa-sort fa-5x"></i></button>
+            <ul id="myDropdown" class="animate" style="display:none; position:relative; top:5px;">
+              <li class="animate">Radiology<i class="fa fa-life-ring float-right"></i></li>
+              <li class="animate">Ambulance<i class="fa fa-ambulance float-right"></i></li>
+              <li class="animate">Emergency<i class="fa fa-sign-in float-right"></i></li>
+              <li class="animate">Atm<i class="fa fa-usd float-right"></i></li>
+            </ul>
+        </dropdown>
+      </div>
+
     </div>
+  </div>
+</div>
 
 
- <br/>
- <br/>
- 
+<br/>
+<br/>
 
 
 
- <div class="container">
+
+<div class="container">
   <div class="row" id="ip">
     <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="op" style="position:relative; top:80px;">
       <input type="text" class="text-lines" id="s" size="26" placeholder="Enter your location?" />
@@ -329,20 +397,22 @@
   </div>
   <div class="row" id="ipp">
     <div class="hidden-lg hidden-md col-sm-12 col-xs-12" id="opp" style="position:relative; top:57px;">
-
-                <input id="autocomplete2" class="text-lines" size="26" type="text" placeholder="Type a care" /><br />
-                    <button type="submit" class="btn" style="  position:relative;
-                    left:150px;
-                    top:16px;
-                    background:none;
-                    color: #fbc940;">
-                    <i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i>
-
-                    </button>    </div>
+      <input id="autocomplete2" class="text-lines" size="26" type="text" placeholder="Type a care" /><br />
+        <button type="submit" class="btn" 
+          style=" position:relative;
+                  left:150px;
+                  top:16px;
+                  background:none;
+                  color: #fbc940;">
+          <i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i>
+        </button>    
+    </div>
   </div>
 </div>
 
- <section>
+ 
+
+<section>
   <div class="container">
     <div class="row">
       <div class="col-sm-2"></div>
@@ -356,6 +426,7 @@
   <div class="container">
     <div class="row row-gap-small">
       <div class="col-sm-12" id="k" style="positive:relative;top:100px;" > 
+        
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
           <div class="col-sm-2 col-xs-12"  ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
@@ -384,6 +455,8 @@
             </div></center>
           </div>
         </div>
+        
+
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
           <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png" style="position:relative;top:1px;"/></center></div>
@@ -412,6 +485,7 @@
             </div></center>
           </div>
         </div>
+        
         
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
@@ -443,6 +517,7 @@
         </div>
 
 
+        
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
           <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
@@ -473,6 +548,7 @@
         </div>
 
 
+        
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
           <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
@@ -502,6 +578,7 @@
           </div>
         </div>
 
+        
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
           <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
@@ -530,6 +607,7 @@
             </div></center>
           </div>
         </div>
+        
         
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
