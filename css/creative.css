@@ -11,7 +11,7 @@ body {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/pexels-photo1.jpg');
+  background-image: url('../img/home_bg.png');
  /* overflow-x:hidden;*/
   
 }
@@ -61,7 +61,7 @@ color: rgba(251,201,64,0.5);
   text-transform: uppercase;
   font-weight: 1500;
   font-size: 14px;
-  color: #000;
+  color: #fff;
  
 }
 
