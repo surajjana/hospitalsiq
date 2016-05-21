@@ -62,15 +62,19 @@ color: rgba(251,201,64,0.5);
   font-weight: 1500;
   font-size: 14px;
   color: #fff;
+   -webkit-transition: all .35s;
+       -moz-transition: all .35s;
+       transition: all .35s;
  
 }
 
 
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
- color:rgba(0,0,0,1);
+ color: rgba(160,160,160,0.8);
+ 
 /*background-color: #fbc940;*/
-  box-shadow: 0px -3px 0px 0px rgba(251,201,64,1) inset;
+  box-shadow: 0px -2px 0px 0px rgba(251,201,64,1) inset;
 }
 
 

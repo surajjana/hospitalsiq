@@ -3,6 +3,7 @@
 
 
 .sui-listbox,ul.sui-listbox{position:relative;
+	top:-20px;
 	display:block;
 	list-style:none;
 	color:#000;
@@ -29,6 +30,7 @@
 .sui-listbox-disabled,.sui-listbox-disabled:active,.sui-listbox-disabled:focus{pointer-events:none;cursor:default;opacity:.4}
 
 .sui-autocomplete,ul.sui-autocomplete{position:relative;
+	top:-20px;
 	display:none;
 	list-style:none;
 	margin:0;
@@ -39,7 +41,10 @@
 
 .sui-autocomplete-loading{background-repeat:no-repeat;
 	background-position:right;background-image:url(../img/loading-light-bootstrap-small.gif)}
-.sui-input{color:#000;
+.sui-input{
+	position:relative;
+	top:-25px;
+	color:#000;
 	background-color:#fff;
 	border-color:#e7e7e7;
 	border-style:solid;
