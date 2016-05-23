@@ -179,10 +179,10 @@ window.onclick = function(event) {
 
 
     .navbar-default{
-        background-color:rgba(240,240,240,1);
+        background-color:rgba(40,40,40,1);
         border-bottom: none;
         margin-bottom: 0 !important;
-        border-top:solid rgba(200,200,200,1) 1px;
+        border-bottom:solid rgba(40,40,40,1) 1px;
         max-height:30px;
         font-family: 'Lato';
         font-size: 12px;
@@ -190,7 +190,7 @@ window.onclick = function(event) {
    
 
 
-    html,
+   /* html,
     body {
         background-image: none;
         background-color: rgba(248,248,248,1);
@@ -202,9 +202,25 @@ window.onclick = function(event) {
         background-size: cover;
         -o-background-size: cover;
         background-position: center;
-    }
+    }*/
 
-
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding-top: 5px;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+   background-image: url('img/home_bg.png');
+ /* overflow-x:hidden;*/
+  
+}
 
     .text-lines{
       background-color: transparent;
@@ -261,7 +277,7 @@ window.onclick = function(event) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top" style="padding:5px;"><img src="img/hospitalsIQ2.png"/></a>
+               <!-- <a class="navbar-brand page-scroll" href="#page-top" style="padding:5px;"><img src="img/hospitalsIQ2.png"/></a>-->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -315,7 +331,7 @@ window.onclick = function(event) {
               </dropdown>-->
       <div class="hidden-lg hidden-md col-sm-3 col-xs-3" >
         <dropdown>
-          <button onclick="myFunction()" class="dropbtn"><i class="fa fa-filter fa-5x"></i></button>
+          <button onclick="myFunction()" class="dropbtn"><i class="fa fa-filter fa-5x" style="color:#fbc831;"></i></button>
           <ul id="myDropdown" class="animate" style="display:none; position:relative; top:5px;">
             <li class="animate">Radiology<i class="fa fa-life-ring float-right"></i></li>
             <li class="animate">Ambulance<i class="fa fa-ambulance float-right"></i></li>
@@ -327,12 +343,12 @@ window.onclick = function(event) {
 
           
       <div class="hidden-lg hidden-md col-sm-3 col-xs-3">
-        <i class="fa fa-map-marker fa-5" id="lo" style="position:relative; left:9px;color:#1ABC9C;"></i>
+        <i class="fa fa-map-marker fa-5" id="lo" style="position:relative; left:9px;color:#fbc831;"></i>
       </div>
 
           
       <div class="hidden-lg hidden-md col-sm-3 col-xs-3">
-        <i class="fa fa-users" aria-hidden="true" id="ca" style="position:relative; left:12px;color:#1ABC9C;"></i>
+        <i class="fa fa-users" aria-hidden="true" id="ca" style="position:relative; left:12px;color:#fbc831;"></i>
       </div>
 
           
@@ -370,10 +386,9 @@ window.onclick = function(event) {
         <dropdown>
           <button onclick="myFunction()" class="dropbtn"><i class="fa fa-sort fa-5x"></i></button>
             <ul id="myDropdown" class="animate" style="display:none; position:relative; top:5px;">
-              <li class="animate">Radiology<i class="fa fa-life-ring float-right"></i></li>
-              <li class="animate">Ambulance<i class="fa fa-ambulance float-right"></i></li>
-              <li class="animate">Emergency<i class="fa fa-sign-in float-right"></i></li>
-              <li class="animate">Atm<i class="fa fa-usd float-right"></i></li>
+             <li class="animate">Distance<i class="fa fa-bullseye fa-3x float-right"></i></li>
+            <li class="animate">Popularity<i class="fa fa-line-chart float-right"></i></li>
+           
             </ul>
         </dropdown>
       </div>
@@ -416,7 +431,7 @@ window.onclick = function(event) {
   <div class="container">
     <div class="row">
       <div class="col-sm-2"></div>
-      <div class="col-sm-9" style="position:relative;top:80px;font-size:20px;font-family:Arial;letter-spacing:2px;text-shadow:1px 1px 2px rgba(0,0,0,0.25);color:rgba(90,90,90,1)"><p>Hospitals at hebbal for cardiology</p></div>
+      <div class="col-sm-9" style="position:relative;top:80px;font-size:20px;font-family:Arial;letter-spacing:2px;text-shadow:1px 1px 2px rgba(0,0,0,0.25);color:rgba(255,255,255,1)"><p>Hospitals at hebbal for cardiology</p></div>
     </div>
   </div>
 </section>
@@ -425,7 +440,8 @@ window.onclick = function(event) {
 <div class="wrap">
   <div class="container">
     <div class="row row-gap-small">
-      <div class="col-sm-12" id="k" style="positive:relative;top:100px;" > 
+    <div class="col-sm-1"></div>
+      <div class="col-sm-10" id="k" style="position:relative;top:100px;color:white;" > 
         
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>

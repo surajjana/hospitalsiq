@@ -83,8 +83,12 @@ hr{
 }
 h4{
     font-size: 16px;
+    color:white;
 }
+#k{ 
 
+background:rgba(251,220,108,0.7);
+}
 
 * {
   padding: 0;
@@ -118,23 +122,25 @@ dropdown label, dropdown ul li {
   display: block;
   width: 150px;
   height:44px;
-  background: rgba(248,248,248,1);
+  background: #000;
   padding: 15px 10px;
   z-index:2px;
+  color:white;
 }
 
 dropdown label:hover, dropdown ul li:hover {
-  background:  rgba(246,246,246,1);
-  color: rgba(100,100,100,1);
+  background:  #fbc831;
+  color: rgba(255,255,255,1);
   cursor: pointer;
 }
 
 dropdown label {
-  color: #1ABC9C;
-  border-left: 4px solid #1ABC9C;
+  color: #fff;
+  border-left: 4px solid rgba(40,40,40,1);
   border-radius: 0 5px 0 0;
   position: relative;
   z-index: 2;
+  height:47px;
 }
 
 dropdown input {
@@ -150,7 +156,7 @@ dropdown input ~ ul {
 }
 
 dropdown input:checked + label {
-  background: #1ABC9C;
+  background: #fbc831;
   color: white;
 }
 
