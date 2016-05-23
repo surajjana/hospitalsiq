@@ -97,6 +97,9 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
+function MYFunction() {
+    document.getElementById("MYDropdown").classList.toggle("show");
+}
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -384,8 +387,8 @@ body {
           
       <div class="hidden-lg hidden-md col-sm-3 col-xs-3">
         <dropdown>
-          <button onclick="myFunction()" class="dropbtn"><i class="fa fa-sort fa-5x"></i></button>
-            <ul id="myDropdown" class="animate" style="display:none; position:relative; top:5px;">
+          <button onclick="MYFunction()" class="dropbtn"><i class="fa fa-sort fa-5x" style="color:#fbc831;"></i></button>
+            <ul id="MYDropdown" class="animate" style="display:none; position:relative; top:5px;">
              <li class="animate">Distance<i class="fa fa-bullseye fa-3x float-right"></i></li>
             <li class="animate">Popularity<i class="fa fa-line-chart float-right"></i></li>
            
