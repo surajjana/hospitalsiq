@@ -116,6 +116,9 @@ window.onclick = function(event) {
 }
 </script>
 
+
+
+<!--
    
     <script type="text/javascript">
     var cares = ["Radiology",
@@ -169,7 +172,7 @@ window.onclick = function(event) {
    
     $("#k").addClass('animated fadeIn');
   });
- </script>
+ </script>-->
 
     <style>
  
@@ -185,10 +188,11 @@ window.onclick = function(event) {
         background-color:rgba(40,40,40,1);
         border-bottom: none;
         margin-bottom: 0 !important;
-        border-bottom:solid rgba(40,40,40,1) 1px;
-        max-height:30px;
+        border-bottom:solid rgba(60,60,60,1) 1px;
+        max-height:45px;
         font-family: 'Lato';
         font-size: 12px;
+        padding: 14px;
     }
    
 
@@ -220,21 +224,20 @@ body {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-   background-image: url('img/home_bg.png');
+   background-color: white;
+   background-size: cover;
  /* overflow-x:hidden;*/
   
 }
 
     .text-lines{
       background-color: transparent;
-      color: #000;
+      color: #fff;
       outline: none;
       outline-style: none;
       outline-offset: 0;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      border-bottom: solid #000 1px;
+      border:none;
+   
     }
 
 
@@ -292,6 +295,10 @@ body {
                     <li>
                         <a class="page-scroll" href="#contact">Ping Us</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Notifictaions</a>
+                    </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -351,7 +358,7 @@ body {
 
           
       <div class="hidden-lg hidden-md col-sm-3 col-xs-3">
-        <i class="fa fa-users" aria-hidden="true" id="ca" style="position:relative; left:12px;color:#fbc831;"></i>
+        <i class="fa fa-users" aria-hidden="true" id="ca" style="position:relative; left:12px;color:#fbc831;top:1px;"></i>
       </div>
 
           
@@ -360,7 +367,7 @@ body {
           <input type="text" class="text-lines" id="loc" size="30" placeholder="Enter your location?" />
           <input type="hidden" name="lat" id="lat" value="">
           <input type="hidden" name="lon" id="lon" value="">
-          <input id="autocomplete1" class="text-lines" size="30" placeholder="What care you need?">
+          <input id="autocomplete1" class="text-lines" size="30" style="position:relative;top:2px;" placeholder="What care you need?">
           <button type="submit" class="btn" 
             style=" position:relative;
                     left:20px;
@@ -444,7 +451,7 @@ body {
   <div class="container">
     <div class="row row-gap-small">
     <div class="col-sm-1"></div>
-      <div class="col-sm-10" id="k" style="position:relative;top:100px;color:white;" > 
+      <div class="col-sm-10" id="k" style="position:relative;top:100px;color:white;background-color:rgba(15,15,15,1);" > 
         
         <div class="row row-gap-medium">
           <div class="col-sm-2"></div>
@@ -505,36 +512,7 @@ body {
           </div>
         </div>
         
-        
-        <div class="row row-gap-medium">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-2 col-xs-12" ><center><img src="img/bb.png"  style="position:relative;top:1px;"/></center></div>
-          <div class="col-sm-8 hidden-xs"  style="position:relative;left:4%;" >
-            <div class="row row-gap-small" >
-              <h4> RMV Hospital</h4>
-            </div>
-            <div  class="row row-gap-small"> 
-              <p>
-                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
-                Hospital<br/>
-                Allopathy<br/>
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-10 hidden-sm hidden-lg hidden-md" style="position:relative;left:4%;" >
-            <center><div class="row row-gap-small" >
-              <h4> RMV Hospital</h4>
-            </div>
-            <div  class="row row-gap-small"> 
-              <p>
-                12Th Cross Road, Aecs Layout, Sanjay Nagar, Bangalore, Karnataka<br/>
-                Hospital<br/>
-                Allopathy<br/>
-              </p>
-            </div></center>
-          </div>
-        </div>
-
+       
 
         
         <div class="row row-gap-medium">

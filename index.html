@@ -22,6 +22,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
+        <link rel="stylesheet" href="css/humanoid.css" type="text/css">
      <link rel="stylesheet" href="css/index.css" type="text/css">
     <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -41,63 +42,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
-
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
-    <script type="text/javascript">
-        google.maps.event.addDomListener(window, 'load', function () {
-            var places = new google.maps.places.Autocomplete(document.getElementById('loc'));
-            google.maps.event.addListener(places, 'place_changed', function () {
-                var place = places.getPlace();
-                var address = place.formatted_address;
-                var latitude = place.geometry.location.lat();
-                var longitude = place.geometry.location.lng();
-                var mesg = "Address: " + address;
-                /*mesg += "\nLatitude: " + latitude;
-                mesg += "\nLongitude: " + longitude;
-                alert(mesg);*/
-                document.getElementById("lat").value = latitude;
-                document.getElementById("lon").value = longitude;
-                if(places!='\0')
-                    {
-                        $("#lonlat").hide();
-                        $('#care_div').css('visibility', 'visible');
-                    }
-            });
-        });
-    </script>
-    
-
-    <script type="text/javascript">
-        google.maps.event.addDomListener(window, 'load', function () {
-            var places = new google.maps.places.Autocomplete(document.getElementById('location'));
-            google.maps.event.addListener(places, 'place_changed', function () {
-                var place = places.getPlace();
-                var address = place.formatted_address;
-                var latitude = place.geometry.location.lat();
-                var longitude = place.geometry.location.lng();
-                var mesg = "Address: " + address;
-                mesg += "\nLatitude: " + latitude;
-                mesg += "\nLongitude: " + longitude;
-                /*alert(mesg);*/
-                document.getElementById("lat").value = latitude;
-                document.getElementById("lon").value = longitude;
-               
-                 if(places!='\0')
-                  {
-                    $("#lonlat").hide();
-                    $('#care_div').css('visibility', 'visible');
-                  }
-        
-             });
-        });
-    </script>
-   
-
-
-  
-
-     <!-- <script type="text/javascript">
+<!-- <script type="text/javascript">
     var cares = ["Radiology",
                 "Urology",
                 "Veterinary",
@@ -142,6 +87,87 @@
         
     });
 </script>-->
+
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+  
+        google.maps.event.addDomListener(window, 'load', function () {
+            var places = new google.maps.places.Autocomplete(document.getElementById('loc'));
+            google.maps.event.addListener(places, 'place_changed', function () {
+                var place = places.getPlace();
+                var address = place.formatted_address;
+                var latitude = place.geometry.location.lat();
+                var longitude = place.geometry.location.lng();
+                var mesg = "Address: " + address;
+                /*mesg += "\nLatitude: " + latitude;
+                mesg += "\nLongitude: " + longitude;
+                alert(mesg);*/
+                document.getElementById("lat").value = latitude;
+                document.getElementById("lon").value = longitude;
+                if(places!='\0')
+                    {
+                        $("#lonlat").hide();
+                        $('#care_div').css('display', 'block');
+                    }
+            });
+        });
+   
+        google.maps.event.addDomListener(window, 'load', function () {
+            var places = new google.maps.places.Autocomplete(document.getElementById('location'));
+            google.maps.event.addListener(places, 'place_changed', function () {
+                var place = places.getPlace();
+                var address = place.formatted_address;
+                var latitude = place.geometry.location.lat();
+                var longitude = place.geometry.location.lng();
+                var mesg = "Address: " + address;
+                mesg += "\nLatitude: " + latitude;
+                mesg += "\nLongitude: " + longitude;
+                /*alert(mesg);*/
+                document.getElementById("lat").value = latitude;
+                document.getElementById("lon").value = longitude;
+               
+                 if(places!='\0')
+                  {
+                    $("#lonlat").hide();
+                    $('#care_div').css('visibility', 'visible');
+                  }
+        
+             });
+        });
+
+
+  
+
+    
+
+        $('#a input').on('change', function(){
+            var gender = $('input[name="selector"]:checked', '#a').val();
+            console.log(gender);
+            if(gender === 'male'){
+                console.log("1");
+                
+                $('#female').css("display","none");
+                $('#male').css("display","block");
+            }else{
+                console.log("2");
+                $('#male').css("display","none");
+                $('#female').css("display","block");
+            }
+        });
+
+
+
+
+
+        $('.text-line').click(function(){
+            $('#care_div').css("display","none");
+          $('#humanoid').css("display","block");
+        });
+})
+</script>
+
 
 
 
@@ -191,6 +217,9 @@ sel.addEventListener('click', function(el){
                     <li>
                         <a class="page-scroll" href="#contact">Ping Us</a>
                     </li>
+                     <li>
+                        <a class="page-scroll" href="#contact">Notifictaions</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -198,7 +227,7 @@ sel.addEventListener('click', function(el){
         <!-- /.container-fluid -->
     </nav>
     
-
+<!--
 
 <section>
     <div class="container-fluid">
@@ -212,11 +241,18 @@ sel.addEventListener('click', function(el){
         </div>
     </div>
 </section>
+-->
 
 
-
-<section>
     <div class="container-fluid" id="lonlat">
+    <div class="row">
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
+            <div class="col-lg-4 col-md-4  hidden-sm hidden-xs "><center><img style="position:relative;top:60px;" src="img/hospitalsIQ2.png" /></center></div>
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
+
+            <div class="hidden-lg hidden-md col-sm-12 col-xs-8"><center><img style="position:relative;top:80px;left:30px;" src="img/hospitalsIQ2.png" /></center></div>
+            
+        </div>
         <form action="test.php" id="frm" method="post">
         <div class="row">
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
@@ -236,10 +272,18 @@ sel.addEventListener('click', function(el){
             </div>
         </div>
     </div>
-</section> 
+
     
-<section>
-    <div class="container-fluid" id="care_div" style="visibility:hidden; ">
+
+    <div class="container-fluid" id="care_div" style="display: none; ">
+    <div class="row">
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
+            <div class="col-lg-4 col-md-4  hidden-sm hidden-xs "><center><img style="position:relative;top:60px;" src="img/hospitalsIQ2.png" /></center></div>
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
+
+            <div class="hidden-lg hidden-md col-sm-12 col-xs-8"><center><img style="position:relative;top:80px;left:30px;" src="img/hospitalsIQ2.png" /></center></div>
+            
+        </div>
         <div class="row">
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs" >
@@ -315,7 +359,7 @@ sel.addEventListener('click', function(el){
         <div class="row">
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs" >
-                <a href="#humanoid"><button type="button" class="text-line">Enter your symptoms</button></a>
+                <button type="button" class="text-line">Enter your symptoms</button>
             </div>
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs "></div>
             <div class="hidden-lg hidden-md col-sm-10 col-xs-10" >
@@ -324,40 +368,48 @@ sel.addEventListener('click', function(el){
                 </center>
             </div>
         </div>
+        </div>
     </form>
 
-<div class="container-fluid" id="humanoid" style="visibility:hidden;">
+<div class="container-fluid" id="humanoid" style="display:none;">
     <div class="row">
         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
-        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-            <img src="img/human.png" style="color:#fbc831;position:relative;top:50px;"/>
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs"  id="male" style="display:block"">
+            <img src="img/human.png" style=" color:#fbc831;position:relative;top:120px;width:60%;"/>
         </div>
+        <div class="col-lg-3 col-md-3  hidden-sm hidden-xs" id="female" style="display:none;">
+            <img src="img/humanoid_g.png" style=" color:#fbc831;position:relative;top:120px;left:10px;width:47%"/>
+        </div>
+        
+       
         <div class="col-lg-5 col-md-5 hidden-sm hidden-xs">
             <form id="a">
-                Name:<input type="text" class="info" placeholder="Enter your name" /><br> <br><br><br>
-                Gender:
+                <p style="color:white;">Name:</p><input type="text" class="info" placeholder="Enter your name" /><br> <br><br><br>
+                <p style="color:white;">Gender:</p>
                 <ul>
                     <li>
-                        <input type="radio" id="s-option" name="selector">
+                        <input type="radio" id="s-option" name="selector" value="male">
                         <label for="s-option">Male</label>
                         <div class="check"><div class="inside"></div></div>
                     </li>
                     <li>
-                        <input type="radio" id="t-option" name="selector">
+                        <input type="radio" id="t-option" name="selector" value="female">
                         <label for="t-option">Female</label>
                         <div class="check"><div class="inside"></div></div>
                     </li>
                 </ul>
                 <br>
                 <p style="position:relative;
-                left:-356px;top:40px;">Age:</p><input type="text" class="info" placeholder="Enter your age" /><br> <br><br><br>
-                Email:<input type="text" class="info"  placeholder="Enter your email" /><br> 
+                left:-356px;top:40px;color:white;">Age:</p><input type="text" class="info" placeholder="Enter your age" /><br> <br><br><br>
+                <p style="color:white;">Email:</p><input type="text" class="info"  placeholder="Enter your email" /><br> 
             </form>
         </div>
         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
     </div>
 </div> 
-</section>
+
+
+
 
 
 
@@ -382,6 +434,6 @@ sel.addEventListener('click', function(el){
 
 </body>
 
-</html>
+
 </body>             
  </html>

@@ -2,8 +2,8 @@
         position:relative;
         top:170px;
         border-radius:50px;
-         background-color: transparent;
-        border:1px solid rgba(160,160,160,0.8);
+         background-color: rgba(18,18,18,0.8);
+        border:1px solid rgba(251,200,49,0.8);
      -webkit-transition: all .35s;
        -moz-transition: all .35s;
        transition: all .35s;
@@ -21,8 +21,9 @@
         top:190px;
      
         border-radius:50px;
-         background-color: transparent;
-        border:1px solid rgba(160,160,160,0.8);
+       
+         background-color: rgba(18,18,18,0.8);
+        border:1px solid rgba(251,200,49,0.8);
      -webkit-transition: all .35s;
        -moz-transition: all .35s;
        transition: all .35s;
@@ -35,17 +36,21 @@
 
     }
 
-    #loc:hover{
+    #loc,
+    .care,
+    .text-line:hover{
         opacity:0.7;
-        border:1px solid rgba(190,190,190,1);
+      
+         box-shadow: 0 1px 3px 0 rgba(251, 200, 49, 0.2), 0 2px 9px 0 rgba(251, 200, 49, 0.19);
     }
     
     .care{
         position:relative;
         top:170px;
         border-radius:50px;
-        background-color: rgba(0,0,0,0);
-        border:1px solid rgba(160,160,160,0.8);
+       
+         background-color: rgba(18,18,18,0.8);
+        border:1px solid rgba(251,200,49,0.8);
      
        -webkit-transition: all .35s;
        -moz-transition: all .35s;

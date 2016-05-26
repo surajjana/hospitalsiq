@@ -42,6 +42,8 @@
 */
 
 
+
+
 html,
 body {
   height: 100%;
@@ -55,14 +57,15 @@ body {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-   background-image: url('../img/home_bg.png');
+   background: url('../img/home_bg.png') no-repeat center center fixed;
+   background-size:cover; 
  
  /* overflow-x:hidden;*/
   
 }
 .dropbtn {
     
-  background-color: rgba(248,248,248,1);
+  background-color: rgba(30,30,30,1);
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -138,11 +141,12 @@ dropdown {
 dropdown label, dropdown ul li {
   display: block;
   width: 150px;
-  height:44px;
-  background: #000;
+  height:50px;
+  background: rgba(30,30,30,1);
   padding: 15px 10px;
   z-index:2px;
   color:white;
+  font-size: 14px;
 }
 
 dropdown label:hover, dropdown ul li:hover {
@@ -153,7 +157,7 @@ dropdown label:hover, dropdown ul li:hover {
 
 dropdown label {
   color: #fff;
-  border-left: 4px solid rgba(40,40,40,1);
+ 
   border-radius: 0 5px 0 0;
   position: relative;
   z-index: 2;
