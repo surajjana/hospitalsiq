@@ -173,8 +173,44 @@ input[type=radio]:checked ~ label{
 </style>
 
 </head>
+
 <body>
 
+
+<div class="container-fluid" id="humanoid" >
+    <div class="row">
+        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+            <img src="img/human.png" style="color:#fbc831;position:relative;top:50px;"/>
+        </div>
+        <div class="col-lg-5 col-md-5 hidden-sm hidden-xs">
+            <form id="a">
+                Name:<input type="text" class="info" placeholder="Enter your name" /><br> <br><br><br>
+                Gender:
+                <ul>
+                    <li>
+                        <input type="radio" id="s-option" name="selector">
+                        <label for="s-option">Male</label>
+                        <div class="check"><div class="inside"></div></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="t-option" name="selector">
+                        <label for="t-option">Female</label>
+                        <div class="check"><div class="inside"></div></div>
+                    </li>
+                </ul>
+                <br>
+                <p style="position:relative;
+                left:-356px;top:40px;">Age:</p><input type="text" class="info" placeholder="Enter your age" /><br> <br><br><br>
+                Email:<input type="text" class="info"  placeholder="Enter your email" /><br> 
+            </form>
+        </div>
+        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
+    </div>
+</div> 
+
+
+.
 
  
 <script src="js/jquery.js"></script>

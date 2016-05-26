@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  padding-top: 5px;
+
   position: relative;
   width: 100%;
   min-height: auto;
@@ -30,6 +30,7 @@ color: rgba(251,201,64,0.5);
   background-color:rgba(255,255,255,0);
   border-bottom: none;
   margin-bottom: 0 !important;
+  padding: 10px;
    
 }
 
