@@ -10,7 +10,6 @@
     <meta name="author" content="">
 
 
-
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
@@ -243,7 +242,7 @@ sel.addEventListener('click', function(el){
 </section>
 -->
 
-
+ 
     <div class="container-fluid" id="lonlat">
     <div class="row">
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
@@ -383,8 +382,8 @@ sel.addEventListener('click', function(el){
         
        
         <div class="col-lg-5 col-md-5 hidden-sm hidden-xs">
-            <form id="a">
-                <p style="color:white;">Name:</p><input type="text" class="info" placeholder="Enter your name" /><br> <br><br><br>
+            <form id="a" >
+                <p style="color:white;">Name:</p><input type="text" class="info" name="name" placeholder="Enter your name" /><br> <br>
                 <p style="color:white;">Gender:</p>
                 <ul>
                     <li>
@@ -399,9 +398,12 @@ sel.addEventListener('click', function(el){
                     </li>
                 </ul>
                 <br>
-                <p style="position:relative;
-                left:-356px;top:40px;color:white;">Age:</p><input type="text" class="info" placeholder="Enter your age" /><br> <br><br><br>
-                <p style="color:white;">Email:</p><input type="text" class="info"  placeholder="Enter your email" /><br> 
+                   <p style="position:relative;
+                left:-356px;top:40px;color:white;">Age:</p><input type="text" name="age" class="info" placeholder="Enter your age" /><br> <br>
+                <p style="color:white;">Add the body part:</p><input type="text" name="part" class="info" placeholder="Enter the body part" /><br> <br>
+               
+                <p style="color:white;">Email:</p><input type="text" class="info" name="mail"  placeholder="Enter your email" /><br> 
+                <input id="round" type="submit" style="position:relative; left:63%;" value="Submit" />
             </form>
         </div>
         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
