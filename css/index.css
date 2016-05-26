@@ -1,3 +1,21 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding-top: 5px;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+   background-color: black;
+   background-size: cover;
+ /* overflow-x:hidden;*/
+  
+}
 #loc{
         position:relative;
         top:170px;
