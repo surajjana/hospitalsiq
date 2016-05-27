@@ -240,6 +240,9 @@ body {
    
     }
 
+.text-lines:hover{
+  color:white;
+}
 
     
 
@@ -367,15 +370,50 @@ body {
           <input type="text" class="text-lines" id="loc" size="30" placeholder="Enter your location?" />
           <input type="hidden" name="lat" id="lat" value="">
           <input type="hidden" name="lon" id="lon" value="">
-          <input id="autocomplete1" class="text-lines" size="30" style="position:relative;top:2px;" placeholder="What care you need?">
-          <button type="submit" class="btn" 
+       <!--   <input class="dropdown text-lines" size="30" style="position:relative;top:2px;" placeholder="What care you need?">-->
+            <button type = "button" class = "btn dropdown-toggle text-lines" id = "dropdownMenu1" data-toggle = "dropdown">
+      What care you need?
+      <span class = "caret"></span>
+   </button>
+          <ul class = "dropdown-menu" role = "menu" aria-labelledby = "dropdownMenu1" >
+       <li value="radiology">Radiology</li>
+                    <li value="urology">Urology</li>
+                    <li value="veterinary">Veterinary</li>
+                    <li value="opthalmology">Opthalmology</li>
+                    <li value="eye">Eye</li>
+                    <li value="gastroenterologist">Gastroenterologist</li>
+                    <li value="cardiology">Cardiology</li>
+                    <li value="dental">Dental</li>
+                    <li value="anesthesiology">Anesthesiology</li>
+                    <li value="hematology">Hematology</li>
+                    <li value="psychiatric">Psychiatric</li>
+                    <li value="diabetes">Diabetes</li>
+                    <li value="cosmetic & plastic surgery">Cosmetic & Plastic Surgery</li>
+                    <li value="immunology">Immunology</li>
+                    <li value="Ayurveda">Ayurveda</li>
+                    <li value="nephrology">Nephrology</li>
+                    <li value="ent">ENT</li>
+                    <li value="homeopathy">Homeopathy</li>
+                    <li  value="oncology">Oncology</li>
+                    <li  value="mental">Mental</li>
+                    <li value="cancer ">Cancer</li>
+                    <li value="orthopaedic">Orthopaedic</li>
+                    <li value="gynecology">Gynecology</li>
+                    <li value="rheumatology">Rheumatology</li>
+                    <li value="neurology">Neurology</li>
+                    <li value="maternity">Maternity</li>
+                    <li value="dermatology">Dermatology</li>
+                    <li value="children">Children</li>
+   </ul>
+   
+          <!--<button type="submit" class="btn" 
             style=" position:relative;
                     left:20px;
                     top:5px;
                     background:none;
                     color: #000;">
             <i class="fa fa-long-arrow-right fa-5x " aria-hidden="true"></i>
-          </button>
+          </button>-->
         </center>
       </div>
           
