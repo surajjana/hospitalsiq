@@ -26,6 +26,7 @@
     <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/awesomplete.css">
     <script type="text/javascript" src="js/awesomplete.js"></script>
@@ -285,7 +286,7 @@ sel.addEventListener('click', function(el){
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
-            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs" >
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs" class="styled_select" >
                 <select name="care" class="care" id="select_id"> 
                     <option value="radiology">Radiology</option>
                     <option value="urology">Urology</option>
@@ -399,9 +400,66 @@ sel.addEventListener('click', function(el){
                 </ul>
                 <br>
                    <p style="position:relative;
-                left:-356px;top:40px;color:white;">Age:</p><input type="text" name="age" class="info" placeholder="Enter your age" /><br> <br>
-                <p style="color:white;">Add the body part:</p><input type="text" name="part" class="info" placeholder="Enter the body part" /><br> <br>
-               
+                left:-356px;top:40px;color:white;">Age:</p><select name="care" class="info" id="select_id"> 
+                    <option value="radiology">Radiology</option>
+                    <option value="urology">Urology</option>
+                    <option value="veterinary">Veterinary</option>
+                    <option value="opthalmology">Opthalmology</option>
+                    <option value="eye">Eye</option>
+                    <option value="gastroenterologist">Gastroenterologist</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="dental">Dental</option>
+                    <option value="anesthesiology">Anesthesiology</option>
+                    <option value="hematology">Hematology</option>
+                    <option value="psychiatric">Psychiatric</option>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="cosmetic&plastic surgery">Cosmetic & Plastic Surgery</option>
+                    <option value="immunology">Immunology</option>
+                    <option value="Ayurveda">Ayurveda</option>
+                    <option value="nephrology">Nephrology</option>
+                    <option value="ent">ENT</option>
+                    <option value="homeopathy">Homeopathy</option>
+                    <option value="oncology">Oncology</option>
+                    <option value="mental">Mental</option>
+                    <option value="cancer ">Cancer</option>
+                    <option value="orthopaedic">Orthopaedic</option>
+                    <option value="gynecology">Gynecology</option>
+                    <option value="rheumatology">Rheumatology</option>
+                    <option value="neurology">Neurology</option>
+                    <option value="maternity">Maternity</option>
+                    <option value="dermatology">Dermatology</option>
+                    <option value="children">Children</option>
+                </select><br> <br>
+                <p style="color:white;">Add the body part:</p><select name="care" class="info" id="select_id"> 
+                    <option value="radiology">Radiology</option>
+                    <option value="urology">Urology</option>
+                    <option value="veterinary">Veterinary</option>
+                    <option value="opthalmology">Opthalmology</option>
+                    <option value="eye">Eye</option>
+                    <option value="gastroenterologist">Gastroenterologist</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="dental">Dental</option>
+                    <option value="anesthesiology">Anesthesiology</option>
+                    <option value="hematology">Hematology</option>
+                    <option value="psychiatric">Psychiatric</option>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="cosmetic&plastic surgery">Cosmetic & Plastic Surgery</option>
+                    <option value="immunology">Immunology</option>
+                    <option value="Ayurveda">Ayurveda</option>
+                    <option value="nephrology">Nephrology</option>
+                    <option value="ent">ENT</option>
+                    <option value="homeopathy">Homeopathy</option>
+                    <option value="oncology">Oncology</option>
+                    <option value="mental">Mental</option>
+                    <option value="cancer ">Cancer</option>
+                    <option value="orthopaedic">Orthopaedic</option>
+                    <option value="gynecology">Gynecology</option>
+                    <option value="rheumatology">Rheumatology</option>
+                    <option value="neurology">Neurology</option>
+                    <option value="maternity">Maternity</option>
+                    <option value="dermatology">Dermatology</option>
+                    <option value="children">Children</option>
+                </select><br> <br>
                 <p style="color:white;">Email:</p><input type="text" class="info" name="mail"  placeholder="Enter your email" /><br> 
                 <input id="round" type="submit" style="position:relative; left:63%;" value="Submit" />
             </form>

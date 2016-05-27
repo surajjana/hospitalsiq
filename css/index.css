@@ -99,9 +99,33 @@ body {
         position:relative;
         top:200px;
 
-        background-color: none;
-        color:black;
+        background-color: black;
+        color:#fbc831;
+        
     }
+/*
+    .styled_select{
+   width: 100px;
+   height: 17px;
+   overflow: hidden;
+   overflow: -moz-hidden-unscrollable;
+   background: url(../img/dropdown.png) no-repeat right blue;
+   border: 2px double red;
+   display: inline-block;
+   position:relative;
+   }
+
+.styled_select select {
+   background: transparent;
+   -webkit-appearance: none;
+   width: 100px;
+   font-size: 11px;
+   border: 0;
+   height: 17px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   }*/
     .care_small{
           position:relative;
         top:150px;
