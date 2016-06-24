@@ -27,19 +27,11 @@
 
 
 
-
-#a{
-	position:relative;
-	top:130px;
-}
-
-.container{
+#humanoid{
   display: block;
   position: absolute;
-  margin: auto;
-  height: 450px;
-  width: 400px;
-  bottom: 0; left:0; right: 0; top:0;
+
+    bottom: 0; left:0; right: 0; top:0;
   padding: 0;
 }
 
@@ -48,7 +40,7 @@ h2 {
   font-weight: normal;
 }
 
-.container ul{
+#humanoid ul{
   list-style: none;
   height: 100%;
   width: 100%;
@@ -57,7 +49,7 @@ h2 {
 }
 
 
-ul li{
+#humanoid ul li{
   color: #AAAAAA;
   display: inline;
   position: relative;
@@ -66,13 +58,13 @@ ul li{
  
 }
 
-ul li input[type=radio]{
+#humanoid ul li input[type=radio]{
   position: absolute;
   visibility: hidden;
   display:inline;
 }
 
-ul li label{
+#humanoid ul li label{
   
   position: relative;
   top:-60px;
@@ -87,11 +79,11 @@ ul li label{
   -webkit-transition: all 0.25s linear;
 }
 
-ul li:hover label{
+#humanoid ul li:hover label{
   color: #FFFFFF;
 }
 
-ul li .check{
+#humanoid ul li .check{
   display: block;
   position: absolute;
   border: 5px solid #ffffff;
@@ -105,11 +97,11 @@ ul li .check{
   -webkit-transition: border .25s linear;
 }
 
-ul li:hover .check {
+#humanoid ul li:hover .check {
   border: 5px solid #FFFFFF;
 }
 
-ul li .check::before {
+#humanoid ul li .check::before {
   display: block;
   position: absolute;
   content: '';
@@ -134,3 +126,31 @@ input[type=radio]:checked ~ .check::before{
 input[type=radio]:checked ~ label{
   color: #fbc831;
 }
+
+
+    #round{
+    width:60px; /*same as the height*/
+    height:60px; /*same as the width*/
+    background-color:#fbc831;
+    border:1px solid #fbc831; /*same colour as the background*/
+    color:#fff;
+    opacity: 0.8;
+    font-size:1.0em;
+    /*set the border-radius at half the size of the width and height*/
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    /*give the button a small drop shadow*/
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    }
+    /***NOW STYLE THE BUTTON'S HOVER STATE***/
+    input#round:hover{
+    opacity: 0.6;
+    border:1px solid #fbc831;
+    /*reduce the size of the shadow to give a pushed effect*/
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    }

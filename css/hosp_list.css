@@ -1,4 +1,15 @@
+body{
+  overflow-x:hidden;
+}
 
+.navbar-custom{
+  position:fixed;
+  width:100%;
+  z-index:1;
+ 
+  
+ 
+}
 
 .dropdown-menu{
   position:absolute;
@@ -268,3 +279,46 @@ dropdown ul li:nth-child(4):hover .fa {
 
 
 
+select {
+    padding:4px;
+    margin: 0;
+    background: #fff;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    width: 150px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+label {position:relative}
+label:after {
+    content:"\f078";   
+    font-family: "FontAwesome";
+    font-size: 11px;
+    color:#aaa;
+    right:8px; top:4px;
+    padding:0 0 2px;
+    position:absolute;
+    pointer-events:none;
+}
+label:before {
+    content:'';
+    right:4px; top:0px;
+    width:23px; height:18px;
+    background:#fff;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}

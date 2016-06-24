@@ -30,6 +30,8 @@
      
    });
 
+   
+
 
 //$(document).on("click", function(e){
     //if( !$("#op").is(e.target) ){ 
@@ -53,6 +55,7 @@
     $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
         $('.navbar-toggle:visible').click();
     });
+
 
     // Fit Text Plugin for Main Header
     $("h1").fitText(
