@@ -11,6 +11,7 @@
     
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+   
 
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -31,57 +32,35 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+   
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3s8Q5zB993rGPC-iUEnUC9h0mj091-OI&libraries=places&callback=initAutocomplete"
+        async defer></script>
 
     <script type="text/javascript">
-    $(document).ready(function()
-    {
-        google.maps.event.addDomListener(window, 'load', function () 
-        {
-            var places = new google.maps.places.Autocomplete(document.getElementById('loc'));
-            google.maps.event.addListener(places, 'place_changed', function () 
-            {
-                var place = places.getPlace();
-                var address = place.formatted_address;
-                var latitude = place.geometry.location.lat();
-                var longitude = place.geometry.location.lng();
-                var mesg = "Address: " + address;
-                document.getElementById("lat").value = latitude;
-                document.getElementById("lon").value = longitude;
-                if(places!='\0')
-                {
-                    $("#lonlat").hide();
-                    $('#care_div').css('display', 'block');
-                }
-            });
-        });
-   
-        google.maps.event.addDomListener(window, 'load', function () 
-        {
-            var places = new google.maps.places.Autocomplete(document.getElementById('location'));
-            google.maps.event.addListener(places, 'place_changed', function () 
-            {
-                var place = places.getPlace();
-                var address = place.formatted_address;
-                var latitude = place.geometry.location.lat();
-                var longitude = place.geometry.location.lng();
-                var mesg = "Address: " + address;
-                mesg += "\nLatitude: " + latitude;
-                mesg += "\nLongitude: " + longitude;
-                /*alert(mesg);*/
-                document.getElementById("lat").value = latitude;
-                document.getElementById("lon").value = longitude;
-               
-                if(places!='\0')
-                {
-                    console.log("hi");
-                    $("#lonlat").hide();
-                    $('#care_div').css('display', 'block');
-                }
+    /*$(document).ready(function()
+    {*/console.log("hola");
         
-             });
-        });
+        var autocomplete;
 
+      function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('loc')),
+            {types: ['geocode']});
+        autocomplete.addListener('place_changed', getLoc);
+      }
+
+      function getLoc() {
+        var place = autocomplete.getPlace();
+        console.log('Latitude : '+place.geometry.location.lat());
+        console.log('Longitude : '+place.geometry.location.lng());
+      }
+
+     
+
+</script>
+<script type="text/javascript">
+$(document).function(){
 
         $('#a input').on('change', function()
         {
@@ -119,7 +98,7 @@
             $('#humanoid').css("display","block");
         });
 
-    })
+    });
     </script>
 
     
