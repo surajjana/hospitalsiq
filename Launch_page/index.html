@@ -48,49 +48,7 @@ function showPage() {
 }
 </script>
 
-<script type="text/javascript">
-        $('textarea').blur(function () {
-    $('#hire textarea').each(function () {
-        $this = $(this);
-        if ( this.value != '' ) {
-          $this.addClass('focused');
-          $('textarea + label + span').css({'opacity': 1});
-        }
-        else {
-          $this.removeClass('focused');
-          $('textarea + label + span').css({'opacity': 0});
-        }
-    });
-});
 
-$('#hire .field:first-child input').blur(function () {
-    $('#hire .field:first-child input').each(function () {
-        $this = $(this);
-        if ( this.value != '' ) {
-          $this.addClass('focused');
-          $('.field:first-child input + label + span').css({'opacity': 1});
-        }
-        else {
-          $this.removeClass('focused');
-          $('.field:first-child input + label + span').css({'opacity': 0});
-        }
-    });
-});
-
-$('#hire .field:nth-child(2) input').blur(function () {
-    $('#hire .field:nth-child(2) input').each(function () {
-        $this = $(this);
-        if ( this.value != '' ) {
-          $this.addClass('focused');
-          $('.field:nth-child(2) input + label + span').css({'opacity': 1});
-        }
-        else {
-          $this.removeClass('focused');
-          $('.field:nth-child(2) input + label + span').css({'opacity': 0});
-        }
-    });
-});
-    </script>
     <style type="text/css">
 
 
@@ -222,31 +180,6 @@ padding:12px 13px;" >Access the beta</a>
                 </div> -->
 
 
-                 <h1 style="font-weight:100;text-align:center;">Login</h1>
-    
-    <form >
-         
-
-          <div class="field email-box">
-                <input type="text" id="email" placeholder="name@email.com"/>
-                <label for="email">Email</label>
-                <span class="ss-icon">check</span>
-          </div>
-
-         <!--  <div class="field pwd-box">
-                <textarea id="pwd"  placeholder="Yype your password..."/></textarea>
-                <label for="pwd">Password</label>
-                <span class="ss-icon">check</span>
-          </div> -->
-          <div class="field pwd-box">
-          <input type="password" placeholder="********">
-          <label for="pwd">Password</label>
-           <span class="ss-icon">check</span>
-           </div>
-
-
-          <input class="button" type="submit" value="Send" />
-  </form>
             </div>
 
         </div>
