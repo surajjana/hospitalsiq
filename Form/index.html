@@ -19,6 +19,8 @@
     <!-- Plugin CSS -->
     
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
   <title>jQuery UI Accordion - Default functionality</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
@@ -31,6 +33,8 @@
   $( function() {
     $( "#accordion" ).accordion();
   } );
+
+  
   </script>
 
   <style type="text/css">
@@ -218,18 +222,44 @@ transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 
     </section>
 
-    <section id="services" style="position:relative;top:100px;display:none;">
-     <form  id="serviceForm" novalidate>
-                    
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Name:</label>
-                            <input type="checkbox" class="form-control" id="name" required data-validation-required-message="Please enter your phone number.">
-                             <input type="checkbox" class="form-control" id="name" required data-validation-required-message="Please enter your phone number.">
-                        </div>
-                    </div>
-                    </form>
-                    </section>
+    <section id="services" style="position:relative;top:100px;">
+
+   
+
+     <form role="form">
+     <div class="container">
+    <div class="row">
+    
+    <div class="col-sm-8 col-sm-push-2 col-sm-offset-pull-2">
+    <div class="row">
+    <div class="col-sm-4">
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Option 1
+    </label>
+    </div>
+        <div class="col-sm-4">
+
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Option 2
+    </label>
+    </div>
+        <div class="col-sm-4">
+
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Option 3
+    </label>
+    </div>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Option 4
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Option 5
+    </label>
+  </form>
+  </div>
+
+                 
+          </section>
                    
 
 
