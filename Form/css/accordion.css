@@ -33,3 +33,13 @@ html,body{
   width: 100%;
 	margin-bottom:35%;
 }
+
+input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    vertical-align: bottom;
+}
+
+#services{
+	line-height: 35px;
+}
