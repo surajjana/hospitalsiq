@@ -29,22 +29,15 @@
 
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+      <script src="js/accordion.js"></script>
 
      
-      <script type="text/javascript">
-        
-        $( function() 
-        {
-        $( "#accordion" ).accordion();
-        } 
-        );
-
-      </script>
+      
 
       
       <style type="text/css">
 
-        textarea
+        #one
         {
           width:100%;
           font-size: 14px;
@@ -69,6 +62,13 @@
           letter-spacing:3px;
           color:rgba(0,0,0,0.6);
         }
+        h4{
+
+          cursor: pointer;
+          letter-spacing:3px;
+          color:rgba(0,0,0,0.6);
+        }
+       
 
       
       </style>
@@ -82,7 +82,7 @@
     <div class="row">
       
     
-      <div class="col-sm-4 col-sm-push-4 col-sm-pull-4" style="position:relative;top:15px;">
+      <div class="col-sm-4 col-sm-push-2 col-sm-pull-2" style="position:relative;top:15px;">
         <center>
           <img src="img/hIQ_logo.png" style="width:60%" />
         </center>
@@ -213,7 +213,7 @@
           
           <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" style="position:relative;top:90px;">
             <label>Description:</label>
-            <textarea ></textarea>
+            <textarea id="one"></textarea>
           </div>
           
         
@@ -241,7 +241,7 @@
 
     <section id="services" style="position:relative;top:100px;">
 
-      <div class="container" style="position:relative;top:50px;">
+      <div class="container-fluid" style="position:relative;top:50px;">
     
         <div class="row">
     
@@ -255,94 +255,113 @@
 
         <div class="row">
         
-          <div class="col-sm-8 col-sm-push-2 col-sm-offset-pull-2">
+          <div class="col-sm-8 col-sm-push-2 col-sm-offset-pull-2 col-xs-push-0 col-xs-pull-0">
             <div class="row">
 
-              <form role="form" style="position:relative;top:50px;">
+              <form role="form" style="position:relative;top:50px;" id="se">
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
-                  <input type="checkbox" value="">Ambulance
+                  <input type="checkbox"  value="">Ambulance
                   </label>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                     <input type="checkbox" value="">Blood bank
                   </label>
                 </div>
             
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Cafeteria
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value=""> Laboratory
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Money changer
                   </label>
                 </div>
                  
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Online appointments
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Parking
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Pharmacy
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Telemedicines
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Waiting lounge
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Wifi services
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Organ transplants
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Cashless mediclaim
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">ATM
                   </label>
                 </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                  <label class="checkbox-inline">
+                  <input type="checkbox" value="">Other
+                  </label>
+                  </div>
+                  <div class="col-sm-6 " style="position:relative;left:3px;">
+                  
+                   <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your phone number.">
+                </div>
+
+                  </div>
+
+                </div>
+
+                
+
               </form>
             </div>
             <div class="row">
@@ -380,126 +399,126 @@
 
         <div class="row">
         
-          <div class="col-sm-8 col-sm-push-2 col-sm-offset-pull-2">
+          <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 col-xs-push-0 col-xs-pull-0">
             <div class="row">
 
               <form role="form" style="position:relative;top:50px;">
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Anesthesiology
                   </label>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                     <input type="checkbox" value="">Ayurveda
                   </label>
                 </div>
             
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Cancer
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value=""> Cardiology
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Children
                   </label>
                 </div>
                  
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Cosmetic and Plastic surgery
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Dental
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Dermatology
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Diabetes
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">ENT
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Eye
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Gastroenterologist
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Gynecology
                   </label>
                 </div>
                 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Hematology
                   </label>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Homeopathy
                   </label>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Immunology
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Maternity
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Mental
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Nephrology
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Neurology
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Oncology
                 </div>
@@ -509,59 +528,75 @@
                   <input type="checkbox" value="">Ophthalmology
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Orthopaedic
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Psychiatric
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Radiology
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Rheumatology
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Urology
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Veterinary
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Pulmonology
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Dietary
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">Emergency medicine
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">General surgery
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <label class="checkbox-inline">
                   <input type="checkbox" value="">General medicine
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                  <label class="checkbox-inline">
+                  <input type="checkbox" value="">Other
+                  </label>
+                  </div>
+                  <div class="col-sm-6 " style="position:relative;left:7px;">
+                  
+                   <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your phone number.">
+                </div>
+
+                  </div>
+
                 </div>
 
               </form>
@@ -583,6 +618,1095 @@
     </section>
 
 
+<!-- Section4 -->
+<section id="price" style="position:relative;top:260px;">
+  <div class="container">
+    <div class="row">
+    
+          <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" >
+            <center>
+              <h3 style="border:1px solid rgba(10, 185, 193, 0.56);border-radius:4px;padding:12px;color:rgba(0,0,0,0.65);">Consultation Fees for each department</h3>
+            </center>
+          </div>
+      
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" style="position:relative;top:30px;">
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h3>Departments</h3>
+            <hr/></center>
+          </div>
+          <div class="col-sm-6">
+            <center><h3>Consultancy Fees</h3><hr/></center>
+          </div>
+        </div>
+        <br/>
+        <div class="row">
+           <div class="col-sm-6">
+            <center><h4>Anesthesiology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range"></div>
+          </div>
+        </div>
+
+
+         <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Ayurveda</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range1"></div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Cancer</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range2"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Cardiology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range3"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Children</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount4" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range4"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Cosmetic and Plastic surgery</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount5" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range5"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Dental</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount6" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range6"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Dermatology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount7" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range7"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Diabetes</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount8" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range8"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>ENT</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount9" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range9"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Eye</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount10" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range10"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Gastroenterologist</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount11" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range11"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Gynecology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount12" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range12"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Hematology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount13" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range13"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Homeopathy</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount14" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range14"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Immunology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount15" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range15"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Maternity</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount16" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range16"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Mental</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount17" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range17"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Nephrology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount18" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range18"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Neurology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount19" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range19"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Oncology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount20" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range20"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Ophthalmology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount21" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range21"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Orthopaedic</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount22" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range22"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Psychiatric</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount23" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range23"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Radiology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount24" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range24"></div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Rheumatology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount25" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range25"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Urology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount26" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range26"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Veterinary</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount27" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range27"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Pulmonology</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount28" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range28"></div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Dietary</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount29" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range29"></div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Emergency medicine</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount30" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range30"></div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>General surgery</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount31" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range31"></div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>General medicine</h4></center>
+          </div>
+          <div class="col-sm-6">
+           <input type="text" id="amount32" readonly style="border:0; color:#f6931f; font-weight:bold;">
+           <div id="slider-range32"></div>
+          </div>
+        </div>
+ 
+        <div class="row">
+              
+          
+              <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" style="position:relative;top:120px;">
+                 <center>
+                  <button type="button" id="click_me" class="btn btn-primary" style="background:none;color:black;padding:12px 25px;" >Submit</button>
+                 </center><br/>
+              </div>
+             
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section5 -->
+<section id="Hosp_capacity" style="position:relative; top:400px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" >
+            <center>
+              <h3 style="border:1px solid rgba(10, 185, 193, 0.56);border-radius:4px;padding:12px;color:rgba(0,0,0,0.65);">Hospital Capacity</h3>
+            </center>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" >
+        <div class="row">
+          <div class="col-sm-6">
+            <center>
+              <h4 >Number of beds :</h4>
+            </center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" >
+        <div class="row">
+          <div class="col-sm-6">
+            <center>
+              <h4 >Number of ICU :</h4>
+            </center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" >
+        <div class="row">
+          <div class="col-sm-6">
+            <center>
+              <h4 >Number of ventilators :</h4>
+            </center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+              
+          
+              <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" style="position:relative;top:120px;">
+                 <center>
+                  <button type="button" id="click_me" class="btn btn-primary" style="background:none;color:black;padding:12px 25px;" >Submit</button>
+                 </center><br/>
+              </div>
+             
+    </div>
+  </div>
+</section>
+
+
+<!--Section 6-->
+<section id="Doc_count" style="position:relative;top:500px;">
+  <div class="container">
+  <div class="row">
+      <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" >
+            <center>
+              <h3 style="border:1px solid rgba(10, 185, 193, 0.56);border-radius:4px;padding:12px;color:rgba(0,0,0,0.65);">Number of doctors in a department</h3>
+            </center>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" style="position:relative;top:30px;">
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h3>Departments</h3>
+            <hr/></center>
+          </div>
+          <div class="col-sm-6">
+            <center><h3>Number of doctors</h3><hr/></center>
+          </div>
+        </div>
+        <br/>
+        <div class="row">
+           <div class="col-sm-6">
+            <center><h4>Anesthesiology</h4></center>
+          </div>
+         <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+         <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Ayurveda</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Cancer</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Cardiology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Children</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Cosmetic and Plastic surgery</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Dental</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Dermatology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Diabetes</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>ENT</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Eye</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Gastroenterologist</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Gynecology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Hematology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Homeopathy</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Immunology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Maternity</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Mental</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Nephrology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Neurology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Oncology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Ophthalmology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Orthopaedic</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Psychiatric</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Radiology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Rheumatology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Urology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Veterinary</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Pulmonology</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Dietary</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>Emergency medicine</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>General surgery</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <center><h4>General medicine</h4></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <select class="1-50"></select>
+            </center>
+          </div>
+        </div>
+ 
+        <div class="row">
+              
+          
+              <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" style="position:relative;top:120px;">
+                 <center>
+                  <button type="button" id="click_me" class="btn btn-primary" style="background:none;color:black;padding:12px 25px;" >Submit</button>
+                 </center><br/>
+              </div>
+             
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section 8-->
+
+
+<section id="insure" style="position:relative;top:620px;">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" >
+        <center>
+          <h3 style="border:1px solid rgba(10, 185, 193, 0.56);border-radius:4px;padding:12px;color:rgba(0,0,0,0.65);">Insurance companies</h3>
+        </center>
+      </div>
+  
+    </div>
+
+    <div class="row">
+    
+      <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 col-xs-push-0 col-xs-pull-0">
+        <div class="row">
+
+          <form role="form" style="position:relative;top:50px;">
+            
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+              <label class="checkbox-inline">
+              <input type="checkbox" value="">ABc
+              </label>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+              <label class="checkbox-inline">
+                <input type="checkbox" value="">Def
+              </label>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+              <label class="checkbox-inline">
+                <input type="checkbox" value="">Ghi
+              </label>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                  <label class="checkbox-inline">
+                  <input type="checkbox" value="">Other
+                  </label>
+                  </div>
+                  <div class="col-sm-6" style="position:relative;left:6px;">
+                  
+                  <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your phone number.">
+                </div>
+
+                  </div>
+
+                </div>
+
+            <div class="row">
+              
+          
+              <div class="col-sm-8 col-sm-push-2 col-sm-pull-2" style="position:relative;top:120px;">
+                 <center>
+                  <button type="button" id="click_me" class="btn btn-primary" style="background:none;color:black;padding:12px 25px;" >Submit</button>
+                 </center><br/>
+              </div>
+             
+            </div>
+            <br/>
+            <br/>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
   
@@ -595,8 +1719,6 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
 
 
  

@@ -28,17 +28,33 @@ html,body{
 
   width: 100%;
 	margin-bottom:35%;
+
+}
+html{
+    overflow-x: hidden;
 }
 
-input[type="checkbox"] {
-    width: 24px;
-    height: 24px;
-    vertical-align: bottom;
-}
 
 #services{
-	line-height: 35px;
+	line-height: 25px;
 }
 #Depts{
-    line-height: 35px;
+    line-height: 25px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+
+}
+
+/*#se{
+    white-space: normal;
+    word-wrap: break-word;
+}*/
+
+
+#price{
+    margin-top:200px;
 }
