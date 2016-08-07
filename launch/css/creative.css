@@ -34,7 +34,7 @@ body {
 .form label {
   display: block;
   text-align: left;
-  color: white;
+  color: rgba(74,74,74,0.9);
   font-size: .875em;
 }
 .form form .text-input {
