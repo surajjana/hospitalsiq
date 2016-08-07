@@ -136,77 +136,6 @@ p{
 }
 
 
-.form{
-  width: 400px;
-  margin: 0 auto;
-  text-align: left;
-  margin-top: 10em;
-  
-  label {
-    display: block;
-    text-align: left;
-    color: white;
-    font-size: .875em;
-  }
-  
-  .form {
-  width: 400px;
-  margin: 0 auto;
-  text-align: left;
-  margin-top: 10em;
-}
-.form label {
-  display: block;
-  text-align: left;
-  color: white;
-  font-size: .875em;
-}
-.form form .text-input {
-  overflow: hidden;
-  margin-bottom: .875em;
-}
-.form form input[type="text"],
-.form form input[type="password"] {
-  width: 100%;
-  padding: 1em 0 12px;
-  padding-left: 0;
-  background: none;
-  color: white;
-  font-size: 1.2em;
-  font-weight: 400;
-  border: none;
-  border-bottom: 1px solid #999;
-  /*Some sibling magic happens */
-}
-.form form input[type="text"]:focus + .separator,
-.form form input[type="password"]:focus + .separator {
-  -webkit-transform: scaleX(1) translateY(-2px);
-          transform: scaleX(1) translateY(-2px);
-  opacity: 1;
-}
-.form form input[type="submit"] {
-  color: white;
-  background: #3599FF;
-  padding: 1em 1.4em;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 10px;
-}
-
-.separator {
-  height: 3px;
-  width: 100%;
-  background: #68B3FF;
-  display: block;
-  -webkit-transform: scaleX(0) translateY(-2px);
-          transform: scaleX(0) translateY(-2px);
-  -webkit-transform-origin: 50%;
-          transform-origin: 50%;
-  opacity: 0;
-  -webkit-transition: all 0.15s linear;
-  transition: all 0.15s linear;
-}
-
         </style>
         <script >
         $(document).ready(function(){
@@ -457,7 +386,7 @@ else{
 
 
        
-        <section  id="join" style="margin-top:80px;margin-bottom:100px;">
+        <section  id="join" style="margin-top:80px;margin-bottom:80px;">
 
             <div class="container  " style=" position:relative;top:90px; ">
             <div class="row">
@@ -474,15 +403,15 @@ else{
             </div>
         </section>
 
-        <section  id="notify" style="margin-top:200px;margin-bottom:100px;">
+        <section  id="notify" style="margin-top:80px;margin-bottom:100px;">
 
-            <div class="container " style=" position:relative;top:160px; ">
+            <div class="container " style=" position:relative;top:100px; ">
             <div class="row">
-                <div class="col-sm-10 col-sm-push-1 col-sm-pull-1 text-center" >
+                <div class="col-sm-6 col-sm-push-3 col-sm-pull-3 text-center" >
            
                     <h2 >Notify</h2>
                     <hr >
-                    <div class="form">
+                    <div class="form" style="position:relative;top:80px;">
 
 
   <form action="#">
@@ -499,10 +428,9 @@ else{
     </div>
 
     <div class="form-bottom">
-      <input type="submit" id="submit" value="Submit" />
+      <input type="submit" id="submit" value=" Notify Me" />
 
 
-      <a href="https://hub.docker.com/login/" class="original-src">Original Source</a>
     </div>
   </form>
 

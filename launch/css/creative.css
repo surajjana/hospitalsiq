@@ -61,12 +61,18 @@ body {
   opacity: 1;
 }
 .form form input[type="submit"] {
-  color: white;
-  background: #3599FF;
-  padding: 1em 1.4em;
+  color: rgba(74,74,74,0.8);
+  border:1px solid #3599FF;
+  border-radius:2px;
+  position:relative;
+  top:60px;
+padding:12px 10px;
   font-size: 1.2em;
-  border: none;
-  border-radius: 10px;
+
+}
+#submit:hover{
+  box-shadow: 1px 2px 4px #3599FF;
+  color:#fac731;
 }
 
 .separator {
