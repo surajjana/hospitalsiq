@@ -4,19 +4,33 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-html,
+html {
+  height: 100%;
+}
 body {
   height: 100%;
-  width: 100%;
--webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  background: url('../img/bg.jpg') fixed no-repeat center;
-
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
+
+
+
+.main {
+  float: left;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+
+#page1 {
+  text-align: center;
+  background: url('../img/bg.jpg') center center no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+
+
 
 
 a {
@@ -51,7 +65,7 @@ p {
   padding: 0;
 }
 .navbar-default {
-  background-color: transparent;
+ 
   border:none;
   
     font-family: 'Montserrat', sans-serif;
@@ -62,7 +76,7 @@ p {
 .navbar-default .navbar-header .navbar-brand {
   color: #f05f40;
    font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 1.2em;
   text-transform: uppercase;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -72,24 +86,35 @@ p {
 .navbar-default .nav > li > a,
 .navbar-default .nav > li > a:focus {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 1.2em
+  ;
+  letter-spacing:0.2em;
   font-size: 13px;
   color: #222222;
+  padding:19px;
+
+    transition: all 0.3s;
+
+
 }
-.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:hover:before,
 .navbar-default .nav > li > a:focus:hover {
   color: #fac731;
+
+
+  border-bottom:60px solid rgba(116,116,116,0.3);
+
 }
 
 .navbar-default .nav > li.active > a:hover,
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
-  color:#fac731;
+  color:#333;
 }
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
-   \
+   
   }
   .navbar-default .navbar-header .navbar-brand {
     color: rgba(255, 255, 255, 0.7);
@@ -100,28 +125,49 @@ p {
       }
   .navbar-default .nav > li > a,
   .navbar-default .nav > li > a:focus {
-    color:rgba(255,255,255,0.8);
+    color:#ddd;
   }
   .navbar-default .nav > li > a:hover,
   .navbar-default .nav > li > a:focus:hover {
     color: #fac731;
   }
   .navbar-default.affix {
-    background-color: white;
+    background: #313131; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#313131,#343434,#373737); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#313131,#343434,#373737); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#313131,#343434,#373737); /* Standard syntax (must be last) */
+    box-shadow: 1px 2px 6px #252628;
+    border: 2px solid rgba(116,116,116,0.3);
     
   }
   .navbar-default.affix .navbar-header .navbar-brand {
-    color: #fac731;
+    color: rgba(255,255,255,0.8);
     font-size: 14px;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #fac731;
+     color: rgba(255,255,255,0.8);
   }
-  .navbar-default.affix .nav > li > a,
-  .navbar-default.affix .nav > li > a:focus {
-    color: #fac731;
-  }
+  .navbar-default.affix .nav > li >
+a:before {
+ position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0px;
+  bottom: 0px;
+  content: '';
+  background: rgba(120,120,120,0.8);
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+  
+  
+
+.navbar-default.affix .nav > li.active > a:hover:before,
+.navbar-default.affix .nav > li.active > a:focus:hover {
+height:160px;
+}
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
     color: #fac731;
@@ -157,21 +203,7 @@ box-shadow: 2px 3px 5px rgba(255,255,255,0.7);
 
 
 
-#foot{
-  position:fixed;
-float:left;
- color:white;
-  bottom:5px;
-  left:2%;
 
-}
-#foots{
-  position:fixed;
-float:left;
- color:white;
-  bottom:5px;
-  
-}
 
 
 #icons p a{
@@ -190,3 +222,5 @@ float:left;
 .hidden{
   display:none;
 }
+
+

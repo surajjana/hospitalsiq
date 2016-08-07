@@ -626,7 +626,7 @@ if (typeof jQuery === 'undefined') {
   }
 
   Collapse.prototype.hide = function () {
-    if (this.transitioning || !this.$element.hasClass('in')) return
+    if (this.transitioning || !this.$element.hasClass('in'))  return
 
     var startEvent = $.Event('hide.bs.collapse')
     this.$element.trigger(startEvent)
@@ -662,6 +662,8 @@ if (typeof jQuery === 'undefined') {
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
   }
+
+  
 
   Collapse.prototype.toggle = function () {
     this[this.$element.hasClass('in') ? 'hide' : 'show']()
