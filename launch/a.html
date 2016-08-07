@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<title>a</title>
+<style type="text/css">
+/**
+*Those Vars
+*/
+.form {
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 10em;
+}
+.form label {
+  display: block;
+  text-align: left;
+  color: white;
+  font-size: .875em;
+}
+.form form .text-input {
+  overflow: hidden;
+  margin-bottom: .875em;
+}
+.form form input[type="text"],
+.form form input[type="password"] {
+  width: 100%;
+  padding: 1em 0 12px;
+  padding-left: 0;
+  background: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 400;
+  border: none;
+  border-bottom: 1px solid #999;
+  /*Some sibling magic happens */
+}
+.form form input[type="text"]:focus + .separator,
+.form form input[type="password"]:focus + .separator {
+  -webkit-transform: scaleX(1) translateY(-2px);
+          transform: scaleX(1) translateY(-2px);
+  opacity: 1;
+}
+.form form input[type="submit"] {
+  color: white;
+  background: #3599FF;
+  padding: 1em 1.4em;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+}
+
+.separator {
+  height: 3px;
+  width: 100%;
+  background: #68B3FF;
+  display: block;
+  -webkit-transform: scaleX(0) translateY(-2px);
+          transform: scaleX(0) translateY(-2px);
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  opacity: 0;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+/**
+* Form Reset - remove focus highlighting
+*/
+* :focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+body {
+  font-family: Roboto;
+  background: #282F32;
+}
+body a {
+  color: #3599FF;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="form">
+
+
+  <form action="#">
+    <div class="text-input">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" placeholder="" />
+      <span class="separator"> </span>
+    </div>
+
+    <div class="text-input">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="" />
+      <span class="separator"> </span>
+    </div>
+
+    <div class="form-bottom">
+      <input type="submit" id="submit" value="Submit" />
+
+
+      <a href="https://hub.docker.com/login/" class="original-src">Original Source</a>
+    </div>
+  </form>
+
+
+</div>
+</body>
+</html>
