@@ -2,7 +2,86 @@
  * Creative v1.0.4 (http://startbootstrap.com/template-overviews/creative)
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ 
  */
+
+
+ $(document).ready(function(){
+
+        
+
+     var menu = $('.menu');
+    var origOffsetY = menu.offset().top;
+
+    function scroll() {
+      
+        if ($(window).scrollTop() >= origOffsetY) {
+            $('.menu').addClass('sticky');
+           
+            $('.content').addClass('menu-padding');
+        }
+         else {
+            $('.menu').removeClass('sticky');
+            
+            $('.content').removeClass('menu-padding');
+        }
+
+ if ($('#hom').hasClass('active')){
+        $('.menu').removeClass('sticky'); 
+    } 
+else{
+     $('.menu').addClass('sticky');
+}
+
+
+    }
+
+
+
+
+
+    document.onscroll = scroll;
+
+
+
+    animateScript: function() {
+        $('.scrollpoint.sp-effect1').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInLeft');},{offset:'100%'});
+        $('.scrollpoint.sp-effect2').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInRight');},{offset:'100%'});
+        $('.scrollpoint.sp-effect3').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInDown');},{offset:'100%'});
+        $('.scrollpoint.sp-effect4').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeIn');},{offset:'100%'});
+        $('.scrollpoint.sp-effect5').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInUp');},{offset:'100%'});
+    },
+       
+        });
+
+ 
+
+        $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
 
 (function($) {
 

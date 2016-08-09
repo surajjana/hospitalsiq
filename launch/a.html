@@ -2,115 +2,166 @@
 <head>
 <title>a</title>
 <style type="text/css">
-/**
-*Those Vars
-*/
-.form {
-  width: 400px;
-  margin: 0 auto;
-  text-align: left;
-  margin-top: 10em;
+
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1em;
+  max-width: 400px;
+  width: calc(100% - 2em);
+  vertical-align: top;
 }
-.form label {
+
+.input__field {
+  position: relative;
   display: block;
-  text-align: left;
-  color: white;
-  font-size: .875em;
-}
-.form form .text-input {
-  overflow: hidden;
-  margin-bottom: .875em;
-}
-.form form input[type="text"],
-.form form input[type="password"] {
-  width: 100%;
-  padding: 1em 0 12px;
-  padding-left: 0;
-  background: none;
-  color: white;
-  font-size: 1.2em;
-  font-weight: 400;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
   border: none;
-  border-bottom: 1px solid #999;
-  /*Some sibling magic happens */
-}
-.form form input[type="text"]:focus + .separator,
-.form form input[type="password"]:focus + .separator {
-  -webkit-transform: scaleX(1) translateY(-2px);
-          transform: scaleX(1) translateY(-2px);
-  opacity: 1;
-}
-.form form input[type="submit"] {
-  color: white;
-  background: #3599FF;
-  padding: 1em 1.4em;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 10px;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
-.separator {
-  height: 3px;
-  width: 100%;
-  background: #68B3FF;
+.input__field:focus {
+  outline: none;
+}
+
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.input__label-content {
+  position: relative;
   display: block;
-  -webkit-transform: scaleX(0) translateY(-2px);
-          transform: scaleX(0) translateY(-2px);
-  -webkit-transform-origin: 50%;
-          transform-origin: 50%;
-  opacity: 0;
-  -webkit-transition: all 0.15s linear;
-  transition: all 0.15s linear;
+  padding: 1.6em 0;
+  width: 100%;
 }
 
-/**
-* Form Reset - remove focus highlighting
-*/
-* :focus {
-  outline-color: transparent;
-  outline-style: none;
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
 }
 
-body {
-  font-family: Roboto;
-  background: #282F32;
+.icon {
+  color: #ddd;
+  font-size: 150%;
 }
-body a {
-  color: #3599FF;
-  font-size: 1em;
-  text-decoration: none;
+.input--madoka {
+  margin: 1.1em;
 }
+
+.input__field--madoka {
+  width: 100%;
+  background: transparent;
+  color: #7A7593;
+}
+
+.input__label--madoka {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #7A7593;
+  text-align: left;
+  cursor: text;
+}
+
+.input__label-content--madoka {
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.graphic--madoka {
+  -webkit-transform: scale3d(1, -1, 1);
+  transform: scale3d(1, -1, 1);
+  -webkit-transition: stroke-dashoffset 0.3s;
+  transition: stroke-dashoffset 0.3s;
+  pointer-events: none;
+
+  stroke: #7A7593;
+  stroke-width: 4px;
+  stroke-dasharray: 962;
+  stroke-dashoffset: 558;
+}
+
+.input__field--madoka:focus + .input__label--madoka,
+.input--filled .input__label--madoka {
+  cursor: default;
+  pointer-events: none;
+}
+
+.input__field--madoka:focus + .input__label--madoka .graphic--madoka,
+.input--filled .graphic--madoka {
+  stroke-dashoffset: 0;
+}
+
+.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
+.input--filled .input__label-content--madoka {
+  -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+  transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+}
+
 
 </style>
 </head>
 <body>
 
 
-<div class="form">
+<section class="content bgcolor-4">
+        <h2>Madoka</h2>
+        <span class="input input--madoka">
+          <input class="input__field input__field--madoka" type="text" id="input-31" />
+          <label class="input__label input__label--madoka" for="input-31">
+            <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+              <path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+            </svg>
+            <span class="input__label-content input__label-content--madoka">Frequency</span>
+          </label>
+        </span>
+        <span class="input input--madoka">
+          <input class="input__field input__field--madoka" type="text" id="input-32" />
+          <label class="input__label input__label--madoka" for="input-32">
+            <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+              <path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+            </svg>
+            <span class="input__label-content input__label-content--madoka">Weight</span>
+          </label>
+        </span>
+        <span class="input input--madoka">
+          <input class="input__field input__field--madoka" type="text" id="input-33" />
+          <label class="input__label input__label--madoka" for="input-33">
+            <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+              <path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+            </svg>
+            <span class="input__label-content input__label-content--madoka">Strength</span>
+          </label>
+        </span>
+      </section>
 
 
-  <form action="#">
-    <div class="text-input">
-      <label for="username">Username</label>
-      <input type="text" name="username" id="username" placeholder="" />
-      <span class="separator"> </span>
-    </div>
 
-    <div class="text-input">
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" placeholder="" />
-      <span class="separator"> </span>
-    </div>
-
-    <div class="form-bottom">
-      <input type="submit" id="submit" value="Submit" />
-
-
-      <a href="https://hub.docker.com/login/" class="original-src">Original Source</a>
-    </div>
-  </form>
-
-
-</div>
 </body>
 </html>
