@@ -27,12 +27,7 @@ body:before {
 
 }
 
-.scrollpoint {
-  opacity: 0;
-}
-.scrollpoint.active {
-  opacity: 1 \0;
-}
+
 
          .google :hover{
        color:#dd4b39;
