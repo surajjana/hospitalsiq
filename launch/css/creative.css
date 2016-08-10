@@ -342,7 +342,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Lato",Arial;
+  font-size:55px
+  font-weight:1.2em;
+  color:rgba(102,102,102,1);
 }
  .text-faded {
   font-size: 17px;
