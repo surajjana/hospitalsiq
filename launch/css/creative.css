@@ -27,6 +27,18 @@ body:before {
 
 }
 
+section{
+  padding-bottom:90px;
+}
+
+
+
+.scrollpoint {
+  opacity: 0;
+}
+.scrollpoint.active {
+  opacity: 1 \0;
+}
 
 
          .google :hover{
@@ -315,11 +327,12 @@ font-family: "Merriweather","Helvetica Neue",Arial,sans-serif;
 
 
 
-#page1 {
+header {
   text-align: center;
   background: url('../img/bg.jpg') center center no-repeat;
   background-size: cover;
   color: #fff;
+
 }
 
 
