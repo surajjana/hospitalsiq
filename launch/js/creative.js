@@ -99,8 +99,8 @@ $('.scrollpoint.sp-effect1').waypoint(function(){$(this).toggleClass('active');$
     $(".nav li").on("click", function() {
       $(".nav li").removeClass("active");
       $(this).addClass("active");
-    });
 
+    });
 
 
 
