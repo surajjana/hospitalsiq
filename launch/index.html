@@ -25,6 +25,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/normalize.css">
 
     <script src="jquery-1.12.4.min.js"></script>
 
@@ -138,17 +139,17 @@
   
   <body >
     <div class="menu" id="menu">
-      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top "  style="max-height:55px;">
-        <div class="container-fluid">
+      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top "  style="max-height:50px;">
+        <div class="container-fluid" style="max-height:50px;">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="navbar-header" style="max-height:50px;" >
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="img/hIQ_logo.png" style="width:40%;padding:5px;" alt=""/>
+                <img src="img/hIQ_logo1.png" style="padding-top:5px;width:30%;" alt=""/>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -1036,6 +1037,42 @@
         $(document).ready(function() {
             appMaster.preLoader();
         });
+    </script>
+
+    <script>
+      (function() {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+          (function() {
+            // Make sure we trim BOM and NBSP
+            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+            String.prototype.trim = function() {
+              return this.replace(rtrim, '');
+            };
+          })();
+        }
+
+        [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+          // in case the input is already filled..
+          if( inputEl.value.trim() !== '' ) {
+            classie.add( inputEl.parentNode, 'input--filled' );
+          }
+
+          // events:
+          inputEl.addEventListener( 'focus', onInputFocus );
+          inputEl.addEventListener( 'blur', onInputBlur );
+        } );
+
+        function onInputFocus( ev ) {
+          classie.add( ev.target.parentNode, 'input--filled' );
+        }
+
+        function onInputBlur( ev ) {
+          if( ev.target.value.trim() === '' ) {
+            classie.remove( ev.target.parentNode, 'input--filled' );
+          }
+        }
+      })();
     </script>
 
 </body>
