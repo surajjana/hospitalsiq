@@ -47,39 +47,80 @@
         $(document).ready(function()
         {
           
-          var menu = $('.menu');
-          var origOffsetY = menu.offset().top;
-
-          function scroll() 
-          {
-            
-              if ($(window).scrollTop() >= origOffsetY) 
-              {
-                  $('.menu').addClass('sticky');
-                 
-                  $('.content').addClass('menu-padding');
-              }
-               else 
-              {
-                  $('.menu').removeClass('sticky');
-                  
-                  $('.content').removeClass('menu-padding');
-              }
-/*
-              if ($('#hom').hasClass('active'))
-              {
-                  $('.menu').removeClass('sticky'); 
-              } 
-                
-                else
-              {
-                     $('.menu').addClass('sticky');
-              }*/
-              
+     
+  
+  //throttle
+   
+  $.throttle = function(func, wait, options) {
+      var context, args, result;
+      var timeout = null;
+      var previous = 0;
+      if (!options) options = {};
+      var later = function() {
+        previous = options.leading === false ? 0 : $.now();
+        timeout = null;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+      };
+      return function() {
+        var now = $.now();
+        if (!previous && options.leading === false) previous = now;
+        var remaining = wait - (now - previous);
+        context = this;
+        args = arguments;
+        if (remaining <= 0 || remaining > wait) {
+          if (timeout) {
+            clearTimeout(timeout);
+            timeout = null;
           }
+          previous = now;
+          result = func.apply(context, args);
+          if (!timeout) context = args = null;
+        } else if (!timeout && options.trailing !== false) {
+          timeout = setTimeout(later, remaining);
+        }
+        return result;
+      };
+    };    
+  
+
+//scroll hide 
+    var lastScrollTop = 0;    
+            
+      $(document).on('scroll', $.throttle(function() {
           
-          document.onscroll = scroll;
-         /* $("a").on('click', function(event) 
+          var stop = $(this).scrollTop();
+      
+      if($(window).scrollTop() > (80)) {          
+          if (stop > lastScrollTop){
+              console.log('down');
+              // scrolling down
+            if($('#menu').hasClass('menu-close'))
+            {
+                $('#menu').addClass('menu-min');
+                $('#menu').removeClass('menu-close');
+            }
+        }
+          else
+          {
+          // scrolling up
+          if ($('#hom').hasClass('active')){
+        $('.menu').removeClass('menu-min'); 
+    } 
+else{
+     $('.menu').addClass('menu-close');
+}
+
+          } 
+          lastScrollTop = stop;
+          }
+            
+      }, 100));
+
+
+
+
+          $("a").on('click', function(event) 
           {
 
             // Make sure this.hash has a value before overriding default behavior
@@ -100,7 +141,7 @@
                 window.location.hash = hash;
               });
             } // End if
-          });*/
+          });
 
 
 
@@ -109,7 +150,7 @@
       </script>
 
     
-   <!--  <script type="text/javascript">function initMap() {
+<!--     <script type="text/javascript">function initMap() {
         var myLatLng = {lat: 13.022945, lng: 77.585455};
            var labels = 'BuoyancyLabs';
 
@@ -138,8 +179,8 @@
     </head>
   
   <body >
-    <div class="menu" id="menu">
-      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top "  style="max-height:50px;">
+    <div id="menu" class="menu-min" >
+      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top "  >
         <div class="container-fluid" style="max-height:50px;">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header" style="max-height:50px;" >
@@ -638,7 +679,7 @@
             
             <div class="row" >
               <center>
-                <div class="col-md-10 col-md-push-1 col-md-pull-1 hidden-sm hidden-xs scrollpoint sp-effect5 " style="padding-top:10px;" >
+                <div class="col-md-10 col-md-push-1 col-md-pull-1 hidden-sm hidden-xs scrollpoint sp-effect5 " style="padding-top:0px;" >
                   <center>
                     <span class="input input--kuro">
                       <input class="input__field input__field--kuro" type="text" id="input-7" />
@@ -682,7 +723,7 @@
             </div>
 
              <div class="row">
-          <div class="col-md-4 col-md-push-4 col-md-pull-4 scrollpoint sp-effect5 hidden-sm hidden-xs" style="padding-top:20px">
+          <div class="col-md-4 col-md-push-4 col-md-pull-4 scrollpoint sp-effect5 hidden-sm hidden-xs" style="padding-top:12px">
             <center><button id="beta"> Submit </button></center>
           </div>
         </div>
@@ -691,7 +732,7 @@
           </div>
 
 
-              <div class="col-md-7  col-md-push-1 hidden-sm hidden-xs" style="position:relative;top:20px;">
+              <div class="col-md-7  col-md-push-1 hidden-sm hidden-xs" style="position:relative;top:10px;">
         <div class="row">
           <div class="col-md-2 col-md-push-2 hidden-sm hidden-xshidden-sm hidden-xs hidden-sm hidden-xs " >
             <center>
