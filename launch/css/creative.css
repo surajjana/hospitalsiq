@@ -10,6 +10,14 @@ body {
  
 }
 
+#cont{
+padding-top:30px;
+    background: #FDFDFD;
+    height:380px;
+    box-shadow: 1px 4px 8px rgba(174,174,174,0.8);
+
+}
+
 
 body:before {
           content: "";
@@ -50,15 +58,15 @@ section{
 }
 
 
-.one ,  .one ~ div{
+/*.one ,  .one ~ div{
   padding-top:70px;
-}
+}*/
 
-#j1 ,  #j1 ~ div{
-  padding-top:90px;
+/*#j1 ,  #j1 ~ div{
+  padding-top:50px;
      
 
-}
+}*/
 
 #ico {
 
@@ -115,7 +123,7 @@ padding:12px 13px;
 }
 #beta:hover{
 
-box-shadow: 2px 3px 5px #fac731;
+box-shadow: 0 1px 3px #fac731;
 }
 
 
@@ -189,7 +197,7 @@ hr{
   position: relative;
   display: block;
   float: right;
-  padding: 0.8em;
+  padding: 1.5em;
   width: 60%;
   border: none;
   border-radius: 0;
@@ -207,7 +215,7 @@ hr{
 .input__label {
   display: inline-block;
   float: right;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   width: 40%;
   color: rgba(44,44,44,0.8);
   font-weight: normal;
@@ -247,7 +255,7 @@ hr{
 
 
 /*Hosi input field*/
-.input--hoshi {
+/*.input--hoshi {
   overflow: hidden;
 }
 
@@ -265,7 +273,7 @@ hr{
   left: 0;
   padding: 0px 0.25em;
   width: 100%;
-  height: calc(100% - 1em);
+  height: calc(100% - 1eqm);
   text-align: left;
   pointer-events: none;
 }
@@ -354,10 +362,10 @@ hr{
     transform: translate3d(0, -40%, 0);
   }
 }
-
+*/
 /*yoko input field*/
 
-.input__field--yoko {
+/*.input__field--yoko {
   z-index: 10;
   width: 100%;
   background: transparent;
@@ -384,18 +392,18 @@ hr{
 
 
   background: rgba(10, 185, 193, 0.7); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, rgba(10, 185, 193, 0.4),rgba(10, 185, 194, 0.56), rgba(10, 185, 195, 0.7)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, rgba(10, 185, 193, 0.4),rgba(10, 185, 194, 0.56), rgba(10, 185, 195, 0.7)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, rgba(10, 185, 193, 0.4),rgba(10, 185, 194, 0.56), rgba(10, 185, 195, 0.7)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, rgba(10, 185, 193, 0.4),rgba(10, 185, 194, 0.56), rgba(10, 185, 195, 0.7)); /* Standard syntax */
-  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
-  transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
-  -webkit-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-}
-
+ /* background: -webkit-linear-gradient(left top, rgba(10, 185, 193, 0.4),rgba(10, 185, 194, 0.56), rgba(10, 185, 195, 0.7)); /* For Safari 5.1 to 6.0 */
+ /* background: -o-linear-gradient(bottom right, rgba(10, 185, 193, 0.4),rgba(10, 185, 194, 0.56), rgba(10, 185, 195, 0.7)); /* For Opera 11.1 to 12.0 */
+  /*background: -moz-linear-gradient(bottom right, rgba(10, 185, 193, 0.4),rgba(10, 185, 194, 0.56), rgba(10, 185, 195, 0.7)); /* For Firefox 3.6 to 15 */*/
+  /*background: linear-gradient(to bottom right, rgba(10, 185, 193, 0.4),rgba(10, 185, 194, 0.56), rgba(10, 185, 195, 0.7)); /* Standard syntax */*/
+  /*-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);*/
+  /*transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);*/
+  /*-webkit-transform-origin: 50% 100%;*/
+  /*transform-origin: 50% 100%;*/
+  /*-webkit-transition: -webkit-transform 0.3s;*/
+  /*transition: transform 0.3s;*/*/
+/*}*/
+/*
 .input__label--yoko::after {
   content: '';
   position: absolute;
@@ -436,7 +444,7 @@ hr{
 .input--filled .input__label--yoko::after {
   -webkit-transform: perspective(50px) rotate3d(1, 0, 0, -90deg);
   transform: perspective(50px) rotate3d(1, 0, 0, -90deg);
-}
+}*/
 
 /*Kuro*/
 .input--kuro {
@@ -742,7 +750,20 @@ height:150px;
   position:relative;
   top:100px;
 }
+#feet{
+  font-size:13px;
+  background: #313131; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#313131,#343434,#373737); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#313131,#343434,#373737); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#313131,#343434,#373737); /* Standard syntax (must be last) */
+    box-shadow: 1px 2px 6px #252628;
+    min-height:40px;
 
+}
+#feet a{
+  color:white;
+}
 
 
 
