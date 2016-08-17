@@ -195,9 +195,9 @@ box-shadow: 0 1px 3px #fac731;
     top: 0;
     left: 0;
     width: 100%;
-  opacity:1;
+  
     text-align: center;
-  overflow:hidden;
+
     -webkit-transition: 500ms all ease-in-out;
   -moz-transition: 500ms all ease-in-out;
   -ms-transition: 500ms all ease-in-out;
