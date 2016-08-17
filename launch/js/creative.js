@@ -6,41 +6,6 @@
  */
 
 
- $(document).ready(function(){
-
-        
-
-     var menu = $('.menu');
-    var origOffsetY = menu.offset().top;
-
-    function scroll() {
-      
-        if ($(window).scrollTop() >= origOffsetY) {
-            $('.menu').addClass('sticky');
-           
-            $('.content').addClass('menu-padding');
-        }
-         else {
-            $('.menu').removeClass('sticky');
-            
-            $('.content').removeClass('menu-padding');
-        }
-
- if ($('#hom').hasClass('active')){
-        $('.menu').removeClass('sticky'); 
-    } 
-else{
-     $('.menu').addClass('sticky');
-}
-
-
-    }
-
-
-
-
-
-    document.onscroll = scroll;
 
 $('.scrollpoint.sp-effect1').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInLeft');},{offset:'100%'});
         $('.scrollpoint.sp-effect2').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInRight');},{offset:'100%'});
