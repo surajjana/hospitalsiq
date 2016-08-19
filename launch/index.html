@@ -45,6 +45,55 @@
             font-family: "Cardo","Times New Roman",Times,serif;
             font-size:16px;
             color:#555;}
+
+
+            .face {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear alternate;animation-fill-mode: forwards;  ;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+    .t_bounce{
+
+      animation: bounce 1s infinite;
+}
+@-webkit-keyframes bounce {
+  from  {
+
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+ to {
+  
+    -webkit-transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 2px, 0);
+  }
+
+}
+
+@keyframes bounce {
+   from  {
+
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+ to {
+
+    -webkit-transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 2px, 0);
+  }
+}
            
         </style>  
 
@@ -479,7 +528,52 @@ else{
             <div class="col-md-8 col-md-push-2 col-md-pull-2 " >
               <div class="row">
                 <div class="col-md-4 col-md-push-1 hidden-sm hidden-xs">
-                  <center><p ><img src="img/ani.svg" /></p></center>
+                  <center><svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg2"
+   xml:space="preserve"
+   style="enable-background:new 0 0 200 200;"
+   viewBox="0 0 200 200"
+   height="200px"
+   width="200px"
+   y="0px"
+   x="0px"
+   version="1.1"><metadata
+     id="metadata57"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs55" /><style
+     id="style4"
+     type="text/css">
+  .st0{fill:none;stroke:#D7DCE0;stroke-width:4;stroke-miterlimit:10;}
+  .st1{fill:none;stroke:#A84D54;stroke-width:4;stroke-miterlimit:10;}
+  .st2{opacity:0;fill:#FFFFFF;}
+  .st3{fill:#223443;}
+  .st4{fill:#FFFFFF;stroke:#223443;stroke-width:4;stroke-miterlimit:10;}
+  .st5{fill:none;stroke:#223443;stroke-width:4;stroke-miterlimit:10;}
+</style><ellipse class="face"
+     ry="58.050846"
+     rx="58.051003"
+     cy="92.796608"
+     cx="99.576355"
+     id="path4185"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#2c2c2c;stroke-width:2.70000172;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1" />
+     <path class="eye"
+     id="path4192"
+     d="m 59.301197,68.828331 c 26.111478,6.354893 52.634533,6.536149 79.605413,0 4.66412,6.833647 5.95989,11.421719 5.47891,14.825299 -29.85499,11.004708 -60.171208,10.478583 -90.885527,0 0.587971,-4.941766 1.807861,-9.883533 5.801204,-14.825299 z"
+     style="fill:#2c2c2c;fill-rule:evenodd;stroke:#2c2c2c;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
+     <path
+     id="path4194"
+     d="m 84.439747,124.90663 28.361443,0"
+     style="fill:none;fill-rule:evenodd;stroke:#2c2c2c;stroke-width:1.70000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+     <path class="t_bounce"
+     id="path4196"
+     d="m 89.274084,127.80725 19.988692,0"
+     style="fill:none;fill-rule:evenodd;stroke:#2c2c2c;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" /></svg></center>
                 </div>
                 <div class="col-md-4 col-md-push-2 scrollpoint sp-effect2 hidden-sm hidden-xs" >
                   <center><p class="inf">Hi bud!!!! Some info about the Icon and features goes here!! :-)
