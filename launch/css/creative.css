@@ -37,11 +37,6 @@ header:before {
 
 }
 
-header{
-   -webkit-box-shadow: 0px 8px 45px rgba(0,0,0,.8);
-              -moz-box-shadow: 0px 8px 45px rgba(0,0,0,.8);
-                         box-shadow: 0px 8px 45px rgba(0,0,0,.8);
-}
 .section-heading h2{
             font-size:55px;
             font-weight: 1.2em;
@@ -603,9 +598,11 @@ hr{
 
 
 header {
+  height:100%;
   text-align: center;
-  background: url('../img/bg.jpg') center center no-repeat;
+  background: url('../img/bg.jpg') center center no-repeat fixed;
   background-size: cover;
+  z-index:-1;
   color: #fff;
 
 }
@@ -689,10 +686,10 @@ top:50px;
 
 .navbar-default .nav > li > a:hover:before,
 .navbar-default .nav > li > a:focus:hover {
-  color: #fac731;
+  color: #999;
 
 
-  border-bottom:55px solid rgba(116,116,116,0.3);
+/*  border-bottom:55px solid rgba(116,116,116,0.3);*/
 
 }
 
@@ -715,7 +712,7 @@ top:50px;
       }
   .navbar-default .nav > li > a,
   .navbar-default .nav > li > a:focus {
-    color:#ddd;
+    color:#888;
   }
   .navbar-default .nav > li > a:hover,
   .navbar-default .nav > li > a:focus:hover {
@@ -728,17 +725,17 @@ top:50px;
     background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#313131,#343434,#373737); /* Standard syntax (must be last) */
     box-shadow: 1px 2px 6px #252628;
-    border: 2px solid rgba(116,116,116,0.3);
+  /*  border: 2px solid rgba(116,116,116,0.3);*/
     
     
   }
   .navbar-default.affix .navbar-header .navbar-brand {
-    color: rgba(255,255,255,0.8);
+     color: rgba(230,230,230,0.8);
     font-size: 14px;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-     color: rgba(255,255,255,0.8);
+     color: rgba(230,230,230,0.8);
   }
   .navbar-default.affix .nav > li >
 a:before {
@@ -750,20 +747,16 @@ a:before {
   content: '';
   background: rgba(120,120,120,0.8);
   opacity: 0.3;
-  transition: all 1.2s;
+  transition: background 1.2s ease-in-out;
 }
   
   
 
 .navbar-default.affix .nav > li.active > a:hover:before,
 .navbar-default.affix .nav > li.active > a:focus:hover {
-height:150px;
+max-height:50px;
 }
-  .navbar-default.affix .nav > li > a:hover,
-  .navbar-default.affix .nav > li > a:focus:hover {
-    color: #fac731;
-  }
-}
+  
 
 
 
