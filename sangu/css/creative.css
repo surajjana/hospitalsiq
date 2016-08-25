@@ -24,6 +24,9 @@ color:#666;
   font-size:15px;
 }
 
+a :focus{
+  outline:none;
+}
 /*.menu-close { 
   -moz-transform: translateY(-100%);
      -ms-transform: translateY(-100%);
@@ -103,7 +106,7 @@ color:#666;
   width: 40%;
   color: rgba(44,44,44,0.8);
   font-weight: normal;
-  font-size: 14px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   -webkit-touch-callout: none;
@@ -238,14 +241,15 @@ padding-top:30px;
 
 #beta{
 
-border: solid #fac731 1px;
-border-radius: 5px;
+border: none;
+background: rgba(250, 199, 49,0.7);
 padding:12px 10px;
+color:white;
 }
 
 #beta:hover{
 
-box-shadow: 0 1px 3px #fac731;
+box-shadow: 0 1px 3px #999;
 }
 
 
@@ -265,6 +269,7 @@ box-shadow: 0 1px 3px #fac731;
      border-color: #0ab9c1;
   border-width: 2px;
   position: relative;
+/*  right:127px;*/
   right:100px;
   margin-top:10px;
   max-width: 20px;
@@ -295,11 +300,9 @@ a {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
   color: #f05f40;
+  outline:none !important ;
 }
-a:hover,
-a:focus {
-  color: #eb3812;
-}
+
 h1,
 h2,
 h3,
@@ -333,47 +336,57 @@ aside {
   padding: 0;
 }
 .navbar-default {
-  background-color: white;
-  border-color: rgba(34, 34, 34, 0.05);
+  background: #313131; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#313131,#343434,#373737); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#313131,#343434,#373737); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#313131,#343434,#373737); /* Standard syntax (must be last) */
+    box-shadow: 1px 2px 6px #252628;
+  
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
 .navbar-default .navbar-header .navbar-brand {
-  color: #f05f40;
+ color: rgba(255, 255, 255, 0.7);;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #eb3812;
+
+   color: #fac731;
 }
 .navbar-default .nav > li > a,
 .navbar-default .nav > li > a:focus {
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 13px;
-  color: #222222;
+  font-weight: 2.1em;
+  font-size: 15px;
+
+
+  color: #bbb;
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #f05f40;
+  color: #fac731;
+  border:none;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #f05f40 !important;
-  background-color: transparent;
+   color: rgba(255, 255, 255, 0.7); !important;
+  background-color: rgba(40,40,40,1);
+  outline: none; !important;
 }
 .navbar-default .nav > li.active > a:hover,
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
 }
-@media (min-width: 768px) {
+ 
   .navbar-default {
     background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.3);
+ 
     opacity:0;
   }
   .navbar-default .navbar-header .navbar-brand {
@@ -392,27 +405,35 @@ aside {
     color: white;
   }
   .navbar-default.affix {
-    background-color: white;
-    border-color: rgba(34, 34, 34, 0.05);
+     background: #313131; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#313131,#343434,#373737); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#313131,#343434,#373737); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#313131,#343434,#373737); /* Standard syntax (must be last) */
+    box-shadow: 1px 2px 6px #252628;
+
     opacity:1;
   }
   .navbar-default.affix .navbar-header .navbar-brand {
-    color: #f05f40;
+ color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+  color: rgba(255, 255, 255, 0.7);
+
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
-    color: #222222;
+    color:rgba(255,255,255.0.7);
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #f05f40;
+ color: #fac731;
   }
-}
+
+
+
 header {
   position: relative;
   width: 100%;
