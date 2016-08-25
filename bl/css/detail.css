@@ -1,0 +1,16 @@
+body{
+
+	overflow-y:auto;
+}
+	section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#page1 {
+  text-align: center;
+  background: url('../img/slide_2.jpg') center center no-repeat;
+  background-size: cover;
+  color: #fff;
+}

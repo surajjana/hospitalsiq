@@ -95,7 +95,7 @@ h4.heading-i:after {
 .content {
   position: relative;
   width: 100%;
-  top: 50%;
+  top: 45%;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -184,11 +184,7 @@ p.social a.email {
     text-align: center !important;
   }
 }
-@media (min-width: 1200px) {
-  .copyright {
-    margin-top: 60px;
-  }
-}
+
 @media (max-width: 991px) {
   .copyright {
     text-align: center !important;
@@ -607,6 +603,7 @@ hr {
   font-size: 12px;
   line-height: 1.42857143;
   border-radius: 0;
+  transition:all 0.3s ease;
 }
 .btn-primary {
   color: #000000;
