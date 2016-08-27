@@ -245,11 +245,13 @@ border: none;
 background: rgba(250, 199, 49,0.7);
 padding:12px 10px;
 color:white;
+box-shadow: 0 1px 3px #999;
+
 }
 
 #beta:hover{
 
-box-shadow: 0 1px 3px #999;
+box-shadow: 0 1px 5px #999;
 }
 
 
