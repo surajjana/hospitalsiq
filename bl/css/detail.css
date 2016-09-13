@@ -140,20 +140,65 @@ padding-bottom:50px;
   height: 100%;
   left: 0;
   top: 0;
-  background: #000;
-  z-index: 2;
-  opacity: 0.3;
-  filter: alpha(opacity=30);
+  background: rgba(0,0,0,0.4);
+
+  z-index: -2;
+
 }
+
+
+
+.overlays{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.86);
+
+  z-index: 2px;
+
+}
+
+
+
 	section {
  padding:100px 0px;}
 
 
 #page1 {
   text-align: center;
-  background: url('../img/slide_2.jpg') center center no-repeat;
+  background: url('../img/gear.png') center center no-repeat;
   background-size: cover;
   color: #fff;
   height:100%;
   width:100%;
 }
+
+#page1_s {
+  text-align: center;
+  background: url('../img/gears.png') center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  height:100%;
+  width:100%;
+}
+
+#reg{
+
+position:relative;
+top:40px;
+  background:none;
+  border:1px solid rgba(255,255,255,0.7);
+  padding: 15px 25px;
+  border-radius:2px;
+  transition:all 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+#reg :hover{
+  box-shadow:1px 2px 4px rgba(255,255,255,0.23) ;
+}
+
