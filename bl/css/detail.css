@@ -134,30 +134,27 @@ padding-bottom:50px;
   height: 100%;
   margin: 0 auto;
 }
+
+
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(0,0,0,0.25);
-
+  background: rgba(0,0,0,0.3);
   z-index: 2px;
-
+ 
 }
-
-
-
-.overlays{
+.overlays {
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(0,0,0,0.81);
-
+  background: rgba(0,0,0,0.7);
   z-index: 2px;
-
+ 
 }
 
 
@@ -175,14 +172,10 @@ padding-bottom:50px;
   width:100%;
 }
 
-#page1_s {
-  text-align: center;
-  background: url('../img/gears.png') center center no-repeat;
-  background-size: cover;
-  color: #fff;
-  height:100%;
-  width:100%;
-}
+
+
+
+
 
 #reg{
 
