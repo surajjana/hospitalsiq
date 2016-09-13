@@ -142,7 +142,7 @@ padding-bottom:50px;
   top: 0;
   background: rgba(0,0,0,0.4);
 
-  z-index: -2;
+  z-index: 2px;
 
 }
 
@@ -154,7 +154,7 @@ padding-bottom:50px;
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(0,0,0,0.86);
+  background: rgba(0,0,0,0.81);
 
   z-index: 2px;
 
