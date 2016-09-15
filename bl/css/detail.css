@@ -14,12 +14,17 @@ body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
-  border-color: #f05f40;
-  border-width: 3px;
-  max-width: 50px;
+  border-color: #999;
+ border:solid 1px rgba(0,0,0,0.5);
+
+max-width: 30px;
+
 }
 hr.light {
   border-color: white;
+}
+a{
+  outline:none !important; 
 }
 a {
   -webkit-transition: all 0.35s;
@@ -64,7 +69,12 @@ aside {
   padding: 0;
 }
 .navbar-default {
-  background-color: white;
+ background: #313131; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#313131,#343434,#373737); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#313131,#343434,#373737); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#313131,#343434,#373737); /* Standard syntax (must be last) */
+    box-shadow: 1px 2px 6px #252628;
 border:none;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.35s;
@@ -86,11 +96,11 @@ border:none;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 13px;
-  color: #222222;
+  color: rgba(255,255,255,0.7);
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #f05f40;
+  color: #fff;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
@@ -143,15 +153,21 @@ border:none;
   }
 }
 header {
-  position: relative;
+
+
+
+
+
+    position: relative;
   width: 100%;
   min-height: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center;
+  background-position: center ;
   background-image: url('../img/gear.png');
+/*  background-attachment: fixed;*/
   text-align: center;
   color: white;
 }
@@ -447,23 +463,53 @@ header .media-body{
 #reg
 {
 
-  border-radius:2px;
+  border-radius:1px;
   padding:15px 35px;
   background: rgba(255,255,255,0.9);
   color:rgba(0,0,0,0.7);
   transition: all 0.3s ease;
   border:none;
+   box-shadow:1px 3px 5px rgba(0,0,0,0.6);
 }
 
-#reg:hover{
-  box-shadow:1px 3px 5px rgba(0,0,0,0.6);
+#regs
+{
+
+  border-radius:1px;
+  padding:15px 30px;
+  background: rgba(255,255,255,0.9);
+  color:rgba(0,0,0,0.7);
+  transition: all 0.3s ease;
+  border:none;
+    box-shadow:1px 3px 5px rgba(0,0,0,0.6);
 }
+
+#reg  :hover{
+  box-shadow:1px 30px 55px rgba(0,0,0,0.6);
+}
+
+ #regs :hover{
+  box-shadow:1px 6px 12px rgba(0,0,0,0.6)  box-shadow:1px 12px 15px rgba(0,0,0,0.32);
+}
+
 
 #content{
 border:solid 1px rgba(200,200,200,0.7);
-padding:40px 30px;
+padding:70px 60px;
+margin-bottom:50px;
+color:rgba(0,0,0,0.64);
+
 }
 
 .desc{
   font-size:14px;
+}
+
+.sec{
+    font-size:14px;
+}
+
+
+footer .copyright p{
+  font-size:13px;
 }
