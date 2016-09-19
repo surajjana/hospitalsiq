@@ -48,7 +48,38 @@
             font-size:16px;
             color:#555;}
 
+.google :hover{
+       color:#dd4b39;
+      
+            
+          }
+          .twitter :hover{
+       color:#0084b4;
+            
+          }
+          .fb :hover{
+       color:#3b5998;
+       background-color: none;
+            
+          }
+          
+          
+          .linkedin :hover{
+            color:#4875B4;
+          }
+          p.social a i :hover{
+            background-color: none;
+          }
 
+          #hov{
+            border:1px solid white;
+            transition:all 0.3s ease;
+          }
+
+           #hov:hover{
+            background: white;
+            color:black;
+           }
  
            
         </style>  
@@ -594,8 +625,15 @@ else{
                 </div>
             </div>
              <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-md-4 hidden-sm hidden-xs">
                         <div class="about-item scrollpoint sp-effect2 text-center">
+                                   <center><img src="img/cloud.png" style="width:40%"  /></center>
+                            <h3>Easy setup</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        </div>
+                    </div>
+                     <div class="col-sm-12 col-xs-12 hidden-lg hidden-md">
+                        <div class="about-item scrollpoint sp-effect5 text-center">
                                    <center><img src="img/cloud.png" style="width:40%"  /></center>
                             <h3>Easy setup</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
@@ -608,7 +646,14 @@ else{
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12" >
+                    <div class=" col-md-4  hidden-sm hidden-xs" >
+                        <div class="about-item scrollpoint sp-effect1 text-center">
+                               <center><img src="img/cloud.png"  style="width:40%" /></center>
+                            <h3>Social connect</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        </div>
+                    </div>
+                    <div class=" col-sm-12 col-xs-12 hidden-lg hidden-md" >
                         <div class="about-item scrollpoint sp-effect5 text-center">
                                <center><img src="img/cloud.png"  style="width:40%" /></center>
                             <h3>Social connect</h3>
@@ -635,29 +680,22 @@ else{
       </div>
         <div class="row">
           <div class="col-md-4 text-center scrollpoint sp-effect2 hidden-sm hidden-xs" style=" padding-top:70px;" >
-                <center><span class="input input--kuro">
-              <input class="input__field input__field--kuro" type="text" id="input-7" />
-              <label class="input__label input__label--kuro" for="input-7">
-                <span class="input__label-content input__label-content--kuro">Name</span>
-              </label>
+                <center><span class="input">
+              <input class="input-field" type="text" placeholder="Name" id="input-7" />
+            
             </span>
             </center>
           </div>
           <div class="col-md-4 text-center scrollpoint sp-effect5 hidden-sm hidden-xs" style=" padding-top:70px;">
-                <center><span class="input input--kuro">
-              <input class="input__field input__field--kuro" type="text" id="input-7" />
-              <label class="input__label input__label--kuro" for="input-7">
-                <span class="input__label-content input__label-content--kuro">Email</span>
-              </label>
-            </span>
+                <center><span class="input ">
+              <input class="input-field " type="text" placeholder="Email" id="input-7" />
+                          </span>
             </center>
           </div>
           <div class="col-md-4 text-center scrollpoint sp-effect1 hidden-sm hidden-xs" style=" padding-top:70px;">
-                  <center><span class="input input--kuro">
-                <input class="input__field input__field--kuro" type="text" id="input-7" />
-                <label class="input__label input__label--kuro" for="input-7">
-                  <span class="input__label-content input__label-content--kuro">Number</span>
-                </label>
+                  <center><span class="input ">
+                <input class="input-field " type="text" placeholder="Number" id="input-7" />
+              
               </span>
               </center>
           </div>
@@ -666,34 +704,27 @@ else{
 <div class="row">
 <div class="col-sm-12 col-xs-12 hidden-lg hidden-md">
 <div class="row">
-           <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 col-xs-10 col-xs-push-1 col-xs-pull-1  text-center  scrollpoint sp-effect5 hidden-lg hidden-md" style="padding-top:70px;">
-                <center><span class="input input--kuro">
-              <input class="input__field input__field--kuro" type="text" id="input-7" />
-              <label class="input__label input__label--kuro" for="input-7">
-                <span class="input__label-content input__label-content--kuro">Name</span>
-              </label>
+           <div class="col-sm-12 col-xs-12  text-center  scrollpoint sp-effect5 hidden-lg hidden-md" style="padding-top:70px;">
+                 <center><span class="input">
+              <input class="input-field" type="text" placeholder="Name" id="input-7" />
+            
             </span>
             </center>
           </div>
           </div>
           <div class="row">
-          <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 col-xs-10 col-xs-push-1 col-xs-pull-1   text-center scrollpoint sp-effect5 hidden-lg hidden-md">
-                <center><span class="input input--kuro">
-              <input class="input__field input__field--kuro" type="text" id="input-7" />
-              <label class="input__label input__label--kuro" for="input-7">
-                <span class="input__label-content input__label-content--kuro">Email</span>
-              </label>
-            </span>
+          <div class="col-sm-12 col-xs-12    text-center scrollpoint sp-effect5 hidden-lg hidden-md">
+                <center><span class="input ">
+              <input class="input-field " type="text" placeholder="Email" id="input-7" />
+                          </span>
             </center>
           </div>
           </div>
           <div class="row">
-          <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 col-xs-10 col-xs-push-1 col-xs-pull-1  text-center scrollpoint sp-effect5 hidden-lg hidden-md">
-                  <center><span class="input input--kuro">
-                <input class="input__field input__field--kuro" type="text" id="input-7" />
-                <label class="input__label input__label--kuro" for="input-7">
-                  <span class="input__label-content input__label-content--kuro">Number</span>
-                </label>
+          <div class="col-sm-12  col-xs-12  text-center scrollpoint sp-effect5 hidden-lg hidden-md">
+                     <center><span class="input ">
+                <input class="input-field " type="text" placeholder="Number" id="input-7" />
+              
               </span>
               </center>
           </div>
@@ -745,11 +776,9 @@ else{
               <center>
                 <div class="col-md-10 col-md-push-1 col-md-pull-1 hidden-sm hidden-xs scrollpoint sp-effect5 " style="padding-top:0px;" >
                   <center>
-                    <span class="input input--kuro">
-                      <input class="input__field input__field--kuro" type="text" id="input-7" />
-                      <label class="input__label input__label--kuro" for="input-7">
-                        <span class="input__label-content input__label-content--kuro">Name</span>
-                      </label>
+                    <span class="input ">
+                      <input class="input-field-c " type="text"  placeholder="Name" id="input-7" />
+                    
                     </span>
                   </center>
                 </div>  
@@ -760,11 +789,9 @@ else{
               <center>
                 <div class="col-md-10 col-md-push-1 col-md-pull-1 hidden-sm hidden-xs scrollpoint sp-effect5">
                   <center>
-                    <span class="input input--kuro">
-                      <input class="input__field input__field--kuro" type="text" id="input-8" />
-                      <label class="input__label input__label--kuro" for="input-8">
-                        <span class="input__label-content input__label-content--kuro">Email</span>
-                      </label>
+                    <span class="input ">
+                      <input class="input-field-c " type="text" placeholder="Email" id="input-8" />
+                      
                     </span>
                   </center>
                 </div>
@@ -775,11 +802,9 @@ else{
               <center>
                 <div class="col-md-10 col-md-push-1 col-md-pull-1 hidden-sm hidden-xs scrollpoint sp-effect5">
                   <center>
-                    <span class="input input--kuro">
-                      <input class="input__field input__field--kuro" type="text" id="input-9" />
-                      <label class="input__label input__label--kuro" for="input-9">
-                        <span class="input__label-content input__label-content--kuro">Message</span>
-                      </label>
+                    <span class="input">
+                      <input class="input-field-c " type="text" placeholder="Message" id="input-9" />
+                     
                     </span>
                   </center>
                 </div>
@@ -839,9 +864,9 @@ else{
         </div>
         
             <div class="row">
-            <div class="col-md-4 col-md-push-2 hidden-sm hidden-xs" style="padding-left:30px;" >
+            <div class="col-md-4 col-md-push-2 hidden-sm hidden-xs" style="padding-left:30px;margin-top:5%; " >
               <center>
-                <div class="social">
+                <div class="social" >
                   <a href="http://fb.com" title="" class="fb" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-facebook"></i></a>
                   <a href="http://twitter.com" title="" class="twitter" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-twitter"></i></a>
                   <a href="#" title="" class="google" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-google-plus"></i></a>
@@ -867,36 +892,33 @@ else{
 <div class="row">
 <div class="col-sm-12 col-xs-12 hidden-lg hidden-md" >
 <div class="row">
-           <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 col-xs-10 col-xs-push-1 col-xs-pull-1 text-center  scrollpoint sp-effect5 hidden-lg hidden-md" style="padding-top:70px;">
-                <center><span class="input input--kuro">
-              <input class="input__field input__field--kuro" type="text" id="input-7" />
-              <label class="input__label input__label--kuro" for="input-7">
-                <span class="input__label-content input__label-content--kuro">Name</span>
-              </label>
-            </span>
-            </center>
+           <div class="col-sm-12  col-xs-12  text-center  scrollpoint sp-effect5 hidden-lg hidden-md" style="padding-top:70px;">
+                <center>
+                    <span class="input ">
+                      <input class="input-field-c " type="text" placeholder="Email" id="input-8" />
+                      
+                    </span>
+                  </center>
           </div>
           </div>
           <div class="row">
-          <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 col-xs-10 col-xs-push-1 col-xs-pull-1  text-center scrollpoint sp-effect5 hidden-lg hidden-md">
-                <center><span class="input input--kuro">
-              <input class="input__field input__field--kuro" type="text" id="input-7" />
-              <label class="input__label input__label--kuro" for="input-7">
-                <span class="input__label-content input__label-content--kuro">Email</span>
-              </label>
-            </span>
-            </center>
+          <div class="col-sm-12  col-xs-12  text-center scrollpoint sp-effect5 hidden-lg hidden-md">
+                <center>
+                    <span class="input ">
+                      <input class="input-field-c " type="text" placeholder="Email" id="input-8" />
+                      
+                    </span>
+                  </center>
           </div>
           </div>
           <div class="row">
-          <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 col-xs-10 col-xs-push-1 col-xs-pull-1  text-center scrollpoint sp-effect5 hidden-lg hidden-md">
-                  <center><span class="input input--kuro">
-                <input class="input__field input__field--kuro" type="text" id="input-7" />
-                <label class="input__label input__label--kuro" for="input-7">
-                  <span class="input__label-content input__label-content--kuro">Message</span>
-                </label>
-              </span>
-              </center>
+          <div class="col-sm-12  col-xs-12 text-center scrollpoint sp-effect5 hidden-lg hidden-md">
+                   <center>
+                    <span class="input">
+                      <input class="input-field-c " type="text" placeholder="Message" id="input-9" />
+                     
+                    </span>
+                  </center>
           </div>
         </div>
         </div>
@@ -966,7 +988,7 @@ else{
         </div>
 
             <div class="row">
-              <div class="col-sm-12 col-xs-12  hidden-lg hidden-md" style="margin-bottom:20%;padding-top:10px;">
+              <div class="col-sm-12 col-xs-12  hidden-lg hidden-md" style="margin-bottom:10%;padding-top:10px;">
          <center>
                 <div class="social">
                   <a href="http://fb.com" title="" class="fb" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-facebook"></i></a>
@@ -986,7 +1008,7 @@ else{
         
       
 
-      <div class="foot" id="feet" >
+      <div id="feet" class="hidden-sm hidden-xs" >
         <div class="container-fluid " >
           <div class="row copyright">
             <div class="col-md-2 hidden-sm hidden-xs">
@@ -1027,17 +1049,25 @@ else{
             <div class="col-md-4 hidden-sm hidden-xs" >
               <center>
                 <div class="social">
-                  <a href="http://fb.com" title="" class="fb" style="color:#ffffff;background-color:none;padding-right:5px;"><i class="fa fa-facebook"></i></a>
-                  <a href="http://twitter.com" title="" class="twitter" style="color:#ffffff;background-color:none;padding-right:5px;"><i class="fa fa-twitter"></i></a>
-                  <a href="#" title="" class="google" style="color:#ffffff;background-color:none;padding-right:5px;"><i class="fa fa-google-plus"></i></a>
-                  <a href="#" title="" class="linkedin" style="color:#ffffff;background-color:none;padding-right:5px;"><i class="fa fa-linkedin"></i></a>
+                  <a href="http://fb.com" title="" class="fb" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-facebook"></i></a>
+                  <a href="http://twitter.com" title="" class="twitter" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-twitter"></i></a>
+                  <a href="#" title="" class="google" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-google-plus"></i></a>
+                  <a href="#" title="" class="linkedin" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-linkedin"></i></a>
                 </div>
               </center>
             </div> 
           </div>
         </div>
 
-        <div class="container" style="background: #313131; /* For browsers that do not support gradients */
+       
+
+
+
+      
+        <!-- /.container-fluid-->
+
+      </div>
+       <div class="container" style="background: #313131; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#313131,#343434,#373737); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#313131,#343434,#373737); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
@@ -1077,7 +1107,7 @@ else{
                 <p><a href="training.html" style="font-style:italic;color:white">Terms & Conditions</a>
                 </p>
               </center>
-            </di
+            </div>
                     
             <div class="col-sm-12 hidden-lg hidden-md" >
               <center>
@@ -1091,13 +1121,6 @@ else{
             </div> 
           </div>
         </div>
-
-
-
-      
-        <!-- /.container-fluid-->
-
-      </div>
       
     </section> 
       
