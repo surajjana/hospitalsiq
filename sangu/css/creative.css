@@ -137,23 +137,39 @@ box-shadow: 0 1px 5px #999;
 }
 
 
-#desc {
+/*#desc {
   position:relative;
-  top:20px;
+  top:60px;
+
+ 
+
+}*/
+#content {
+  position:relative;
+  top:60px;
+
  
 
 }
+
+
 #desc h4{
     color:#666;
-    position:relative;
-    left:9px;
+   
+}
+#descs h4{
+    color:#666;
+   
+}
 
+#descs hr{
+     border-color: #0ab9c1;
+     max-width:50px;
 }
 .sub{
      border-color: #0ab9c1;
   border-width: 2px;
-  position: relative;
-  right:127px;
+
 /*  right:100px;*/
   margin-top:10px;
   max-width: 20px;
