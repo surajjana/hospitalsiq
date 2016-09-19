@@ -439,14 +439,15 @@ aside {
 header {
   position: relative;
   width: 100%;
-  min-height: auto;
+  height:100%;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   background-position: center ;
   background-image: url('../img/header.jpg');
-  background-attachment: fixed;
+
   text-align: center;
   color: white;
 }
