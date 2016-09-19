@@ -23,10 +23,11 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/draw.css">
-         <link rel="stylesheet" href="css/forum.css">
-           <link rel="stylesheet" href="css/style.css">
-         <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/draw.css">
+        <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/forum.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,7 +37,7 @@
     <![endif]-->
 
     <!-- Animations Css-->
-   <link rel="stylesheet" href="css/animation.css" type="text/css">
+    <link rel="stylesheet" href="css/animation.css" type="text/css">
 
     <!-- Javascript files-->
     <script src="jquery-1.12.4.min.js"></script>
@@ -46,407 +47,350 @@
     <!-- Animation Javascript-->
     <script src="js/animation.js"></script>
 
-         <style type="text/css">
-           body{background: #F6F6F6 none repeat scroll 0% 0%;
-            font-family: "Cardo","Times New Roman",Times,serif;
-            font-size:16px;
-            color:#555;}
+    <style type="text/css">
+           
+      body
+      {
+        background: #F6F6F6 none repeat scroll 0% 0%;
+        font-family: "Cardo","Times New Roman",Times,serif;
+        font-size:16px;
+        color:#555;
+      }
 
-         
-.google :hover{
+      .google :hover
+      {
        color:#dd4b39;
+      }
       
-            
-          }
-          .twitter :hover{
+      .twitter :hover
+      {
        color:#0084b4;
-            
-          }
-          .fb :hover{
+      }
+          
+      .fb :hover
+      {
        color:#3b5998;
        background-color: none;
-            
-          }
+      }
           
+      .linkedin :hover
+      {
+        color:#4875B4;
+      }
           
-          .linkedin :hover{
-            color:#4875B4;
-          }
-          p.social a i :hover{
-            background-color: none;
-          }
+      p.social a i :hover
+      {
+        background-color: none;
+      }
 
-          #hov{
-            border:1px solid white;
-            transition:all 0.3s ease;
-          }
+      #hov
+      {
+        border:1px solid white;
+        transition:all 0.3s ease;
+      }
 
-           #hov:hover{
-            background: white;
-            color:black;
-           }
- 
-           
-        </style>  
+      #hov:hover
+      {
+        background: white;
+        color:black;
+      }
+    
+    </style>  
 
-        <script >
-        $(document).ready(function()
-        {
-          
-     
-$('.scrollpoint.sp-effect1').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInLeft');},{offset:'100%'});
+    <script >
+      $(document).ready(function()
+      {
+        $('.scrollpoint.sp-effect1').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInLeft');},{offset:'100%'});
         $('.scrollpoint.sp-effect2').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInRight');},{offset:'100%'});
         $('.scrollpoint.sp-effect3').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInDown');},{offset:'100%'});
         $('.scrollpoint.sp-effect4').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeIn');},{offset:'100%'});
         $('.scrollpoint.sp-effect5').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInUp');},{offset:'100%'});
-         $('.scrollpoint.sp-effect6').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInDownBig');},{offset:'100%'});
+        $('.scrollpoint.sp-effect6').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInDownBig');},{offset:'100%'});
   
   //throttle
    
-  $.throttle = function(func, wait, options) {
-      var context, args, result;
-      var timeout = null;
-      var previous = 0;
-      if (!options) options = {};
-      var later = function() {
-        previous = options.leading === false ? 0 : $.now();
-        timeout = null;
-        result = func.apply(context, args);
-        if (!timeout) context = args = null;
-      };
-      return function() {
-        var now = $.now();
-        if (!previous && options.leading === false) previous = now;
-        var remaining = wait - (now - previous);
-        context = this;
-        args = arguments;
-        if (remaining <= 0 || remaining > wait) {
-          if (timeout) {
-            clearTimeout(timeout);
-            timeout = null;
-          }
-          previous = now;
+        $.throttle = function(func, wait, options) 
+      {
+        var context, args, result;
+        var timeout = null;
+        var previous = 0;
+        if (!options) options = {};
+        var later = function() {
+          previous = options.leading === false ? 0 : $.now();
+          timeout = null;
           result = func.apply(context, args);
           if (!timeout) context = args = null;
-        } else if (!timeout && options.trailing !== false) {
-          timeout = setTimeout(later, remaining);
-        }
-        return result;
-      };
-    };    
+        };
+        return function() 
+        {
+          var now = $.now();
+          if (!previous && options.leading === false) previous = now;
+          var remaining = wait - (now - previous);
+          context = this;
+          args = arguments;
+          if (remaining <= 0 || remaining > wait) {
+            if (timeout) {
+              clearTimeout(timeout);
+              timeout = null;
+            }
+            previous = now;
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+          } else if (!timeout && options.trailing !== false) {
+            timeout = setTimeout(later, remaining);
+          }
+          return result;
+        };
+      };    
   
 
 //scroll hide 
-    var lastScrollTop = 0;    
+      var lastScrollTop = 0;    
             
-      $(document).on('scroll', $.throttle(function() {
-          
-          var stop = $(this).scrollTop();
-      
-      if($(window).scrollTop() > (80)) {          
-          if (stop > lastScrollTop){
-              console.log('down');
+      $(document).on('scroll', $.throttle(function() 
+      {
+        var stop = $(this).scrollTop();
+        if($(window).scrollTop() > (80)) 
+        {          
+          if (stop > lastScrollTop)
+          {
+            console.log('down');
               // scrolling down
             if($('#menu').hasClass('menu-close'))
             {
                 $('#menu').addClass('menu-min');
                 $('#menu').removeClass('menu-close');
             }
-        }
+          }
           else
           {
           // scrolling up
-          if ($('#hom').hasClass('active')){
-        $('#menu').removeClass('menu-min'); 
-         $('#menu').addClass('menu-close');
-    } 
-else{
-     $('.menu').addClass('menu-close');
-}
+            if ($('#hom').hasClass('active'))
+            {
+              $('#menu').removeClass('menu-min'); 
+              $('#menu').addClass('menu-close');
+            } 
+            else
+            {
+              $('.menu').addClass('menu-close');
+            }
 
           } 
+          
           lastScrollTop = stop;
-          }
+        }
             
       }, 100));
-
-
-
-
-       /*   $("a").on('click', function(event) 
-          {
-
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
-
-              // Store hash
-              var hash = this.hash;
-
-              // Using jQuery's animate() method to add mdooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-              $('html, body').animate({
-                scrollTop: $(hash).offset().top
-              }, 100, function(){
-           
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              });
-            } // End if
-          });*/
-
-
-
-        });
-
-      </script>
-
-
-
+    });
+  </script>
 </head>
 
 <body id="page-top">
-<div id="menu" class="menu-close">
-
+  <div id="menu" class="menu-close">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a " href="#page-top"><img src="img/hIQ_logo.svg" style="padding:5px;" alt="hello" /></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                     <li>
-                        <a class="page-scroll" style="display:none;" href="#">Home</a>
-                    </li>
-           
-                    <li>
-                        <a class="page-scroll" href="#features">Features</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#join">Join us</a>
-                    </li>
-                  
-                    <li>
-                        <a class="page-scroll" href="#notify">Notify</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- /.navbar-collapse -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a " href="#page-top"><img src="img/hIQ_logo.svg" style="padding:5px;" alt="hello" /></a>
         </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+               <li>
+                  <a class="page-scroll" style="display:none;" href="#">Home</a>
+              </li>
+     
+              <li>
+                  <a class="page-scroll" href="#features">Features</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="#join">Join us</a>
+              </li>
+            
+              <li>
+                  <a class="page-scroll" href="#notify">Notify</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="#contact">Contact</a>
+              </li>
+          </ul>
+        </div>
+            <!-- /.navbar-collapse -->
+      </div>
         <!-- /.container-fluid -->
     </nav>
-</div>
+  </div>
 
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner hidden-lg hidden-md text-center">
-              <img src="img/hospitalsIQ.svg" style="width:50%"  alt=""/>
-             
-                <p style="position:relative;top:50px">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <div >
-           <i class="fa fa-angle-double-down fa-2x" style="position:relative;top:120px; padding:30px;" aria-hidden="true"></i>
-              <p style="position:relative;top:90px;font-size:13px">Scroll to view more </p>
-           </div>
-            </div>
-            <div class="header-content-inner hidden-sm hidden-xs text-center ">
-              <img src="img/hospitalsIQ.svg" class="animated fadeInDown" alt=""/>
-             
-                <p style="position:relative;top:70px; "  class="animated fadeInLeft">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-             <div >
-           <i class="fa fa-angle-double-down fa-2x" style="position:relative;top:200px; padding:30px;" aria-hidden="true"></i>
-           <p style="position:relative;top:170px;font-size:13px">Scroll to view more </p>
-           </div>
-
-            </div>
+  <header>
+    <div class="header-content">
+      <div class="header-content-inner hidden-lg hidden-md text-center">
+        <img src="img/hospitalsIQ.svg" style="width:50%"  alt=""/>
+        <p style="position:relative;top:50px">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+        <div >
+          <i class="fa fa-angle-double-down fa-2x" style="position:relative;top:120px; padding:30px;" aria-hidden="true"></i>
+          <p style="position:relative;top:90px;font-size:13px">Scroll to view more </p>
         </div>
-       
-    </header>
+      </div>
+      <div class="header-content-inner hidden-sm hidden-xs text-center ">
+        <img src="img/hospitalsIQ.svg" class="animated fadeInDown" alt=""/>
+        <p style="position:relative;top:70px; "  class="animated fadeInLeft">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+        <div >
+          <i class="fa fa-angle-double-down fa-2x" style="position:relative;top:200px; padding:30px;" aria-hidden="true"></i>
+          <p style="position:relative;top:170px;font-size:13px">Scroll to view more </p>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <section class="bg-primary" id="features" style="background-color:#f6f6f6;margin-bottom:5%">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-push-2 col-md-pull-2 text-center">
-                    <h2 >Features</h2>
-                    <hr >
-                </div>
-            </div>
+  <section class="bg-primary" id="features" style="background-color:#f6f6f6;margin-bottom:5%">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-push-2 col-md-pull-2 text-center">
+          <h2 >Features</h2>
+          <hr >
+        </div>
+      </div>
 
 
+      <!-- Search and discovery -->
+
+
+      <div class="row">
+        <div class="col-md-10 col-md-push-1 col-md-pull-1  " id="desc" >
           <div class="row">
-            <div class="col-md-10 col-md-push-1 col-md-pull-1  " id="desc" >
-              <div class="row">
-               <div class="col-md-4 col-md-push-2 col-md-pull-1 col-sm-12 col-xs-12">
-                  <center><svg id="cd-animated-hosp" version="1.1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
-    <title>hIQ</title>
-    <desc>Search And Discovery</desc>
-    
-    <g id="cd-mag-space">
-      <g id="cd-mag">
-        <circle id="cd-magnify-1" class="cd-stroke cd-stroke-color-1" cx="75" cy="75" r="50" transform="translate(95 77) scale(0)"/>
-        <circle id="cd-magnify-2" class="cd-stroke-2 cd-stroke-color-1" cx="115" cy="115" r="3" transform="translate(95 77) scale(0)" style="background-color: #f8f8f8;"/>
-        <rect id="cd-magnify-3" class="cd-stroke cd-stroke-color-1" x="114" y="125" width="15" height="0" transform="rotate(-45 114 125)" data-height="50"/>
-        <text id="text-h-1" x="57" y="92" style="display: none;">H</text>
-      </g>
-    </g>
-    <g id="cd-buildings">
-      <g id="cd-cloud-1" transform="translate(-80 0)">
-        <line class="cd-stroke cd-stroke-color-2" x1="5" y1="13" x2="29" y2="13"/>
-        <line class="cd-stroke cd-stroke-color-2" x1="35" y1="13" x2="44" y2="13"/>
-        <line class="cd-stroke cd-stroke-color-2" x1="72" y1="27" x2="14" y2="27"/>
-      </g>
-      <g id="cd-cloud-2" transform="translate(70 0)">
-        <line class="cd-stroke cd-stroke-color-2" x1="191" y1="68" x2="159" y2="68"/>
-        <line class="cd-stroke cd-stroke-color-2" x1="153" y1="68" x2="144" y2="68"/>
-        <line class="cd-stroke cd-stroke-color-2" x1="179" y1="83" x2="133" y2="83"/>
-      </g>
-      <g id="cd-home-3">
-        <polygon id="cd-home-3-roof" class="cd-stroke cd-stroke-color-1" points="59.4,55 95,15 130.6,55" transform="translate(0 20)"/>
-        <!-- <rect id="cd-home-3-roof" class="cd-stroke cd-stroke-color-1" x="58" y="145" width="0" height="10" data-width="75"/> -->
-        <rect id="cd-home-3-base" class="cd-stroke cd-stroke-color-1" x="66" y="54" width="58" height="0" transform="rotate(180 95 116)" data-height="124"/>
-        <circle id="cd-home-3-window" class="cd-stroke cd-stroke-color-1" cx="95" cy="77" r="11" transform="translate(95 77) scale(0)"/>
-        <text id="text-plus" x="81" y="85" style="display: none;">+</text>
-      </g>
-      <g id="cd-home-2">
-        <rect id="cd-home-2-base" class="cd-stroke cd-stroke-color-1" x="98" y="132" width="70" height="0" transform="rotate(180 133 155)" data-height="46"/>
-        <rect id="cd-home-2-roof" class="cd-stroke cd-stroke-color-1" x="98" y="122" width="0" height="10" data-width="70"/>
-        <rect id="cd-home-2-door" class="cd-stroke cd-stroke-color-1" x="141" y="156" width="16" height="0" transform="rotate(180 149 167)" data-height="22"/>
-        <rect id="cd-home-2-window" class="cd-stroke cd-stroke-color-1" x="106" y="143" width="26" height="10" transform="translate(119 148) scale(0)"/>
-      </g>
-      <g id="cd-home-1">
-        <rect id="cd-home-1-chimney" class="cd-stroke cd-stroke-color-1" x="34" y="89" width="11" height="11" transform="translate(0 70)"/>
-        <rect id="cd-home-1-base" class="cd-stroke cd-stroke-color-1" x="29" y="108" width="70" height="0" transform="rotate(180 64 143)" data-height="70"/>
-        <rect id="cd-home-1-roof" class="cd-stroke cd-stroke-color-1" x="23" y="100" width="0" height="9" data-width="81"/>
-        <rect id="cd-home-1-door" class="cd-stroke cd-stroke-color-1" x="53" y="150" width="20" height="0" transform="rotate(180 63 164)" data-height="28"/>
-        <rect id="cd-home-1-window" class="cd-stroke cd-stroke-color-1" x="53" y="121" width="20" height="18" transform="translate(63 130) scale(0)"/>
-      </g>
-      <line id="cd-floor" class="cd-stroke cd-stroke-color-1" x1="2" y1="178" x2="2" y2="178" data-x="198"/>
-    </g>
-  </svg></center>
-                </div>
-                <div class="col-md-4 col-md-push-2  hidden-sm hidden-xs scrollpoint sp-effect2 text-left" id="content">
-                 <h4>Search and discovery</h4>
-                        <hr class="sub"  style="position: relative;
-  right:135px;">
-               <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                  Okay now i dont know what else to write to fill the info section :-P </p>
-                </div>
-               
-              </div>
+          <h4 class="hidden-lg hidden-md text-center" id="descs"> Search and discovery<hr/></h4>
+            <div class="col-md-4 col-md-push-2 col-md-pull-1 col-sm-12 col-xs-12">
+              <center>
+              <svg id="cd-animated-hosp" version="1.1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+                <title>hIQ</title>
+                <desc>Search And Discovery</desc>
+                <g id="cd-mag-space">
+                <g id="cd-mag">
+                  <circle id="cd-magnify-1" class="cd-stroke cd-stroke-color-1" cx="75" cy="75" r="50" transform="translate(95 77) scale(0)"/>
+                  <circle id="cd-magnify-2" class="cd-stroke-2 cd-stroke-color-1" cx="115" cy="115" r="3" transform="translate(95 77) scale(0)" style="background-color: #f8f8f8;"/>
+                  <rect id="cd-magnify-3" class="cd-stroke cd-stroke-color-1" x="114" y="125" width="15" height="0" transform="rotate(-45 114 125)" data-height="50"/>
+                  <text id="text-h-1" x="57" y="92" style="display: none;">H</text>
+                </g>
+                </g>
+                <g id="cd-buildings">
+                <g id="cd-cloud-1" transform="translate(-80 0)">
+                  <line class="cd-stroke cd-stroke-color-2" x1="5" y1="13" x2="29" y2="13"/>
+                  <line class="cd-stroke cd-stroke-color-2" x1="35" y1="13" x2="44" y2="13"/>
+                  <line class="cd-stroke cd-stroke-color-2" x1="72" y1="27" x2="14" y2="27"/>
+                </g>
+                <g id="cd-cloud-2" transform="translate(70 0)">
+                  <line class="cd-stroke cd-stroke-color-2" x1="191" y1="68" x2="159" y2="68"/>
+                  <line class="cd-stroke cd-stroke-color-2" x1="153" y1="68" x2="144" y2="68"/>
+                  <line class="cd-stroke cd-stroke-color-2" x1="179" y1="83" x2="133" y2="83"/>
+                </g>
+                <g id="cd-home-3">
+                  <polygon id="cd-home-3-roof" class="cd-stroke cd-stroke-color-1" points="59.4,55 95,15 130.6,55" transform="translate(0 20)"/>
+                  <!-- <rect id="cd-home-3-roof" class="cd-stroke cd-stroke-color-1" x="58" y="145" width="0" height="10" data-width="75"/> -->
+                  <rect id="cd-home-3-base" class="cd-stroke cd-stroke-color-1" x="66" y="54" width="58" height="0" transform="rotate(180 95 116)" data-height="124"/>
+                  <circle id="cd-home-3-window" class="cd-stroke cd-stroke-color-1" cx="95" cy="77" r="11" transform="translate(95 77) scale(0)"/>
+                  <text id="text-plus" x="81" y="85" style="display: none;">+</text>
+                </g>
+                <g id="cd-home-2">
+                  <rect id="cd-home-2-base" class="cd-stroke cd-stroke-color-1" x="98" y="132" width="70" height="0" transform="rotate(180 133 155)" data-height="46"/>
+                  <rect id="cd-home-2-roof" class="cd-stroke cd-stroke-color-1" x="98" y="122" width="0" height="10" data-width="70"/>
+                  <rect id="cd-home-2-door" class="cd-stroke cd-stroke-color-1" x="141" y="156" width="16" height="0" transform="rotate(180 149 167)" data-height="22"/>
+                  <rect id="cd-home-2-window" class="cd-stroke cd-stroke-color-1" x="106" y="143" width="26" height="10" transform="translate(119 148) scale(0)"/>
+                </g>
+                <g id="cd-home-1">
+                  <rect id="cd-home-1-chimney" class="cd-stroke cd-stroke-color-1" x="34" y="89" width="11" height="11" transform="translate(0 70)"/>
+                  <rect id="cd-home-1-base" class="cd-stroke cd-stroke-color-1" x="29" y="108" width="70" height="0" transform="rotate(180 64 143)" data-height="70"/>
+                  <rect id="cd-home-1-roof" class="cd-stroke cd-stroke-color-1" x="23" y="100" width="0" height="9" data-width="81"/>
+                  <rect id="cd-home-1-door" class="cd-stroke cd-stroke-color-1" x="53" y="150" width="20" height="0" transform="rotate(180 63 164)" data-height="28"/>
+                  <rect id="cd-home-1-window" class="cd-stroke cd-stroke-color-1" x="53" y="121" width="20" height="18" transform="translate(63 130) scale(0)"/>
+                </g>
+                <line id="cd-floor" class="cd-stroke cd-stroke-color-1" x1="2" y1="178" x2="2" y2="178" data-x="198"/>
+                </g>
+              </svg>
+              </center>
             </div>
+            <div class="col-md-4 col-md-push-2  hidden-sm hidden-xs scrollpoint sp-effect2 text-left" id="content">
+              <h4>Search and discovery</h4>
+              <hr class="sub"  style="position: relative;right:135px;">
+              <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+              Okay now i dont know what else to write to fill the info section :-P 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md" id="descs" >
+          <div class="row">
+            <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" >
+              <center><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+              Okay now i dont know what else to write to fill the info section :-P </p></center>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!--   Know your hospital -->
 
-            <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md" id="descs" >
-              <div class="row">
-              
-               
-                 <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" >
-                  <center><h4> Search and discovery</h4><hr/><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                  Okay now i dont know what else to write to fill the info section :-P </p></center>
-                </div>
+      <div class="row">
+        <div class="col-md-10 col-md-push-1 col-md-pull-1 " id="desc">
+          <div class="row">
+               <h4 class="hidden-lg hidden-md text-center" id="descs">Know your hospital<hr/></h4>
+            <div class="col-md-4 col-md-push-2  scrollpoint sp-effect1 hidden-sm hidden-xs text-right" id="content" >
+              <h4>Know your hospital</h4>
+              <hr class="sub" style="  position: relative;left:135px;">
+              <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+              Okay now i dont know what else to write to fill the info section :-P 
+              </p>
+            </div>
+            <div class="col-md-4 col-md-push-2 ">
+              <center>
+              <svg id="cd-animated-svg" version="1.1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+                <title>hIQ</title>
+                <desc>Know your hospital</desc>
+                <text id="text-q" x="59.087498" y="157" style="display: none;">?</text>
+                <text id="text-p" x="23.822432" y="157" style="display: none;">+</text>
+                <g transform="matrix(2.6031581,0,0,2.6031581,-180.98022,-93.498119)" id="logo" style="display: none;">
+                <g transform="matrix(0.15995138,0,0,0.15995138,47.95644,-10.82)" id="layer1-6" style="stroke-width:7.72504807;stroke-miterlimit:4;stroke-dasharray:none">
+                <path d="m 423.84062,559.35353 c -29.375,29.375 -77.17375,29.375 -106.55,0 -29.375,-29.37875 -29.375,-77.17626 0,-106.55376 29.37625,-29.37625 77.175,-29.37625 106.55,0 29.37875,29.3775 29.37875,77.17501 0,106.55376 z m 35.695,12.52625 c 32.0575,-43.28625 28.49,-104.84251 -10.72,-144.05251 -43.14625,-43.14625 -113.35125,-43.14625 -156.4975,0 -43.145,43.14875 -43.145,113.35126 0,156.49876 39.21125,39.21 100.76375,42.7775 144.055,10.7175 l 19.9825,19.985 23.15875,-23.16625 -19.97875,-19.9825 z" id="path22" style="fill:#0ab9c1;fill-opacity:1;stroke:none" />
+                <path d="m 479.18975,583.33053 -6.575,6.57875 10.7375,10.7375 -17.8575,17.85625 -10.73625,-10.7375 -5.36875,5.37125 56.1225,56.12 29.80125,-29.80625 -56.12375,-56.12 z" id="path26" style="fill:#0ab9c1;fill-opacity:1;stroke:none" />
+                <path d="m 249.50525,543.3464 c 0,9.71875 -7.79375,17.6 -17.40875,17.6 -9.615,0 -17.41,-7.88125 -17.41,-17.6 l 0,-35.2 c 0,-9.7225 7.795,-17.60126 17.41,-17.60126 9.615,0 17.40875,7.87876 17.40875,17.60126 l 0,35.2 z" id="path30"
+                style="fill:#fac731;fill-opacity:1;stroke:none" />
+                <path d="m 249.50525,463.84439 c 0,9.61375 -7.79375,17.41 -17.40875,17.41 -9.61625,0 -17.41,-7.79625 -17.41,-17.41 0,-9.615 7.79375,-17.41 17.41,-17.41 9.615,0 17.40875,7.795 17.40875,17.41 z" id="path34" style="fill:#fac731;fill-opacity:1;stroke:none" />
+                <path d="m 345.34937,480.12552 16.12375,0 0,18.26001 17.61875,0 0,-18.26001 16.19375,0 0,52.18126 -16.19375,0 0,-21.10625 -17.61875,0 0,21.10625 -16.12375,0 0,-52.18126 z" id="path38" style="fill:#fac731;fill-opacity:1;stroke:none" />
+                </g>
+                </g>
+              </svg>
+              </center>
+            </div>
+           </div>
+          </div>
+          <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md " id="descs" >
+            <div class="row">
+              <div class="col-sm-12  scrollpoint sp-effect5 hidden-lg hidden-md" >
+                <center><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+                Okay now i dont know what else to write to fill the info section :-P </p></center>
               </div>
             </div>
           </div>
+        </div>
 
-
-
-
-
+       <!--  Health tips -->
+      
+        <div class="row">
+          <div class="col-md-10 col-md-push-1 col-md-pull-1" id="desc" >
             <div class="row">
-                <div class="col-md-10 col-md-push-1 col-md-pull-1 " id="desc">
-                    <div class="row">
-                    <div class="col-md-4 col-md-push-2  scrollpoint sp-effect1 hidden-sm hidden-xs text-right" id="content" >
-                        <h4>Know your hospital</h4>
-                        <hr class="sub" style="  position: relative;
-  left:135px;">
-                           <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                            Okay now i dont know what else to write to fill the info section :-P </p>
-                        </div>
-                        <div class="col-md-4 col-md-push-2 ">
-                            <center><svg id="cd-animated-svg" version="1.1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
-    <title>hIQ</title>
-    <desc>Search And Discovery</desc>
-    
-    <text id="text-q" x="59.087498" y="157" style="display: none;">?</text>
-        <text id="text-p" x="23.822432" y="157" style="display: none;">+</text>
-
-        <g
-     transform="matrix(2.6031581,0,0,2.6031581,-180.98022,-93.498119)"
-     id="logo" style="display: none;"><g
-       transform="matrix(0.15995138,0,0,0.15995138,47.95644,-10.82)"
-       id="layer1-6"
-       style="stroke-width:7.72504807;stroke-miterlimit:4;stroke-dasharray:none"><path
-         d="m 423.84062,559.35353 c -29.375,29.375 -77.17375,29.375 -106.55,0 -29.375,-29.37875 -29.375,-77.17626 0,-106.55376 29.37625,-29.37625 77.175,-29.37625 106.55,0 29.37875,29.3775 29.37875,77.17501 0,106.55376 z m 35.695,12.52625 c 32.0575,-43.28625 28.49,-104.84251 -10.72,-144.05251 -43.14625,-43.14625 -113.35125,-43.14625 -156.4975,0 -43.145,43.14875 -43.145,113.35126 0,156.49876 39.21125,39.21 100.76375,42.7775 144.055,10.7175 l 19.9825,19.985 23.15875,-23.16625 -19.97875,-19.9825 z"
-         id="path22"
-         style="fill:#0ab9c1;fill-opacity:1;stroke:none" /><path
-         d="m 479.18975,583.33053 -6.575,6.57875 10.7375,10.7375 -17.8575,17.85625 -10.73625,-10.7375 -5.36875,5.37125 56.1225,56.12 29.80125,-29.80625 -56.12375,-56.12 z"
-         id="path26"
-         style="fill:#0ab9c1;fill-opacity:1;stroke:none" /><path
-         d="m 249.50525,543.3464 c 0,9.71875 -7.79375,17.6 -17.40875,17.6 -9.615,0 -17.41,-7.88125 -17.41,-17.6 l 0,-35.2 c 0,-9.7225 7.795,-17.60126 17.41,-17.60126 9.615,0 17.40875,7.87876 17.40875,17.60126 l 0,35.2 z"
-         id="path30"
-         style="fill:#fac731;fill-opacity:1;stroke:none" /><path
-         d="m 249.50525,463.84439 c 0,9.61375 -7.79375,17.41 -17.40875,17.41 -9.61625,0 -17.41,-7.79625 -17.41,-17.41 0,-9.615 7.79375,-17.41 17.41,-17.41 9.615,0 17.40875,7.795 17.40875,17.41 z"
-         id="path34"
-         style="fill:#fac731;fill-opacity:1;stroke:none" /><path
-         d="m 345.34937,480.12552 16.12375,0 0,18.26001 17.61875,0 0,-18.26001 16.19375,0 0,52.18126 -16.19375,0 0,-21.10625 -17.61875,0 0,21.10625 -16.12375,0 0,-52.18126 z"
-         id="path38"
-         style="fill:#fac731;fill-opacity:1;stroke:none" /></g></g>
-        
-<!--         <text
-     x="59.087498"
-     y="157"
-     id="text3788"
-     xml:space="preserve"
-     style=""><tspan
-       x="59.087498"
-       y="157"
-       id="tspan3790"
-       style="font-size:153.6000061px;stroke:#2c2c2c;">?</tspan></text> -->
-
-
-  </svg></center>
-                        </div>
-                        
-                   </div>
-                </div>
-
-                <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md " id="descs" >
-                  <div class="row">
-                   
-                   
-                    <div class="col-sm-12  scrollpoint sp-effect5 hidden-lg hidden-md" >
-                      <center><h4>Know ypur hospital</h4><hr/><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                      Okay now i dont know what else to write to fill the info section :-P </p></center>
-                    </div>
-                   
-                  </div>
-                </div>
-            </div>
-
-
-
-            <div class="row">
-            <div class="col-md-10 col-md-push-1 col-md-pull-1  hidden-sm hidden-xs" id="desc" >
-              <div class="row">
-               <div class="col-md-4 col-md-push-2 col-md-pull-1 ">
-                  <center><p ><img src="img/ani.svg" /> </p></center>
-                </div>
-                <div class="col-md-4 col-md-push-2  scrollpoint sp-effect2 text-left" id="content" >
+                  <h4 class="hidden-lg hidden-md text-center" id="descs">Health Tips<hr/></h4>
+              <div class="col-md-4 col-md-push-2 col-md-pull-1 col-sm-12 col-xs-12 ">
+                <center><p ><img src="img/ani.svg" /> </p></center>
+              </div>
+              <div class="col-md-4 col-md-push-2 hidden-sm hidden-xs scrollpoint sp-effect2 text-left" id="content" >
                  <h4>Health Tips</h4>
-                        <hr class="sub"  style="position: relative;
-  right:135px;">
+                        <hr class="sub"  style="position: relative;right:135px;">
                <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
                   Okay now i dont know what else to write to fill the info section :-P </p>
                 </div>
@@ -457,41 +401,37 @@ else{
             <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md" id="descs">
               <div class="row">
               
-                <div class="col-sm-12 hidden-lg hidden-md">
-                  <center><p ><img src="img/ani.svg" /> </p></center>
-                </div>
                  <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" >
-                  <center> <h4>Health tips</h4><hr/><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+                  <center> <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
                   Okay now i dont know what else to write to fill the info section :-P </p></center>
                 </div>
               </div>
             </div>
           </div>
 
-
-           <div class="row">
+    <!--   Bot -->
+          <div class="row">
             <div class="col-md-10 col-md-push-1 col-md-pull-1" id="desc"  >
               <div class="row">
-               <div class="col-md-4 col-md-push-2 scrollpoint sp-effect1 hidden-sm hidden-xs text-right" id="content"  >
-                 <h4>Bot</h4>
-                        <hr class="sub" style="position: relative;
-  left:135px;">
-                 <p class="inf">Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                  Okay now i dont know what else to write to fill the info section :-P </p>
+                <h4 class="hidden-lg hidden-md text-center" id="descs">Bot<hr/></h4>
+                <div class="col-md-4 col-md-push-2 scrollpoint sp-effect1 hidden-sm hidden-xs text-right" id="content"  >
+                  <h4>Bot</h4>
+                  <hr class="sub" style="position: relative;left:135px;">
+                  <p class="inf">Hi bud!!!! Some info about the Icon and features goes here!! :-)
+                    Okay now i dont know what else to write to fill the info section :-P </p>
                 </div>
                 <div class="col-md-4 col-md-push-2 ">
-                    <center>
-                   <svg id="animated-bot" version="1.1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
-    <title>Robot</title>
-    <desc>Info</desc>
+                  <center>
+                     <svg id="animated-bot" version="1.1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+    <title>hIQ</title>
+    <desc>Search And Discovery</desc>
 
     <path
-     style="fill:none;fill-rule:evenodd;stroke:#2c2c2c;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display: none;"
+     style="fill:none;fill-rule:evenodd;stroke:#2c2c2c;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 54.28658,132.78354 17.823404,0"
      id="botmouth" />
-
      <g 
-     id="botface" style="display: none;">
+     id="botface">
       <path
        id="path4192"
        d="m 27.560522,79.908745 c 23.282935,5.697183 46.932863,5.85968 70.982106,0 4.158872,6.126388 5.314282,10.23961 4.885402,13.290931 -26.620928,9.865754 -53.653122,9.394084 -81.040293,0 0.524279,-4.43031 1.612023,-8.860621 5.172785,-13.290931 z"
@@ -509,18 +449,15 @@ else{
        rx="51.762592"
        ry="52.042778" />
      </g>
-
      <path
-     style="fill:#000000;fill-opacity:0;stroke:#2c2c2c;stroke-width:1.50000024;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display: none;"
-     id="talkbox"
-     d="m 131.59915,98.706748 c -5.35375,0 -9.69387,5.015942 -9.69387,11.203612 l 0,0 0,0.007 c 0,6.18749 4.34012,11.20351 9.69387,11.20351 l 0,0 1.30823,0 -1.22954,9.12943 10.52077,-9.12943 42.63613,0 c 5.35378,0 9.69385,-5.01602 9.69385,-11.20351 l 0,0 0,-0.007 c 0,-6.18767 -4.34007,-11.203612 -9.69385,-11.203612 l 0,0 -53.23559,0 z" />
-
-     <g
-     id="botText"><text
+     style="fill:#000000;fill-opacity:0;stroke:#2c2c2c;stroke-width:1.50000024;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="talkbot"
+     d="m 131.59915,98.706748 c -5.35375,0 -9.69387,5.015942 -9.69387,11.203612 l 0,0 0,0.007 c 0,6.18749 4.34012,11.20351 9.69387,11.20351 l 0,0 1.30823,0 -1.22954,9.12943 10.52077,-9.12943 42.63613,0 c 5.35378,0 9.69385,-5.01602 9.69385,-11.20351 l 0,0 0,-0.007 c 0,-6.18767 -4.34007,-11.203612 -9.69385,-11.203612 l 0,0 -53.23559,0 z" /><g
+     id="g4199"><text
        id="hello"
        y="114.01096"
        x="144.93172"
-       style="font-style:normal;font-weight:normal;font-size:12.02779388px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2c2c2c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display: none;"
+       style="font-style:normal;font-weight:normal;font-size:12.02779388px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2c2c2c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"
        transform="scale(0.99730313,1.0027042)"><tspan
          y="114.01096"
@@ -531,52 +468,42 @@ else{
          x="144.93172" /></text>
 </g>
     </svg>
-
                     </center>
+                  </div>
                 </div>
-               
               </div>
-            </div>
-
-            <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md " id="descs">
-              <div class="row">
-               
-                <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" >
-                  <center><h4>Bot</h4></center>
-                  <hr/>
-
-                  <center><p class="inf">Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                  Okay now i dont know what else to write to fill the info section :-P </p></center>
+              <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md " id="descs">
+                <div class="row">
+                  <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" > 
+                    <center><p class="inf">Hi bud!!!! Some info about the Icon and features goes here!! :-)
+                    Okay now i dont know what else to write to fill the info section :-P </p></center>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
- <div class="row">
-            <div class="col-md-10 col-md-push-1 col-md-pull-1  hidden-sm hidden-xs" id="desc" >
+           <!--  Wallet -->
+          <div class="row">
+            <div class="col-md-10 col-md-push-1 col-md-pull-1  " id="desc" >
               <div class="row">
-               <div class="col-md-4 col-md-push-2 col-md-pull-1 ">
+              <h4 class="hidden-lg hidden-md text-center" id="descs"> Wallet<hr/></h4>
+                <div class="col-md-4 col-md-push-2 col-md-pull-1 col-sm-12 col-xs-12 ">
                   <center><p ><img src="img/ani.svg" /> </p></center>
                 </div>
-                <div class="col-md-4 col-md-push-2  scrollpoint sp-effect2 text-left" id="content" >
-                 <h4>Wallet</h4>
-                        <hr class="sub"  style="position: relative;
-  right:135px;">
-               <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                  Okay now i dont know what else to write to fill the info section :-P </p>
+                <div class="col-md-4 col-md-push-2 hidden-sm hidden-xs scrollpoint sp-effect2 text-left" id="content" >
+                  <h4>Wallet</h4>
+                  <hr class="sub"  style="position: relative;right:135px;">
+                  <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+                      Okay now i dont know what else to write to fill the info section :-P </p>
                 </div>
-               
               </div>
             </div>
 
             <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md" id="descs">
               <div class="row">
-              
-                <div class="col-sm-12 hidden-lg hidden-md">
-                  <center><p ><img src="img/ani.svg" /> </p></center>
-                </div>
-                 <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" >
-                  <center><h4> Wallet</h4><hr/><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+               
+                <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" >
+                  <center><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
                   Okay now i dont know what else to write to fill the info section :-P </p></center>
                 </div>
               </div>
@@ -584,444 +511,348 @@ else{
           </div>
 
 
+       <!--  Review -->
 
-
-
-
-            
-            <div class="row">
-                <div class="col-md-10 col-md-push-1 col-md-pull-1 " id="desc" >
-                    <div class="row">
-                        <div class="col-md-4 col-md-push-2 scrollpoint sp-effect1 hidden-sm hidden-xs text-right" id="content"  >
-                         <h4 >Review</h4>
-                        <hr class="sub"   style="position: relative;left:135px;">
-                           <p class="inf">Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                            Okay now i dont know what else to write to fill the info section :-P </p>
-                        </div>
-                        <div class="col-md-4 col-md-push-2 hidden-sm hidden-xs text-center">
-                            <svg
-                               xmlns:dc="http://purl.org/dc/elements/1.1/"
-                               xmlns:cc="http://creativecommons.org/ns#"
-                               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                               xmlns:svg="http://www.w3.org/2000/svg"
-                               xmlns="http://www.w3.org/2000/svg"
-                               id="svg2"
-                               xml:space="preserve"
-                               style="enable-background:new 0 0 200 200;"
-                               viewBox="0 0 200 200"
-                               height="200px"
-                               width="200px"
-                               y="0px"
-                               x="0px"
-                               version="1.1">
-                               <metadata id="metadata57"><rdf:RDF><cc:Work
-                                rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-                                rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs id="defs55" />
-                                <g
-                                id="g4301"
-                                transform="translate(-126.39849,-442.8267)">
-                                <path
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
-                                   id="star_one"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,126.53906,503.02658)" 
-                                />
-                                <path
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;sstroke-opacity:1"
-                                   id="star_two"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,167.50715,503.02694)" 
-                               />
-                               <path
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
-                                   id="star_three"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,208.47495,503.02694)" />
-                                <path
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
-                                   id="star_four"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,249.44335,503.02694)" />
-                                <g id="g4262">
-                                <g id="star_five">
-                                <path
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
-                                   id="path4136-6-4-9-9-5"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,290.41095,503.02694)" 
-                                   /></g>
-
-                            </svg>
-                        </div>
-                
-
-                <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md" >
-                    <div class="row">
-                        <div class="col-sm-12 hidden-lg hidden-md">
-                            <center>
-                            <svg
-                               xmlns:dc="http://purl.org/dc/elements/1.1/"
-                               xmlns:cc="http://creativecommons.org/ns#"
-                               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                               xmlns:svg="http://www.w3.org/2000/svg"
-                               xmlns="http://www.w3.org/2000/svg"
-                               id="svg2"
-                               xml:space="preserve"
-                               style="enable-background:new 0 0 200 200;"
-                               viewBox="0 0 200 200"
-                               height="200px"
-                               width="200px"
-                               y="0px"
-                               x="0px"
-                               version="1.1"><metadata
-                                 id="metadata57"><rdf:RDF><cc:Work
-                                     rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-                                       rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-                                 id="defs55" />
-                                <g id="g4301" transform="translate(-126.39849,-442.8267)">
-                                <path
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
-                                   id="star_ones"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,126.53906,503.02658)" 
-                                />
-                                <path
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;sstroke-opacity:1"
-                                   id="star_twos"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,167.50715,503.02694)" 
-                                />
-                                <path
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
-                                   id="star_threes"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,208.47495,503.02694)" 
-                                />
-                                <path
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
-                                   id="star_fours"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,249.44335,503.02694)"
-                                />
-                                <g id="g4262">
-                                <g>
-                                <path id="star_fives"
-                                   style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
-                                   id="path4136-6-4-9-9-5"
-                                   d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
-                                   transform="matrix(0.06697918,0,0,0.06592699,290.41095,503.02694)" 
-                                />
-                                </g>
-                            </svg>
-                        </center>
-                </div>
-                <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" id="descs">
-                  <center><h4>Review</h4><hr/><p class="inf">Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                  Okay now i dont know what else to write to fill the info section :-P </p></center>
-                </div>
-            </div>
-            </div>
-            </div>
-        </div>
-        </div>
-
-
-
-<div class="row">
-            <div class="col-md-10 col-md-push-1 col-md-pull-1  hidden-sm hidden-xs" id="desc" >
+          <div class="row">
+            <div class="col-md-10 col-md-push-1 col-md-pull-1 " id="desc" >
               <div class="row">
-               <div class="col-md-4 col-md-push-2 col-md-pull-1 ">
-                  <center><p ><img src="img/ani.svg" /> </p></center>
-                </div>
-                <div class="col-md-4 col-md-push-2  scrollpoint sp-effect2 text-left" id="content" >
-                 <h4>Insurance</h4>
-                        <hr class="sub"  style="position: relative;
-  right:135px;">
-               <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+                <h4 class="hidden-lg hidden-md text-center" id="descs">Review<hr/></h4>
+                <div class="col-md-4 col-md-push-2 scrollpoint sp-effect1 hidden-sm hidden-xs text-right" id="content"  >
+                  <h4 >Review</h4>
+                  <hr class="sub"   style="position: relative;left:135px;">
+                  <p class="inf">Hi bud!!!! Some info about the Icon and features goes here!! :-)
                   Okay now i dont know what else to write to fill the info section :-P </p>
                 </div>
-               
+                <div class="col-md-4 col-md-push-2 col-sm-12 col-xs-12 text-center">
+                  <svg
+                     xmlns:dc="http://purl.org/dc/elements/1.1/"
+                     xmlns:cc="http://creativecommons.org/ns#"
+                     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:svg="http://www.w3.org/2000/svg"
+                     xmlns="http://www.w3.org/2000/svg"
+                     id="svg2"
+                     xml:space="preserve"
+                     style="enable-background:new 0 0 200 200;"
+                     viewBox="0 0 200 200"
+                     height="200px"
+                     width="200px"
+                     y="0px"
+                     x="0px"
+                     version="1.1">
+                     <metadata id="metadata57"><rdf:RDF><cc:Work
+                      rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+                      rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs id="defs55" />
+                      <g
+                      id="g4301"
+                      transform="translate(-126.39849,-442.8267)">
+                      <path
+                         style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
+                         id="star_one"
+                         d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
+                         transform="matrix(0.06697918,0,0,0.06592699,126.53906,503.02658)" 
+                      />
+                      <path
+                         style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;sstroke-opacity:1"
+                         id="star_two"
+                         d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
+                         transform="matrix(0.06697918,0,0,0.06592699,167.50715,503.02694)" 
+                     />
+                     <path
+                         style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
+                         id="star_three"
+                         d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
+                         transform="matrix(0.06697918,0,0,0.06592699,208.47495,503.02694)" />
+                      <path
+                         style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
+                         id="star_four"
+                         d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
+                         transform="matrix(0.06697918,0,0,0.06592699,249.44335,503.02694)" />
+                      <g id="g4262">
+                      <g id="star_five">
+                      <path
+                         style="opacity:1;stroke:#fadf47;stroke-width:40.63215256;stroke-linejoin:round;stroke-miterlimit:9.39999962;stroke-opacity:1"
+                         id="path4136-6-4-9-9-5"
+                         d="M 396.4056,541.11847 269.07588,432.05497 142.65791,542.08765 207.03642,387.28741 63.323823,301.05875 230.44165,314.45044 268.04035,151.12552 306.94634,314.20228 473.8962,299.49059 330.8236,386.88588 Z"
+                         transform="matrix(0.06697918,0,0,0.06592699,290.41095,503.02694)" 
+                         />
+                      </g>
+                  </svg>
+                </div>
               </div>
             </div>
-
-            <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md" >
-              <div class="row">
-              
-                <div class="col-sm-12 hidden-lg hidden-md">
-                  <center><p ><img src="img/ani.svg" /> </p></center>
-                </div>
-                 <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" id="descs">
-                  <center><h4> Insurance</h4><hr/><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                  Okay now i dont know what else to write to fill the info section :-P </p></center>
-                </div>
-              </div>
+            <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" id="descs">
+              <center><p class="inf">Hi bud!!!! Some info about the Icon and features goes here!! :-)
+              Okay now i dont know what else to write to fill the info section :-P </p></center>
             </div>
           </div>
-
-
-
-
-       
-     
-      
     
+     <!--  Insurance -->
+
           <div class="row">
             <div class="col-md-10 col-md-push-1 col-md-pull-1  " id="desc" >
               <div class="row">
-                <div class="col-md-4 col-md-push-2  scrollpoint sp-effect1 text-right hidden-sm hidden-xs" id="content" >
-                 <h4>Forum</h4>
-                        <hr class="sub"  style="position: relative;
-  left:135px;">
-               <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
-                  Okay now i dont know what else to write to fill the info section :-P </p>
+              <h4 class="hidden-lg hidden-md text-center" id="descs"> Insurance<hr/></h4>
+               <div class="col-md-4 col-md-push-2 col-md-pull-1 col-sm-12 col-xs-12 ">
+                  <center><p ><img src="img/ani.svg" /> </p></center>
                 </div>
-                <div class="col-md-4 col-md-push-2 col-md-pull-1 col-sm-12 col-xs-12 ">
-                  <center><svg id="cd-animated-forum" version="1.1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
-    <title>hIQ</title>
-    <desc>Search And Discovery</desc>
-
-    
-
-
-    <g
-       transform="matrix(1.9394286,0,0,1.9394286,4.9999992,4.9990293)"
-       id="g3"
-       style="fill:#2c2c2c;fill-opacity:1">
-       <g id="p1" style="opacity: 0;"><circle
-             cx="49.541"
-             cy="50.673"
-             r="9.6709995"
-             id="circle17"
-             style="fill:#2c2c2c;fill-opacity:1" /><path
-             d="m 53.643,61.003 h -8.206 c -6.828,0 -12.383,5.557 -12.383,12.382 v 10.037 l 0.026,0.157 0.69,0.216 c 6.516,2.035 12.177,2.715 16.835,2.715 9.101,0 14.375,-2.595 14.701,-2.76 l 0.646,-0.328 H 66.02 V 73.385 C 66.023,66.558 60.469,61.003 53.643,61.003 z"
-             id="path25"
-             style="fill:#2c2c2c;fill-opacity:1;" />
-        </g>
-
-        <g
-           id="pr-1"
-           style="opacity: 0;"><path
-             d="m 65.539,50.36 c 5.342,0 9.67,-4.33 9.67,-9.67 0,-5.342 -4.328,-9.67 -9.67,-9.67 -5.292,0 -9.583,4.251 -9.663,9.524 3.049,1.912 5.187,5.146 5.577,8.9 1.242,0.582 2.623,0.916 4.086,0.916 z"
-             id="path11"
-             style="fill:#2c2c2c;fill-opacity:1" /><path
-             d="m 69.643,51.019 h -8.144 c -0.089,3.258 -1.479,6.192 -3.679,8.301 6.068,1.806 10.509,7.434 10.509,14.082 v 3.092 c 8.04,-0.297 12.674,-2.573 12.979,-2.729 l 0.646,-0.328 h 0.067 V 63.401 C 82.023,56.573 76.469,51.019 69.643,51.019 z"
-             id="path19"
-             style="fill:#2c2c2c;fill-opacity:1" /></g>
-
-        <g
-           id="pr-2"
-           style="opacity: 0;"><path
-             d="m 71.82,30.813 c 3.049,1.912 5.187,5.146 5.576,8.901 1.241,0.581 2.623,0.916 4.086,0.916 5.342,0 9.67,-4.329 9.67,-9.67 0,-5.341 -4.328,-9.67 -9.67,-9.67 -5.291,-10e-4 -9.582,4.251 -9.662,9.523 z"
-             id="path15"
-             style="fill:#2c2c2c;fill-opacity:1" /><path
-             d="m 85.585,41.289 h -8.142 c -0.088,3.258 -1.479,6.192 -3.678,8.301 6.068,1.806 10.508,7.433 10.508,14.081 v 3.092 c 8.039,-0.296 12.674,-2.572 12.979,-2.729 l 0.646,-0.327 h 0.069 V 53.671 c 0,-6.827 -5.554,-12.382 -12.382,-12.382 z"
-             id="path21"
-             style="fill:#2c2c2c;fill-opacity:1" /></g>
-
-        <g
-           id="pl-1"
-           style="opacity: 0;"><path
-             d="m 32.571,31.019 c -5.343,0 -9.671,4.329 -9.671,9.67 0,5.341 4.328,9.669 9.671,9.669 1.892,0 3.651,-0.553 5.143,-1.492 0.475,-3.091 2.132,-5.794 4.499,-7.634 0.01,-0.181 0.027,-0.36 0.027,-0.543 0,-5.341 -4.33,-9.67 -9.669,-9.67 z"
-             id="path13"
-             style="fill:#2c2c2c;fill-opacity:1" /><path
-             d="m 41.256,59.319 c -2.189,-2.099 -3.575,-5.017 -3.677,-8.254 -0.301,-0.022 -0.6,-0.047 -0.908,-0.047 h -8.203 c -6.828,0 -12.383,5.555 -12.383,12.383 v 10.037 l 0.025,0.155 0.691,0.218 c 5.227,1.633 9.893,2.383 13.944,2.621 v -3.031 c 0.002,-6.647 4.441,-12.275 10.511,-14.082 z"
-             id="path23"
-             style="fill:#2c2c2c;fill-opacity:1" /></g>
-
-        <g
-           id="pl-2"
-           style="opacity: 0;"><path
-             d="m 16.486,40.938 c 1.463,0 2.844,-0.335 4.086,-0.916 0.39,-3.755 2.527,-6.99 5.576,-8.902 -0.08,-5.271 -4.371,-9.523 -9.662,-9.523 -5.343,0 -9.671,4.329 -9.671,9.671 0,5.341 4.328,9.67 9.671,9.67 z"
-             id="path27"
-             style="fill:#2c2c2c;fill-opacity:1" /><path
-             d="M 24.202,49.899 C 22.004,47.79 20.613,44.855 20.525,41.596 H 12.382 C 5.554,41.597 0,47.152 0,53.979 v 10.037 h 0.069 l 0.646,0.327 c 0.306,0.154 4.939,2.433 12.979,2.728 v -3.092 c 0,-6.647 4.439,-12.275 10.508,-14.08 z"
-             id="path29"
-             style="fill:#2c2c2c;fill-opacity:1" /></g>
-
-        <path
-           d="m 27.796,30.063 c 1.16,-0.47 2.93,-1.047 4.62,-1.047 1.967,0 3.891,0.506 5.607,1.469 0.382,-0.375 0.732,-0.783 1.05,-1.22 -1.63,-2.141 -2.52,-4.765 -2.52,-7.464 0,-1.818 0.406,-3.622 1.18,-5.261 -1.762,-1.592 -4.01,-2.461 -6.399,-2.461 -4.348,0 -8.133,2.943 -9.241,7.088 3.248,1.89 5.364,5.194 5.703,8.896 z"
-           id="pl-3"
-           style="fill:#2c2c2c;fill-opacity:1; opacity: 0;" />
-
-        <path
-           d="m 59.117,28.718 c 0.336,0.534 0.729,1.037 1.175,1.505 1.588,-0.792 3.334,-1.208 5.092,-1.208 1.729,0 3.386,0.442 4.472,0.812 0.34,-4.013 2.767,-7.555 6.4,-9.35 -1.332,-3.805 -4.938,-6.402 -9.021,-6.402 -2.64,0 -5.14,1.084 -6.945,2.992 0.634,1.512 0.955,3.101 0.955,4.73 -10e-4,2.495 -0.735,4.873 -2.128,6.921 z"
-           id="pr-3"
-           style="fill:#2c2c2c;fill-opacity:1;opacity: 0;" />
-
-        <g
-           id="p-top"
-           style="opacity: 0;"><path
-             d="m 49.541,38.655 c 1.617,0 3.158,0.338 4.559,0.946 0.105,-2.286 0.893,-4.4 2.157,-6.15 -0.89,-0.186 -1.808,-0.285 -2.748,-0.285 h -8.906 c -0.938,0 -1.856,0.098 -2.739,0.282 1.347,1.869 2.152,4.15 2.165,6.62 1.637,-0.9 3.515,-1.413 5.512,-1.413 z"
-             id="path7"
-             style="fill:#2c2c2c;fill-opacity:1" /><circle
-             cx="49.054001"
-             cy="21.954"
-             r="10.496"
-             id="circle9"
-             style="fill:#2c2c2c;fill-opacity:1" />
-        </g>
-
-    </g>
-
-  </svg></center>
+                <div class="col-md-4 col-md-push-2  hidden-sm hidden-xs scrollpoint sp-effect2 text-left" id="content" >
+                  <h4>Insurance</h4>
+                  <hr class="sub"  style="position: relative;right:135px;">
+                  <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+                    Okay now i dont know what else to write to fill the info section :-P </p>
                 </div>
               </div>
             </div>
-
-            <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md" id="descs" >
+             <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md" >
               <div class="row">
-           
-                 <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" >
-                  <center><h4>Forum</h4><hr/><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+               
+                <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" id="descs">
+                  <center><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
                   Okay now i dont know what else to write to fill the info section :-P </p></center>
                 </div>
               </div>
             </div>
           </div>
 
-        </div>
-    
-    </section>
 
 
-                   <!--  <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+         <!--  Forum -->
+       
+          <div class="row">
+            <div class="col-md-10 col-md-push-1 col-md-pull-1  " id="desc" >
+              <div class="row">
+                <h4 class="hidden-lg hidden-md text-center" id="descs">Forum<hr/></h4>
+                <div class="col-md-4 col-md-push-2  scrollpoint sp-effect1 text-right hidden-sm hidden-xs" id="content" >
+                 <h4>Forum</h4>
+                  <hr class="sub"  style="position: relative;left:135px;">
+                  <p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+                  Okay now i dont know what else to write to fill the info section :-P </p>
                 </div>
+                <div class="col-md-4 col-md-push-2 col-md-pull-1 col-sm-12 col-xs-12 ">
+                  <center>
+                  <svg id="cd-animated-forum" version="1.1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+                    <title>hIQ</title>
+                    <desc>Search And Discovery</desc>
+                    <g
+                     transform="matrix(1.9394286,0,0,1.9394286,4.9999992,4.9990293)"
+                     id="g3"
+                     style="fill:#2c2c2c;fill-opacity:1">
+                    <g id="p1" style="opacity: 0;"><circle
+                           cx="49.541"
+                           cy="50.673"
+                           r="9.6709995"
+                           id="circle17"
+                           style="fill:#2c2c2c;fill-opacity:1" /><path
+                           d="m 53.643,61.003 h -8.206 c -6.828,0 -12.383,5.557 -12.383,12.382 v 10.037 l 0.026,0.157 0.69,0.216 c 6.516,2.035 12.177,2.715 16.835,2.715 9.101,0 14.375,-2.595 14.701,-2.76 l 0.646,-0.328 H 66.02 V 73.385 C 66.023,66.558 60.469,61.003 53.643,61.003 z"
+                           id="path25"
+                           style="fill:#2c2c2c;fill-opacity:1;" />
+                    </g>
+
+                    <g
+                       id="pr-1"
+                       style="opacity: 0;"><path
+                         d="m 65.539,50.36 c 5.342,0 9.67,-4.33 9.67,-9.67 0,-5.342 -4.328,-9.67 -9.67,-9.67 -5.292,0 -9.583,4.251 -9.663,9.524 3.049,1.912 5.187,5.146 5.577,8.9 1.242,0.582 2.623,0.916 4.086,0.916 z"
+                         id="path11"
+                         style="fill:#2c2c2c;fill-opacity:1" /><path
+                         d="m 69.643,51.019 h -8.144 c -0.089,3.258 -1.479,6.192 -3.679,8.301 6.068,1.806 10.509,7.434 10.509,14.082 v 3.092 c 8.04,-0.297 12.674,-2.573 12.979,-2.729 l 0.646,-0.328 h 0.067 V 63.401 C 82.023,56.573 76.469,51.019 69.643,51.019 z"
+                         id="path19"
+                         style="fill:#2c2c2c;fill-opacity:1" /></g>
+
+                    <g
+                       id="pr-2"
+                       style="opacity: 0;"><path
+                         d="m 71.82,30.813 c 3.049,1.912 5.187,5.146 5.576,8.901 1.241,0.581 2.623,0.916 4.086,0.916 5.342,0 9.67,-4.329 9.67,-9.67 0,-5.341 -4.328,-9.67 -9.67,-9.67 -5.291,-10e-4 -9.582,4.251 -9.662,9.523 z"
+                         id="path15"
+                         style="fill:#2c2c2c;fill-opacity:1" /><path
+                         d="m 85.585,41.289 h -8.142 c -0.088,3.258 -1.479,6.192 -3.678,8.301 6.068,1.806 10.508,7.433 10.508,14.081 v 3.092 c 8.039,-0.296 12.674,-2.572 12.979,-2.729 l 0.646,-0.327 h 0.069 V 53.671 c 0,-6.827 -5.554,-12.382 -12.382,-12.382 z"
+                         id="path21"
+                         style="fill:#2c2c2c;fill-opacity:1" /></g>
+
+                    <g
+                       id="pl-1"
+                       style="opacity: 0;"><path
+                         d="m 32.571,31.019 c -5.343,0 -9.671,4.329 -9.671,9.67 0,5.341 4.328,9.669 9.671,9.669 1.892,0 3.651,-0.553 5.143,-1.492 0.475,-3.091 2.132,-5.794 4.499,-7.634 0.01,-0.181 0.027,-0.36 0.027,-0.543 0,-5.341 -4.33,-9.67 -9.669,-9.67 z"
+                         id="path13"
+                         style="fill:#2c2c2c;fill-opacity:1" /><path
+                         d="m 41.256,59.319 c -2.189,-2.099 -3.575,-5.017 -3.677,-8.254 -0.301,-0.022 -0.6,-0.047 -0.908,-0.047 h -8.203 c -6.828,0 -12.383,5.555 -12.383,12.383 v 10.037 l 0.025,0.155 0.691,0.218 c 5.227,1.633 9.893,2.383 13.944,2.621 v -3.031 c 0.002,-6.647 4.441,-12.275 10.511,-14.082 z"
+                         id="path23"
+                         style="fill:#2c2c2c;fill-opacity:1" /></g>
+
+                    <g
+                       id="pl-2"
+                       style="opacity: 0;"><path
+                         d="m 16.486,40.938 c 1.463,0 2.844,-0.335 4.086,-0.916 0.39,-3.755 2.527,-6.99 5.576,-8.902 -0.08,-5.271 -4.371,-9.523 -9.662,-9.523 -5.343,0 -9.671,4.329 -9.671,9.671 0,5.341 4.328,9.67 9.671,9.67 z"
+                         id="path27"
+                         style="fill:#2c2c2c;fill-opacity:1" /><path
+                         d="M 24.202,49.899 C 22.004,47.79 20.613,44.855 20.525,41.596 H 12.382 C 5.554,41.597 0,47.152 0,53.979 v 10.037 h 0.069 l 0.646,0.327 c 0.306,0.154 4.939,2.433 12.979,2.728 v -3.092 c 0,-6.647 4.439,-12.275 10.508,-14.08 z"
+                         id="path29"
+                         style="fill:#2c2c2c;fill-opacity:1" /></g>
+
+                    <path
+                       d="m 27.796,30.063 c 1.16,-0.47 2.93,-1.047 4.62,-1.047 1.967,0 3.891,0.506 5.607,1.469 0.382,-0.375 0.732,-0.783 1.05,-1.22 -1.63,-2.141 -2.52,-4.765 -2.52,-7.464 0,-1.818 0.406,-3.622 1.18,-5.261 -1.762,-1.592 -4.01,-2.461 -6.399,-2.461 -4.348,0 -8.133,2.943 -9.241,7.088 3.248,1.89 5.364,5.194 5.703,8.896 z"
+                       id="pl-3"
+                       style="fill:#2c2c2c;fill-opacity:1; opacity: 0;" />
+
+                    <path
+                       d="m 59.117,28.718 c 0.336,0.534 0.729,1.037 1.175,1.505 1.588,-0.792 3.334,-1.208 5.092,-1.208 1.729,0 3.386,0.442 4.472,0.812 0.34,-4.013 2.767,-7.555 6.4,-9.35 -1.332,-3.805 -4.938,-6.402 -9.021,-6.402 -2.64,0 -5.14,1.084 -6.945,2.992 0.634,1.512 0.955,3.101 0.955,4.73 -10e-4,2.495 -0.735,4.873 -2.128,6.921 z"
+                       id="pr-3"
+                       style="fill:#2c2c2c;fill-opacity:1;opacity: 0;" />
+
+                    <g
+                       id="p-top"
+                       style="opacity: 0;"><path
+                         d="m 49.541,38.655 c 1.617,0 3.158,0.338 4.559,0.946 0.105,-2.286 0.893,-4.4 2.157,-6.15 -0.89,-0.186 -1.808,-0.285 -2.748,-0.285 h -8.906 c -0.938,0 -1.856,0.098 -2.739,0.282 1.347,1.869 2.152,4.15 2.165,6.62 1.637,-0.9 3.515,-1.413 5.512,-1.413 z"
+                         id="path7"
+                         style="fill:#2c2c2c;fill-opacity:1" /><circle
+                         cx="49.054001"
+                         cy="21.954"
+                         r="10.496"
+                         id="circle9"
+                         style="fill:#2c2c2c;fill-opacity:1" />
+                    </g>
+                    </g>
+                  </svg></center>
+                </div>
+              </div>
             </div>
+            <div class="col-sm-8 col-sm-push-2 col-sm-pull-2 hidden-lg hidden-md" id="descs" >
+              <div class="row">
+                <div class="col-sm-12 scrollpoint sp-effect5 hidden-lg hidden-md" >
+                  <center><p class="inf" >Hi bud!!!! Some info about the Icon and features goes here!! :-)
+                  Okay now i dont know what else to write to fill the info section :-P </p></center>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section> -->
+      </section>
+
+                                     <!---JOIN- -->
 
 
 
-    <section class="bg-primary" id="join" style="background:white;color:#999;">
+      <section class="bg-primary" id="join" style="background:white;color:#999;">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 >Join us</h2>
-                    <hr >
-              
-                </div>
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 >Join us</h2>
+                <hr >
             </div>
-             <div class="row">
-                    <div class="col-md-4 hidden-sm hidden-xs">
-                        <div class="about-item scrollpoint sp-effect2 text-center">
-                                   <center><img src="img/cloud.png" style="width:40%"  /></center>
-                            <h3>Easy setup</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                        </div>
-                    </div>
-                     <div class="col-sm-12 col-xs-12 hidden-lg hidden-md">
-                        <div class="about-item scrollpoint sp-effect5 text-center">
-                                   <center><img src="img/cloud.png" style="width:40%"  /></center>
-                            <h3>Easy setup</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12" >
-                        <div class="about-item scrollpoint sp-effect5 text-center">
-                               <center><img src="img/cloud.png" style="width:40%"  /></center>
-                            <h3>On-the-go</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                        </div>
-                    </div>
-                    <div class=" col-md-4  hidden-sm hidden-xs" >
-                        <div class="about-item scrollpoint sp-effect1 text-center">
-                               <center><img src="img/cloud.png"  style="width:40%" /></center>
-                            <h3>Social connect</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                        </div>
-                    </div>
-                    <div class=" col-sm-12 col-xs-12 hidden-lg hidden-md" >
-                        <div class="about-item scrollpoint sp-effect5 text-center">
-                               <center><img src="img/cloud.png"  style="width:40%" /></center>
-                            <h3>Social connect</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                        </div>
-                    </div>
-                   
+          </div>
+          <div class="row">
+            <div class="col-md-4 hidden-sm hidden-xs">
+              <div class="about-item scrollpoint sp-effect2 text-center">
+                <center><img src="img/mentor.png"   /></center>
+                <h3>Easy setup</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-xs-12 hidden-lg hidden-md">
+              <div class="about-item scrollpoint sp-effect5 text-center">
+                <center><img src="img/mentor.png" style="width:40%"  /></center>
+                <h3>Easy setup</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12" >
+              <div class="about-item scrollpoint sp-effect5 text-center">
+                <center><img src="img/investor.png"   /></center>
+                <h3>On-the-go</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+            </div>
+            <div class=" col-md-4  hidden-sm hidden-xs" >
+              <div class="about-item scrollpoint sp-effect1 text-center">
+                <center><img src="img/team.png"   /></center>
+                <h3>Social connect</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+            </div>
+            <div class=" col-sm-12 col-xs-12 hidden-lg hidden-md" >
+              <div class="about-item scrollpoint sp-effect5 text-center">
+                <center><img src="img/cloud.png"  style="width:40%" /></center>
+                <h3>Social connect</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+                                       <!--  NOTIFY  -->
+      <section  id="notify" >
+        <div class="container " >
+          <div class="row">
+            <div class="col-md-6 col-md-push-3 col-md-pull-3 text-center scrollpoint sp-effect3 hidden-sm hidden-xs"   >
+              <h2 >Notify</h2>
+              <hr >
+            </div>
+            <div class="col-sm-6 col-sm-push-3 col-sm-pull-3 text-center scrollpoint sp-effect3 hidden-lg hidden-md"   >
+              <h2 >Notify</h2>
+              <hr >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 text-center scrollpoint sp-effect2 hidden-sm hidden-xs" style=" padding-top:70px;" >
+              <center><span class="input">
+              <input class="input-field" type="text" placeholder="Name" id="input-7" />
+              </span>
+              </center>
+            </div>
+            <div class="col-md-4 text-center scrollpoint sp-effect5 hidden-sm hidden-xs" style=" padding-top:70px;">
+              <center><span class="input ">
+              <input class="input-field " type="text" placeholder="Email" id="input-7" />
+              </span>
+              </center>
+            </div>
+            <div class="col-md-4 text-center scrollpoint sp-effect1 hidden-sm hidden-xs" style=" padding-top:70px;">
+              <center><span class="input ">
+              <input class="input-field " type="text" placeholder="Number" id="input-7" />
+              </span>
+              </center>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-sm-12 col-xs-12 hidden-lg hidden-md">
+              <div class="row">
+               <div class="col-sm-12 col-xs-12  text-center  scrollpoint sp-effect5 hidden-lg hidden-md" style="padding-top:70px;">
+                  <center><span class="input">
+                  <input class="input-field" type="text" placeholder="Name" id="input-7" />
+                  </span>
+                  </center>
                 </div>
-        </div>
-    </section>
-
-
-     <section  id="notify" >
-  <div class="container " >
-    <div class="row">
-      <div class="col-md-6 col-md-push-3 col-md-pull-3 text-center scrollpoint sp-effect3 hidden-sm hidden-xs"   >
-        <h2 >Notify</h2>
-        <hr >
-      </div>
-      <div class="col-sm-6 col-sm-push-3 col-sm-pull-3 text-center scrollpoint sp-effect3 hidden-lg hidden-md"   >
-        <h2 >Notify</h2>
-        <hr >
-      </div>
-      </div>
-        <div class="row">
-          <div class="col-md-4 text-center scrollpoint sp-effect2 hidden-sm hidden-xs" style=" padding-top:70px;" >
-                <center><span class="input">
-              <input class="input-field" type="text" placeholder="Name" id="input-7" />
-            
-            </span>
-            </center>
-          </div>
-          <div class="col-md-4 text-center scrollpoint sp-effect5 hidden-sm hidden-xs" style=" padding-top:70px;">
-                <center><span class="input ">
-              <input class="input-field " type="text" placeholder="Email" id="input-7" />
-                          </span>
-            </center>
-          </div>
-          <div class="col-md-4 text-center scrollpoint sp-effect1 hidden-sm hidden-xs" style=" padding-top:70px;">
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-xs-12    text-center scrollpoint sp-effect5 hidden-lg hidden-md">
                   <center><span class="input ">
-                <input class="input-field " type="text" placeholder="Number" id="input-7" />
-              
-              </span>
-              </center>
+                  <input class="input-field " type="text" placeholder="Email" id="input-7" />
+                  </span>
+                  </center>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12  col-xs-12  text-center scrollpoint sp-effect5 hidden-lg hidden-md">
+                  <center><span class="input ">
+                  <input class="input-field " type="text" placeholder="Number" id="input-7" />
+                  </span>
+                  </center>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-<div class="row">
-<div class="col-sm-12 col-xs-12 hidden-lg hidden-md">
-<div class="row">
-           <div class="col-sm-12 col-xs-12  text-center  scrollpoint sp-effect5 hidden-lg hidden-md" style="padding-top:70px;">
-                 <center><span class="input">
-              <input class="input-field" type="text" placeholder="Name" id="input-7" />
-            
-            </span>
-            </center>
-          </div>
-          </div>
           <div class="row">
-          <div class="col-sm-12 col-xs-12    text-center scrollpoint sp-effect5 hidden-lg hidden-md">
-                <center><span class="input ">
-              <input class="input-field " type="text" placeholder="Email" id="input-7" />
-                          </span>
-            </center>
-          </div>
-          </div>
-          <div class="row">
-          <div class="col-sm-12  col-xs-12  text-center scrollpoint sp-effect5 hidden-lg hidden-md">
-                     <center><span class="input ">
-                <input class="input-field " type="text" placeholder="Number" id="input-7" />
-              
-              </span>
-              </center>
+            <div class="col-md-4 col-md-push-4 col-md-pull-4 scrollpoint sp-effect6 " style="padding-top:50px">
+              <center><button id="beta"> Notify Me ! </button></center>
+            </div>
           </div>
         </div>
-        </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4 col-md-push-4 col-md-pull-4 scrollpoint sp-effect6 " style="padding-top:50px">
-            <center><button id="beta"> Notify Me ! </button></center>
-          </div>
-        </div>
-
-
-      </div>
-    </section>
+      </section>
 
 
 
-
+                               <!--  CONTACT -->
 
      
     <section  id="contact" style="background-color:white;padding-bottom:0px;">
@@ -1037,18 +868,7 @@ else{
           </div>
         </div>
         <div class="row">
-       <!--  <div class="col-md-5 hidden-sm hidden-xs scrollpoint sp-effect1 hidden-sm hidden-xs">
-     
-    
-          <center><div id="map" style="width: 500px; height: 300px"></div></center>
-        </div> -->
-      <!--   <div class="col-sm-8  hidden-lg hidden-md scrollpoiny sp-effect5 hidden-lg hidden-md">
-     
-    
-          <center><div id="map" ></div></center>
-        </div> -->
           <div class="col-md-4 col-md-push-1  hidden-sm hidden-xs" >
-            
             <div class="row" >
               <center>
                 <div class="col-md-10 col-md-push-1 col-md-pull-1 hidden-sm hidden-xs scrollpoint sp-effect5 " style="padding-top:0px;" >
@@ -1088,117 +908,104 @@ else{
               </center>
             </div>
 
-             <div class="row">
-          <div class="col-md-4 col-md-push-4 col-md-pull-4 scrollpoint sp-effect5 hidden-sm hidden-xs" style="padding-top:12px">
-            <center><button id="beta"> Submit </button></center>
-          </div>
-        </div>
-
-
+            <div class="row">
+              <div class="col-md-4 col-md-push-4 col-md-pull-4 scrollpoint sp-effect5 hidden-sm hidden-xs" style="padding-top:12px">
+                <center><button id="beta"> Submit </button></center>
+              </div>
+            </div>
           </div>
 
-
-              <div class="col-md-7  col-md-push-1 hidden-sm hidden-xs" style="position:relative;top:10px;">
-        <div class="row">
-          <div class="col-md-2 col-md-push-2 hidden-sm hidden-xshidden-sm hidden-xs hidden-sm hidden-xs " >
-            <center>
-              <i class="fa fa-map-marker fa-1x" aria-hidden="true"></i>
-            </center> 
-          </div>
+          <div class="col-md-7  col-md-push-1 hidden-sm hidden-xs" style="position:relative;top:10px;">
+            <div class="row">
+              <div class="col-md-2 col-md-push-2 hidden-sm hidden-xshidden-sm hidden-xs hidden-sm hidden-xs " >
+                <center>
+                  <i class="fa fa-map-marker fa-1x" aria-hidden="true"></i>
+                </center> 
+              </div>
               
-          <div class="col-md-7 col-md-push-1  hidden-sm hidden-xs hidden-sm hidden-xs " style="text-align:left">
-            <p>254, 1st Cross Rd, Dena Bank Colony, Armane Nagar, Bengaluru, Karnataka</p>
-          </div>
-        </div>
+              <div class="col-md-7 col-md-push-1  hidden-sm hidden-xs hidden-sm hidden-xs " style="text-align:left">
+                <p>254, 1st Cross Rd, Dena Bank Colony, Armane Nagar, Bengaluru, Karnataka</p>
+              </div>
+            </div>
             
-        <div class="row">
-          <div class="col-md-2 col-md-push-2 hidden-sm hidden-xs " style="padding-top:30px">
-            <center>
-              <i class="fa fa-phone" aria-hidden="true"></i>
-            </center> 
-          </div>
-          <div class="col-md-7 col-md-push-1 hidden-sm hidden-xs " style="padding-top:30px;text-align:left">
-            <p>8553236639</p>
-          </div>
-        </div>
+            <div class="row">
+              <div class="col-md-2 col-md-push-2 hidden-sm hidden-xs " style="padding-top:30px">
+                <center>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                </center> 
+              </div>
+              <div class="col-md-7 col-md-push-1 hidden-sm hidden-xs " style="padding-top:30px;text-align:left">
+                <p>8553236639</p>
+              </div>
+            </div>
 
-        <div class="row">
-          <div class="col-md-2 col-md-push-2 hidden-sm hidden-xs " style="padding-top:30px">
-            <center>
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </center> 
-          </div>
-          <div class="col-md-7 col-md-push-1  text-center hidden-sm hidden-xs" style="padding-top:30px;text-align:left">
-            <p>info@hospitalsiq.com</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-md-push-3 hidden-sm hidden-xs" style="padding-top:20px">
-          
-              <h4>Follow us at</h4>
-     
-          </div>
-        </div>
+            <div class="row">
+              <div class="col-md-2 col-md-push-2 hidden-sm hidden-xs " style="padding-top:30px">
+                <center>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </center> 
+              </div>
+              <div class="col-md-7 col-md-push-1  text-center hidden-sm hidden-xs" style="padding-top:30px;text-align:left">
+                <p>info@hospitalsiq.com</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-md-push-3 hidden-sm hidden-xs" style="padding-top:20px">
+              
+                  <h4>Follow us at</h4>
+         
+              </div>
+            </div>
         
             <div class="row">
-            <div class="col-md-4 col-md-push-2 hidden-sm hidden-xs" style="padding-left:30px;margin-top:5%; " >
-              <center>
-                <div class="social" >
-                  <a href="http://fb.com" title="" class="fb" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-facebook"></i></a>
-                  <a href="http://twitter.com" title="" class="twitter" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-twitter"></i></a>
-                  <a href="#" title="" class="google" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-google-plus"></i></a>
-                  <a href="#" title="" class="linkedin" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </center>
-            </div>
+              <div class="col-md-4 col-md-push-2 hidden-sm hidden-xs" style="padding-left:30px;margin-top:5%; " >
+                <center>
+                  <div class="social" >
+                    <a href="http://fb.com" title="" class="fb" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-facebook"></i></a>
+                    <a href="http://twitter.com" title="" class="twitter" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-twitter"></i></a>
+                    <a href="#" title="" class="google" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-google-plus"></i></a>
+                    <a href="#" title="" class="linkedin" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </center>
+              </div>
             </div> 
-
           </div>
-          </div>
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-<div class="row">
-<div class="col-sm-12 col-xs-12 hidden-lg hidden-md" >
-<div class="row">
-           <div class="col-sm-12  col-xs-12  text-center  scrollpoint sp-effect5 hidden-lg hidden-md" style="padding-top:70px;">
+        <div class="row">
+          <div class="col-sm-12 col-xs-12 hidden-lg hidden-md" >
+            <div class="row">
+              <div class="col-sm-12  col-xs-12  text-center  scrollpoint sp-effect5 hidden-lg hidden-md" style="padding-top:70px;">
                 <center>
                     <span class="input ">
                       <input class="input-field-c " type="text" placeholder="Email" id="input-8" />
                       
                     </span>
-                  </center>
-          </div>
-          </div>
-          <div class="row">
-          <div class="col-sm-12  col-xs-12  text-center scrollpoint sp-effect5 hidden-lg hidden-md">
+                </center>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12  col-xs-12  text-center scrollpoint sp-effect5 hidden-lg hidden-md">
                 <center>
                     <span class="input ">
                       <input class="input-field-c " type="text" placeholder="Email" id="input-8" />
                       
                     </span>
-                  </center>
+                </center>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12  col-xs-12 text-center scrollpoint sp-effect5 hidden-lg hidden-md">
+                <center>
+                  <span class="input">
+                    <input class="input-field-c " type="text" placeholder="Message" id="input-9" />
+                   
+                  </span>
+                </center>
+              </div>
+            </div>
           </div>
-          </div>
-          <div class="row">
-          <div class="col-sm-12  col-xs-12 text-center scrollpoint sp-effect5 hidden-lg hidden-md">
-                   <center>
-                    <span class="input">
-                      <input class="input-field-c " type="text" placeholder="Message" id="input-9" />
-                     
-                    </span>
-                  </center>
-          </div>
-        </div>
-        </div>
         </div>
 
         <div class="row">
@@ -1207,83 +1014,69 @@ else{
           </div>
         </div>
 
-
-
-    
-
-
-
-       
-            
-      <div class="col-sm-12   col-xs-12   hidden-lg hidden-md" style="position:relative;top:50px;background:#f6f6f6;">
-        <div class="row">
-          <div class="col-sm-12 col-xs-12 text-center">
-            <h2>Reach us </h2>
-            <hr/>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-3 col-sm-push-1 col-xs-1  hidden-lg hidden-md" >
-            <center>
-              <i class="fa fa-map-marker fa-1x" aria-hidden="true"></i>
-            </center> 
-          </div>
-              
-          <div class="col-sm-6 col-sm-push-1   col-sm-pull-1 col-xs-10 col-xs-push-1   col-xs-pull-1 hidden-lg hidden-md" style="text-align:left">
-            <p>254, 1st Cross Rd, Dena Bank Colony, Armane Nagar, Bengaluru, Karnataka</p>
-          </div>
-        </div>
-            
-        <div class="row">
-          <div class="col-sm-3 col-sm-push-1 col-xs-1  hidden-lg hidden-md" style="padding-top:40px">
-            <center>
-              <i class="fa fa-phone" aria-hidden="true"></i>
-            </center> 
-          </div>
-          <div class="col-sm-6 col-sm-push-1   col-sm-pull-1 col-xs-10 col-xs-push-1   col-xs-pull-1 hidden-lg hidden-md" style="padding-top:40px;text-align:left">
-            <p>8553236639</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-3 col-sm-push-1 col-xs-1  hidden-lg hidden-md" style="padding-top:40px">
-            <center>
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </center> 
-          </div>
-          <div class="col-sm-6 col-sm-push-1   col-sm-pull-1  col-xs-10 col-xs-push-1   col-xs-pull-1 hidden-lg hidden-mdr" style="padding-top:40px;text-align:left">
-            <p>info@hospitalsiq.com</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-12   col-xs-12   hidden-lg hidden-md" style="padding-top:20px;">
-            <center>
-              <h4>Follow us at</h4>
-            </center>
-          </div>
-        </div>
-
-            <div class="row">
-              <div class="col-sm-12 col-xs-12  hidden-lg hidden-md" style="margin-bottom:10%;padding-top:10px;">
-         <center>
-                <div class="social">
-                  <a href="http://fb.com" title="" class="fb" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-facebook"></i></a>
-                  <a href="http://twitter.com" title="" class="twitter" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-twitter"></i></a>
-                  <a href="#" title="" class="google" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-google-plus"></i></a>
-                  <a href="#" title="" class="linkedin" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-linkedin"></i></a>
-                </div>
-                </center>
-              </div>
-          
+        <div class="col-sm-12   col-xs-12   hidden-lg hidden-md" style="position:relative;top:50px;background:#f6f6f6;">
+          <div class="row">
+            <div class="col-sm-12 col-xs-12 text-center">
+              <h2>Reach us </h2>
+              <hr/>
             </div>
-            </div> 
-
+          </div>
+          <div class="row">
+            <div class="col-sm-3 col-sm-push-1 col-xs-1  hidden-lg hidden-md" >
+              <center>
+                <i class="fa fa-map-marker fa-1x" aria-hidden="true"></i>
+              </center> 
+            </div>
+                
+            <div class="col-sm-6 col-sm-push-1   col-sm-pull-1 col-xs-10 col-xs-push-1   col-xs-pull-1 hidden-lg hidden-md" style="text-align:left">
+              <p>254, 1st Cross Rd, Dena Bank Colony, Armane Nagar, Bengaluru, Karnataka</p>
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col-sm-3 col-sm-push-1 col-xs-1  hidden-lg hidden-md" style="padding-top:40px">
+              <center>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </center> 
+            </div>
+            <div class="col-sm-6 col-sm-push-1   col-sm-pull-1 col-xs-10 col-xs-push-1   col-xs-pull-1 hidden-lg hidden-md" style="padding-top:40px;text-align:left">
+              <p>8553236639</p>
+            </div>
           </div>
 
+          <div class="row">
+            <div class="col-sm-3 col-sm-push-1 col-xs-1  hidden-lg hidden-md" style="padding-top:40px">
+              <center>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </center> 
+            </div>
+            <div class="col-sm-6 col-sm-push-1   col-sm-pull-1  col-xs-10 col-xs-push-1   col-xs-pull-1 hidden-lg hidden-mdr" style="padding-top:40px;text-align:left">
+              <p>info@hospitalsiq.com</p>
+            </div>
+          </div>
 
-        
-      
+          <div class="row">
+            <div class="col-sm-12   col-xs-12   hidden-lg hidden-md" style="padding-top:20px;">
+              <center>
+                <h4>Follow us at</h4>
+              </center>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-xs-12  hidden-lg hidden-md" style="margin-bottom:10%;padding-top:10px;">
+              <center>
+              <div class="social">
+                <a href="http://fb.com" title="" class="fb" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com" title="" class="twitter" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-twitter"></i></a>
+                <a href="#" title="" class="google" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-google-plus"></i></a>
+                <a href="#" title="" class="linkedin" style="color:#555;background-color:none;padding-right:5px;"><i class="fa fa-linkedin"></i></a>
+              </div>
+              </center>
+            </div>
+          </div>
+        </div> 
+      </div>
 
       <div id="feet" class="hidden-sm hidden-xs" >
         <div class="container-fluid " >
@@ -1334,72 +1127,63 @@ else{
               </center>
             </div> 
           </div>
+        </div> 
+     </div>
+    <div class="container" style="background: #313131; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#313131,#343434,#373737); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#313131,#343434,#373737); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#313131,#343434,#373737); /* Standard syntax (must be last) */
+      box-shadow: 1px 2px 6px #252628;">
+      <div class="row">
+        <div class="col-sm-12 hidden-lg hidden-md">
+          <center>
+            <p style="font-style:italic;color:white">&copy;2016 <a href="index.html" style="font-style:italic;color:white;">hospitals IQ</a>
+            </p>
+          </center>
         </div>
-
-       
-
-
-
-      
-        <!-- /.container-fluid-->
-
+        
+        <div class="col-sm-12 hidden-lg hidden-md">
+          <center>
+            <p><a href="index.html" style="font-style:italic;color:white"> AboutUs</a>
+            </p>
+          </center>
+        </div>
+                
+        <div class="col-sm-12 hidden-lg hidden-md">
+          <center>
+            <p><a href="saas.html" style="font-style:italic;color:white">JoinUs</a>
+            </p>
+          </center>
+        </div>
+                 
+        <div class="col-sm-12 hidden-lg hidden-md">
+          <center>
+            <p><a href="training.html" style="font-style:italic;color:white">Privacy Policy</a>
+            </p>
+          </center>
+        </div>
+                  
+        <div class="col-sm-12 hidden-lg hidden-md">
+          <center>
+            <p><a href="training.html" style="font-style:italic;color:white">Terms & Conditions</a>
+            </p>
+          </center>
+        </div>
+                    
+        <div class="col-sm-12 hidden-lg hidden-md" >
+          <center>
+            <div class="social">
+              <a href="http://fb.com" title="" class="fb" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-facebook"></i></a>
+              <a href="http://twitter.com" title="" class="twitter" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-twitter"></i></a>
+              <a href="#" title="" class="google" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-google-plus"></i></a>
+              <a href="#" title="" class="linkedin" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </center>
+        </div> 
       </div>
-       <div class="container" style="background: #313131; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#313131,#343434,#373737); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#313131,#343434,#373737); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#313131,#343434,#373737); /* Standard syntax (must be last) */
-    box-shadow: 1px 2px 6px #252628;">
-          <div class="row">
-            <div class="col-sm-12 hidden-lg hidden-md">
-              <center>
-                <p style="font-style:italic;color:white">&copy;2016 <a href="index.html" style="font-style:italic;color:white;">hospitals IQ</a>
-                </p>
-              </center>
-            </div>
-            
-            <div class="col-sm-12 hidden-lg hidden-md">
-              <center>
-                <p><a href="index.html" style="font-style:italic;color:white"> AboutUs</a>
-                </p>
-              </center>
-            </div>
-                    
-            <div class="col-sm-12 hidden-lg hidden-md">
-              <center>
-                <p><a href="saas.html" style="font-style:italic;color:white">JoinUs</a>
-                </p>
-              </center>
-            </div>
-                     
-            <div class="col-sm-12 hidden-lg hidden-md">
-              <center>
-                <p><a href="training.html" style="font-style:italic;color:white">Privacy Policy</a>
-                </p>
-              </center>
-            </div>
-                      
-            <div class="col-sm-12 hidden-lg hidden-md">
-              <center>
-                <p><a href="training.html" style="font-style:italic;color:white">Terms & Conditions</a>
-                </p>
-              </center>
-            </div>
-                    
-            <div class="col-sm-12 hidden-lg hidden-md" >
-              <center>
-                <div class="social">
-                  <a href="http://fb.com" title="" class="fb" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-facebook"></i></a>
-                  <a href="http://twitter.com" title="" class="twitter" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-twitter"></i></a>
-                  <a href="#" title="" class="google" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-google-plus"></i></a>
-                  <a href="#" title="" class="linkedin" style="color:#ffffff;background-color:none;padding-right:8px;"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </center>
-            </div> 
-          </div>
-        </div>
-      
-    </section> 
+    </div>
+  </section> 
       
 
     <!-- <section id="contact">
@@ -1427,6 +1211,7 @@ else{
     <script src="js/animation.js"></script>
      <script src="js/magnify.js"></script>
       <script src="js/plus.js"></script>
+      <script src="js/bot.js"></script>
        <script src="js/forum.js"></script>
 
     <!-- Bootstrap Core JavaScript -->

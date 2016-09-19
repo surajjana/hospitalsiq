@@ -17,8 +17,11 @@
 	
 
 	function initLoading() {
+
+		
 	
 					animateP1();
+					window.setInterval(animateP1,2000);
 				
 	}
 
