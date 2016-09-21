@@ -21,7 +21,7 @@
 		
 	
 					animateP1();
-					window.setInterval(animateP1,2000);
+					
 				
 	}
 
@@ -65,7 +65,7 @@
 		}, 800);*/
 
 		document.getElementById('p1').style.opacity = "1";
-		p1.addClass('animated slideInUp');
+		p1.addClass('animated slideInUp ');
 
 		setTimeout(function(){
 			document.getElementById('pl-1').style.opacity = "1";

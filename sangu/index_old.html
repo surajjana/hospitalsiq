@@ -47,19 +47,56 @@
     <!-- Animation Javascript-->
     <script src="js/animation.js"></script>
 
-    <script>
-      var myVar;
-
-      function myFunction() {
-          myVar = setTimeout(showPage, 3000);
+    <style type="text/css">
+           
+      body
+      {
+        background: #F6F6F6 none repeat scroll 0% 0%;
+        font-family: "Cardo","Times New Roman",Times,serif;
+        font-size:16px;
+        color:#555;
       }
 
-      function showPage() {
-        document.getElementById("loader").style.opacity = "0";
-        document.getElementById("loader").className = "";
-        document.getElementById("parent").style.opacity = "1";
+      .google :hover
+      {
+       color:#dd4b39;
       }
-    </script>
+      
+      .twitter :hover
+      {
+       color:#0084b4;
+      }
+          
+      .fb :hover
+      {
+       color:#3b5998;
+       background-color: none;
+      }
+          
+      .linkedin :hover
+      {
+        color:#4875B4;
+      }
+          
+      p.social a i :hover
+      {
+        background-color: none;
+      }
+
+      #hov
+      {
+        border:1px solid white;
+        transition:all 0.3s ease;
+      }
+
+      #hov:hover
+      {
+        background: white;
+        color:black;
+      }
+    
+    </style>  
+
 
     <style type="text/css">
   .spinner3 {
@@ -112,56 +149,18 @@
     }
 }
 </style>
+      <script>
+/*var myVar;
 
-    <style type="text/css">
-           
-      body
-      {
-        background: #F6F6F6 none repeat scroll 0% 0%;
-        font-family: "Cardo","Times New Roman",Times,serif;
-        font-size:16px;
-        color:#555;
-      }
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
 
-      .google :hover
-      {
-       color:#dd4b39;
-      }
-      
-      .twitter :hover
-      {
-       color:#0084b4;
-      }
-          
-      .fb :hover
-      {
-       color:#3b5998;
-       background-color: none;
-      }
-          
-      .linkedin :hover
-      {
-        color:#4875B4;
-      }
-          
-      p.social a i :hover
-      {
-        background-color: none;
-      }
-
-      #hov
-      {
-        border:1px solid white;
-        transition:all 0.3s ease;
-      }
-
-      #hov:hover
-      {
-        background: white;
-        color:black;
-      }
-    
-    </style>  
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("main").style.display = "block";
+}*/
+</script>
 
     <script >
       $(document).ready(function()
@@ -251,9 +250,9 @@
   </script>
 </head>
 
-<body id="page-top" onload="myFunction()">
-  <div class="spinner3" id="loader"><img src="img/loader.png" alt="HeyMedy"/></div>
-  <div class="parent" id="parent" style="transition: all 0.3s ease;opacity:0;">
+<body id="page-top"  onload="myFunction()" style="margin:0;">
+<!-- <div class="spinner3 " id="loader"><img src="img/loader.png" alt="HeyMedy"/></div> -->
+<div id="main" style="display:block;">
   <div id="menu" class="menu-close">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -317,7 +316,7 @@
     </div>
   </header>
 
-  <section class="bg-primary" id="features" style="background-color:#f6f6f6;margin-bottom:5%;">
+  <section class="bg-primary" id="features" style="background-color:#f6f6f6;margin-bottom:5%">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-push-2 col-md-pull-2 text-center">
@@ -1331,6 +1330,9 @@
       </div>
     </div>
   </section> 
+
+  </div>
+
       
 
     <!-- <section id="contact">
@@ -1352,8 +1354,6 @@
             </div>
         </div>
     </section> -->
-
-    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
