@@ -287,7 +287,7 @@ aside {
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
    color: rgba(0, 0, 0, 0.6); !important;
-border-bottom:2px solid rgba(73, 194, 183, 1);
+border-bottom: 2px solid rgba(73, 194, 183, 1);
   outline: none; !important;
   background: none;
 }
@@ -317,12 +317,16 @@ border-bottom:2px solid rgba(73, 194, 183, 1);
     color: white;
   }
   .navbar-default.affix {
-     background: #eeeeee; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#cccccc,#dddddd,#eeeeee); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#cccccc,#dddddd,#eeeeee); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#cccccc,#dddddd,#eeeeee); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#cccccc,#dddddd,#eeeeee); /* Standard syntax (must be last) */
-    box-shadow: 1px 2px 6px  rgba(0,0,0,0.6);
+  
+
+      /* background:linear-gradient(rgba(210, 209, 225, 1),rgba(220, 219, 235, 1),rgba(240, 239, 255, 1));
+      background:linear-gradient(#ccc,#ddd,#eee);*/
+/*     background:linear-gradient(rgba(250, 240, 210, 1),rgba(240, 225, 190, 1),rgba(240, 220, 160, 1));*/ /* For browsers that do not support gradients */
+   background: -webkit-linear-gradient(rgba(219, 255, 223, 1),rgba(239, 255, 243, 1),rgba(249, 255, 253, 1)); /* For Safari 5.1 to 6.0 */
+   background: -o-linear-gradient(rgba(219, 255, 223, 1),rgba(239, 255, 243, 1),rgba(249, 255, 253, 1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(219, 255, 223, 1),rgba(239, 255, 243, 1),rgba(249, 255, 253, 1));/* For Firefox 3.6 to 15 */
+    background:linear-gradient(rgba(219, 255, 223, 1),rgba(239, 255, 243, 1),rgba(249, 255, 253, 1));/* Standard syntax (must be last) */
+    box-shadow: 1px 2px 6px  rgba(0,0,0,0.15);
 
     opacity:1;
   }
