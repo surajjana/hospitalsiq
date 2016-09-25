@@ -257,19 +257,7 @@ aside {
 .no-padding {
   padding: 0;
 }
-.navbar-default {
-  background: #313131; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#313131,#343434,#373737); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#313131,#343434,#373737); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#313131,#343434,#373737); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#313131,#343434,#373737); /* Standard syntax (must be last) */
-    box-shadow: 1px 2px 6px #252628;
-  
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  -webkit-transition: all 0.15s;
-  -moz-transition: all 0.15s;
-  transition: all 0.15s;
-}
+
 .navbar-default .navbar-header .navbar-brand {
  color: rgba(255, 255, 255, 0.7);;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
