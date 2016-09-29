@@ -4,6 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
+
 html,
 body {
   height: 100%;
@@ -375,7 +377,7 @@ header {
 /*  position: relative;*/
 
   /* Preserve aspet ratio */
-  
+
   min-width: 100%;
   min-height: 100%;
   -webkit-background-size: cover;
